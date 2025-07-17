@@ -1,52 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Newsletter Preview</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 50px;
-      text-align: center;
-      background-color: #f5f5f5;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Templates Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body and Container Styling */
+        body {
+            font-family: 'Poppins', sans-serif; /* Use Poppins or a nice sans-serif font */
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* Subtle gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            color: #333;
+            box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+        }
 
-    h1 {
-      color: #333;
-    }
+        .main-wrapper {
+            background-color: #ffffff;
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+            padding: 40px;
+            margin: 20px; /* Margin for smaller screens */
+            text-align: center;
+            max-width: 800px; /* Max width for content */
+            width: 100%; /* Ensure it takes full width up to max-width */
+            box-sizing: border-box;
+        }
 
-    .button-container {
-      margin-top: 30px;
-    }
+        h1 {
+            font-size: 2.8em; /* Larger, more impactful heading */
+            color: #2c3e50; /* Darker, more prominent color */
+            margin-bottom: 20px;
+            font-weight: 700; /* Bolder font weight */
+            letter-spacing: -0.5px; /* Slight letter spacing adjustment */
+        }
 
-    .preview-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 25px;
-      font-size: 16px;
-      color: white;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+        p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
 
-    .preview-button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        /* Button Container and Grid */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid for buttons */
+            gap: 25px; /* Spacing between buttons */
+            justify-content: center; /* Center grid items horizontally */
+            margin-top: 30px;
+        }
+
+        /* Individual Button Styling */
+        .preview-button {
+            display: flex; /* Use flexbox to center text vertically/horizontally */
+            justify-content: center;
+            align-items: center;
+            padding: 18px 25px; /* Generous padding */
+            font-size: 1.15em; /* Slightly larger text */
+            font-weight: 600; /* Semi-bold */
+            color: #ffffff;
+            background-color: #4a90e2; /* A modern blue */
+            border: none;
+            border-radius: 8px; /* Slightly more rounded than default */
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+        }
+
+        /* Button Hover and Active States */
+        .preview-button:hover {
+            background-color: #357bd8; /* Darker blue on hover */
+            transform: translateY(-3px); /* Lift effect on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+        }
+
+        .preview-button:active {
+            transform: translateY(0); /* Press down effect */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Smaller shadow on click */
+        }
+
+        /* Specific Button Colors (Optional: if you want different colors per button) */
+        .preview-button:nth-child(1) { background-color: #4a90e2; } /* Blue */
+        .preview-button:nth-child(2) { background-color: #50b077; } /* Green */
+        .preview-button:nth-child(3) { background-color: #f7b731; color: #333; } /* Orange, with dark text */
+        .preview-button:nth-child(4) { background-color: #e25e4a; } /* Reddish-orange */
+
+        /* Specific Hover Colors */
+        .preview-button:nth-child(1):hover { background-color: #357bd8; }
+        .preview-button:nth-child(2):hover { background-color: #3e8d5f; }
+        .preview-button:nth-child(3):hover { background-color: #e0a32a; color: #333; } /* Keep dark text for orange */
+        .preview-button:nth-child(4):hover { background-color: #c94c3c; }
+
+        /* Media Queries for Responsiveness */
+
+        /* For tablets and smaller desktops (e.g., up to 768px) */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            p {
+                font-size: 1em;
+                margin-bottom: 30px;
+            }
+            .button-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust min button width */
+                gap: 20px;
+            }
+            .preview-button {
+                padding: 15px 20px;
+                font-size: 1em;
+            }
+        }
+
+        /* For mobile phones (e.g., up to 480px) */
+        @media (max-width: 480px) {
+            .main-wrapper {
+                padding: 20px;
+                margin: 10px;
+                border-radius: 8px; /* Slightly less rounded on small screens */
+            }
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 0.9em;
+                margin-bottom: 25px;
+            }
+            .button-grid {
+                grid-template-columns: 1fr; /* Stack buttons vertically on very small screens */
+                gap: 15px;
+            }
+            .preview-button {
+                padding: 12px 18px;
+                font-size: 0.95em;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Newsletter Templates</h1>
-  <div class="button-container">
-    <a href="index_01.html" target="_blank" class="preview-button">Template 1</a>
-    <a href="index_02.html" target="_blank" class="preview-button">Template 2</a>
-    <a href="index_03.html" target="_blank" class="preview-button">Template 3</a>
-    <a href="index_04.html" target="_blank" class="preview-button">Template 4</a>
-  </div>
+    <div class="main-wrapper">
+        <h1>Explore Newsletter Designs</h1>
+        <p>Choose a template below to see a live preview of the various newsletter layouts.</p>
+
+        <div class="button-grid">
+            <a href="index_01.html" target="_blank" class="preview-button">Template 1</a>
+            <a href="index_02.html" target="_blank" class="preview-button">Template 2</a>
+            <a href="index_03.html" target="_blank" class="preview-button">Template 3</a>
+            <a href="index_04.html" target="_blank" class="preview-button">Template 4</a>
+        </div>
+    </div>
 
 </body>
 </html>
