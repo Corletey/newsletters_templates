@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAU Newsletter - Student of the Year</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f0f5fa 0%, #e1eaf3 100%);
+            color: #333;
+            padding: 30px;
+            min-height: 100vh;
+        }
+        
+        .newsletter-spread {
+            display: flex;
+            gap: 30px;
+            max-width: 2400px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        
+        .newsletter-container {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(44, 62, 80, 0.15);
+            position: relative;
+        }
+        
+        /* Header with AAU branding */
+        .aau-header {
+            background: linear-gradient(to right, #2c3e50 0%, #34495e 100%);
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid #2c3e50;
+        }
+        
+        .aau-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .aau-logo-circle {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 24px;
+        }
+        
+        .aau-titles {
+            color: white;
+        }
+        
+        .aau-main-title {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+        
+        .aau-subtitles {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .conference-title {
+            text-align: right;
+            color: white;
+            font-size: 28px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Page 1*/
+        .page-1 {
+            display: flex;
+            min-height: 700px;
+        }
+        
+        .page-title-section {
+            flex: 1;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 20%);
+            pointer-events: none;
+        }
+        
+        .page-title {
+            font-size: 120px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            white-space: nowrap;
+        }
+        
+        .content-overlay {
+            position: relative;
+            z-index: 10;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .student-section {
+            flex: 1;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #f8fafd;
+            position: relative;
+        }
+        
+        .student-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .student-tagline {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .student-title {
+            font-size: 72px;
+            font-weight: 900;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+        
+        .student-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .student-image {
+            flex: 1;
+            max-width: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #2c3e50;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .student-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .student-info {
+            flex: 2;
+        }
+        
+        .student-name {
+            font-size: 42px;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .student-achievement {
+            font-size: 22px;
+            color: #34495e;
+            font-weight: 600;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 4px solid #2c3e50;
+        }
+        
+        .student-bio {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            color: #2c3e50;
+            padding: 20px;
+            background: rgba(44, 62, 80, 0.1);
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .quote:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 80px;
+            color: rgba(44, 62, 80, 0.3);
+            font-family: Georgia, serif;
+        }
+
+        /* Page 2 Content */
+        .page-2 {
+            padding: 40px;
+            background: #f8fafd;
+        }
+
+        .main-article {
+            margin-bottom: 40px;
+        }
+
+        .main-title {
+            font-size: 42px;
+            font-weight: 900;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .article-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .article-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            text-align: justify;
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        .article-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .article-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .secondary-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .secondary-article {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .secondary-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .secondary-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .bottom-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .bottom-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .bottom-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .bottom-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .bottom-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: #34495e;
+            transform: translateY(-3px);
+        }
+
+        .page-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .page-number {
+            background: #34495e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 1600px) {
+            .newsletter-spread {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .newsletter-container {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .page-1 {
+                flex-direction: column;
+            }
+            
+            .page-title {
+                font-size: 80px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .section-subtitle {
+                font-size: 24px;
+            }
+            
+            .student-title {
+                font-size: 52px;
+            }
+            
+            .student-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .student-achievement {
+                border-left: none;
+                padding-left: 0;
+                border-top: 4px solid #2c3e50;
+                padding-top: 20px;
+            }
+            
+            .article-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .secondary-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .bottom-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .article-text {
+                column-count: 1;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .aau-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .aau-brand {
+                flex-direction: column;
+            }
+            
+            .conference-title {
+                text-align: center;
+            }
+            
+            .page-title {
+                font-size: 60px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .section-subtitle {
+                font-size: 20px;
+            }
+            
+            .student-title {
+                font-size: 42px;
+            }
+            
+            .student-name {
+                font-size: 32px;
+            }
+            
+            .main-title {
+                font-size: 32px;
+            }
+            
+            .page-2 {
+                padding: 20px;
+            }
+            
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        .back-to-index {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #3B4A87 0%, #2c3a6b 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(59, 74, 135, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-to-index:hover {
+    background: linear-gradient(135deg, #2c3a6b 0%, #1a2547 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 74, 135, 0.4);
+}
+
+.back-to-index:active {
+    transform: translateY(0);
+}
+
+.back-to-index::before {
+    content: '←';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .back-to-index {
+        top: 10px;
+        left: 10px;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="newsletter-spread">
+        <!-- Page 1 -->
+        <div class="newsletter-container">
+            <!-- Header with AAU branding -->
+            <div class="aau-header">
+                <div class="aau-brand">
+                    <div class="aau-logo-circle">AAU</div>
+                    <div class="aau-titles">
+                        <div class="aau-main-title">ASSOCIATION OF AFRICAN UNIVERSITIES</div>
+                        <div class="aau-subtitles">
+                            <div>ASSOCIATION DES UNIVERSITES AFRICAINES</div>
+                            <div>اتحاد الجامعات الأفريقية</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conference-title">16th GENERAL CONFERENCE</div>
+            </div>
+            
+            <!-- Page 1 Content -->
+            <div class="page-1">
+                <div class="page-title-section">
+                    <div class="pattern-overlay"></div>
+                    <div class="page-title">NEWSLETTER</div>
+                    <div class="content-overlay">
+                        <div class="section-title">University</div>
+                        <div class="section-subtitle">Excellence in Education</div>
+                    </div>
+                </div>
+                
+                <div class="student-section">
+                    <div class="student-header">
+                        <div class="student-tagline">Student of the</div>
+                        <div class="student-title">Year</div>
+                    </div>
+                    
+                    <div class="student-content">
+                        <div class="student-image">
+                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Student of the Year">
+                        </div>
+                        
+                        <div class="student-info">
+                            <div class="student-name">Amina Diallo</div>
+                            <div class="student-achievement">Winner of the 2024 AAU Innovation Award</div>
+                            <div class="student-bio">
+                                Amina Diallo, a computer science student at Université Mohammed V de Rabat, has been recognized for her groundbreaking research in AI applications for agricultural optimization. Her project "AgriPredict" uses machine learning to help small-scale farmers predict crop yields and optimize resource allocation.
+                            </div>
+                            <div class="quote">
+                                "This award is not just for me, but for every young African innovator striving to make a difference. AAU has given us a platform to showcase solutions to Africa's unique challenges."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rabat, Morocco</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>July 15-19, 2025</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>www.aau.org/generalconference</span>
+                    </div>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="newsletter-container">
+            <!-- Header with AAU branding -->
+            <div class="aau-header">
+                <div class="aau-brand">
+                    <div class="aau-logo-circle">AAU</div>
+                    <div class="aau-titles">
+                        <div class="aau-main-title">ASSOCIATION OF AFRICAN UNIVERSITIES</div>
+                        <div class="aau-subtitles">
+                            <div>ASSOCIATION DES UNIVERSITES AFRICAINES</div>
+                            <div>اتحاد الجامعات الأفريقية</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conference-title">16th GENERAL CONFERENCE</div>
+            </div>
+            
+            <!-- Page 2 Content -->
+            <div class="page-2">
+                <div class="main-article">
+                    <h1 class="main-title">University Celebrates 150 Years of Excellence</h1>
+                    
+                    <div class="article-layout">
+                        <div class="article-text">
+                            The Association of African Universities proudly commemorates 150 years of academic excellence and innovation across the continent. This milestone represents decades of unwavering commitment to educational advancement, research excellence, and the development of future leaders who will shape Africa's destiny.
+                            
+                            From humble beginnings to becoming a cornerstone of higher education in Africa, our universities have continuously evolved to meet the changing needs of society. Through wars, political changes, and global challenges, these institutions have remained steadfast in their mission to provide quality education and foster intellectual growth.
+                            
+                            Today, we celebrate not just the longevity of these institutions, but their remarkable contributions to science, technology, arts, and humanities. Our graduates have gone on to become presidents, Nobel laureates, innovative entrepreneurs, and leaders in every field imaginable.
+                            
+                            As we look toward the future, we remain committed to excellence in education, groundbreaking research, and the development of solutions to Africa's most pressing challenges. The next 150 years promise even greater achievements as we continue to build upon this strong foundation.
+                        </div>
+                        
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Historic university building">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secondary-content">
+                    <div class="secondary-article">
+                        <h2 class="secondary-title">Research Excellence</h2>
+                        <p class="secondary-text">
+                            Our universities have consistently been at the forefront of groundbreaking research. From medical breakthroughs to technological innovations, African universities have contributed significantly to global knowledge. Recent achievements include advances in tropical medicine, sustainable agriculture, and renewable energy solutions that address both local and global challenges.
+                        </p>
+                    </div>
+                    
+                    <div class="secondary-article">
+                        <h2 class="secondary-title">Student Innovation</h2>
+                        <p class="secondary-text">
+                            The creativity and innovation of our students continue to inspire us daily. Through various innovation hubs and entrepreneurship programs, students are developing solutions to real-world problems. From mobile applications that improve healthcare access to sustainable technologies that address environmental challenges, our students are making a difference.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="bottom-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Students in library">
+                    </div>
+                    
+                    <div class="bottom-content">
+                        <h3 class="bottom-title">Future Generations</h3>
+                        <p class="bottom-text">
+                            As we celebrate this historic milestone, we look forward to welcoming future generations of students who will continue this legacy of excellence. Our commitment to providing world-class education, fostering innovation, and developing leaders remains unwavering. The foundation laid over the past 150 years will continue to support and inspire generations of African scholars and innovators.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="page-info">
+                    <div class="page-number">Page 2 of 4</div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rabat, Morocco</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>July 15-19, 2025</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>www.aau.org/generalconference</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<a href="index.html" class="back-to-index">
+    Back to Templates
+</a>
+</html>
