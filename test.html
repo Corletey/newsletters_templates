@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAU General Conference Newsletter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* --- Base & Font Styles --- */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #e9e9e9;
+    }
+
+    /* --- Main Newsletter Container --- */
+    .newsletter-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 1px solid #d1d1d1;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --- Header Section --- */
+    .header {
+      padding: 15px 30px;
+      border-bottom: 1px solid #eee;
+      background-color: #f8f9fa;
+    }
+
+    .header .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6c757d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+    }
+
+    .header .main-logo-container {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .header .main-logo {
+      max-width: 80%;
+      height: auto;
+    }
+
+    .hosts-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .hosts-section .host-title {
+      font-weight: bold;
+      color: #343a40;
+      margin-right: 20px;
+      font-size: 15px;
+    }
+
+    .hosts-section .host-logo {
+      max-height: 50px;
+      margin: 0 15px;
+    }
+
+    /* --- Hero Image --- */
+    .hero-image-container img {
+      width: 100%;
+      /* height: auto; */
+      display: block;
+    }
+
+    /* --- Main Content Layout --- */
+    .content-body {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+    }
+
+    /* --- Sidebar--- */
+    .sidebar {
+      flex: 0 0 250px;
+      background-color: #2a3962;
+      color: #ffffff;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      font-family: "Helvetica", "Arial Black", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .sidebar ul {
+      /* list-style: none; */
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.4;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #d9532c;
+    }
+
+    .sidebar ul li.featured a {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    /* --- Main Article --- */
+    .main-article {
+      flex: 1;
+      padding: 25px 35px;
+      box-sizing: border-box;
+    }
+
+    .main-article h1 {
+      font-family: "Georgia", serif;
+      font-size: 32px;
+      line-height: 1.2;
+      color: #d9532c;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .main-article .byline {
+      font-size: 14px;
+      color: #6c757d;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .main-article .article-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #343a40;
+      text-align: justify;
+    }
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 768px) {
+      .content-body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex: 1 1 auto;
+      }
+
+      .main-article h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .image-row {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 10px !important;
+      }
+
+      .image-row img {
+        width: 90% !important;
+        min-width: unset !important;
+        max-width: 350px !important;
+      }
+    }
+
+    /* page 2 */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #2c315f;
+    }
+
+    .page-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 40px 50px;
+    }
+
+    .title-section {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .title-section h1 {
+      font-size: 2rem;
+      color: #2c315f;
+      margin: 0;
+    }
+
+    .title-section h2 {
+      font-size: 1.2rem;
+      color: #c1272d;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .article {
+      margin-bottom: 40px;
+    }
+
+    .article img {
+      margin: 30px 0;
+      width: 100%;
+      /* height: auto; */
+      border-radius: 5px;
+      margin-bottom: 15px;
+      flex: 1;
+    }
+
+    .article h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #2c315f;
+    }
+
+    .article .author {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .article p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--ace-dark);
+      color: white;
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      text-align: left;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #e2e8f0;
+    }
+
+    .contact-info {
+      list-style: none;
+    }
+
+    .contact-info li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--ace-primary);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      color: #a0aec0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-container {
+        padding: 20px;
+      }
+
+      .article h3 {
+        font-size: 1.2rem;
+      }
+
+      .title-section h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 30px 20px;
+      }
+
+      .newsletter-title {
+        font-size: 2.8rem;
+      }
+
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        padding: 30px 20px;
+      }
+
+      .logo-text {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .newsletter-title {
+        font-size: 2.2rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+
+      .nav-buttons {
+        flex-wrap: wrap;
+      }
+
+      .image-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="newsletter-container">
+    <header class="header">
+      <div class="top-bar">
+        <span class="date">JULY 24, 2025</span>
+        <!-- <span class="volume">INAUGURAL ISSUE</span> -->
+      </div>
+      <div class="main-logo-container" style="text-align: center">
+        <img src="img/aau-16-gencon-01.png" alt="AAU Gencon Logo" style="max-width: 300px; height: auto" />
+      </div>
+      <div class="hosts-section">
+        <span class="host-title">Hosted by:</span>
+        <img class="host-logo" src="img/uni_M_VI.png" alt="UMP Logo" />
+        <img class="host-logo" src="img/uni_M_V.png" alt="University Mohammed VI Polytechnic" />
+      </div>
+    </header>
+
+    <div class="hero-image-container">
+      <img src="img/3.jpg" alt="Event Group Photo" />
+    </div>
+
+    <div class="content-body">
+      <aside class="sidebar">
+        <h2>In This Issue</h2>
+        <ul>
+          <li class="featured">
+            <a href="#ict-directors-csirt"> ICT Directors Trained in CSIRT and Incident Response </a>
+          </li>
+          <li>
+            <a href="#communication-partnerships">Role of Communications and Partnerships in Policy Reforms
+            </a>
+          </li>
+          <li>
+            <a href="#collective-intelligence">The Collective Intelligence of African Universities</a>
+          </li>
+          <li>
+            <a href="#converging-visions">AAU-UNESCO Executive Leadership Training
+            </a>
+          </li>
+          <li><a href="#leading-lights">Leading lights in Africa’s higher education</a></li>
+        </ul>
+      </aside>
+
+      <article class="main-article">
+        <h1>
+          AAU’s 16th General Conference Opens in Morocco, Charting Bold Vision
+          for Africa Higher Education
+        </h1>
+        <!-- <p class="byline">By Dr. Amina Diallo, AAU Chief Correspondent</p> -->
+        <p class="article-text">
+          The Association of African Universities (AAU) has returned to its
+          birthplace, Rabat, Morocco, for its historic 16th Quadrennial
+          General Conference, 58 years after its founding. Running from 21–25
+          July 2025, the conference has drawn over 400 higher education
+          leaders, policymakers, industry pioneers, and global partners to
+          shape a bold agenda for Africa’s universities under the theme:
+          <b>Shaping the Future of Higher Education for Innovation and
+            Sustainable Development in Africa</b>.
+        </p>
+        <div class="image-row" style="
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 30px; 
+  flex-wrap: wrap;
+">
+          <img src="img/1.jpg" alt="Image 1" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+          <img src="img/2.jpg" alt="Image 2" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+        </div>
+
+        <p class="article-text">
+          The workshop featured a series of interactive sessions led by three
+          facilitators, Dr. Konosoang Sobane, Ing. Ilyas Azzioui, and Prof.
+          Sanaa Zebakh. Participants engaged in practical exercises, case
+          studies, and collaborative group work to equip themselves with tools
+          and frameworks to drive change in their institutions. The sessions
+          covered topics such as crafting of policy briefs, science-policy
+          communication, and public-private partnerships (PPPs), all tailored
+          to the African higher education context.
+        </p>
+        <p style="text-align: center; margin-top: 30px">
+          <a href="https://aau.org/2025/07/aaus-16th-general-conference-opens-in-morocco-charting-bold-vision-for-africa-higher-education/"
+            style="
+                background: #4a90e2;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+              " target="_blank">
+            Find out More
+          </a>
+        </p>
+        <!-- <p class="article-text">Cras in justo eu risus tincidunt aliquam. Donec nec elit vel nunc consectetur tincidunt. Nullam nec nunc ut libero aliquam aliquam. Phasellus vel magna nec sem consequat cursus. Curabitur vel arcu vel urna vehicula pulvinar.</p> -->
+      </article>
+    </div>
+    <div class="page-container page-2" style="
+          background: linear-gradient(135deg, #e0e8f0, #f2f2f2);
+          padding: 40px;
+        ">
+      <div class="title-section" style="text-align: center; margin-bottom: 30px">
+        <h3 id="#ict-directors-csirt">
+          Enhancing Cybersecurity Capacity in African Higher Education: ICT
+          Directors Trained in CSIRT and Incident Response
+        </h3>
+        <!-- <h2>A Call to Action</h2> -->
+      </div>
+
+      <div class="article">
+        <img src="img/ict_2.jpg" alt="Team Photo" />
+        <!-- <h3>
+            CESA 2026–2035: A Vision for Inclusive, Future-Ready Education
+          </h3> -->
+        <!-- <div class="author">By L. Abidou & R. Traore</div> -->
+        <p>
+          As cyber threats continue to rise in both complexity and frequency,
+          so must African higher education institutions (HEIs) be equipped
+          with the necessary digital infrastructure, physical structures, and
+          in-depth knowledge to protect the cyber space. With this in mind,
+          the Association of African Universities (AAU), partnering with the
+          Forum of Incident Response and Security Teams (FIRST), has organized
+          a two-day transformative learning workshop for ICT Directors from
+          Africa’s HEIs. Organized from July 19 to 20, 2025, this insightful
+          masterclass formed part of AAU’s ongoing 16th Quadrennial General
+          Conference in Rabat, Morocco. Themed Building and Operationalizing
+          Computer Security Incident Response Teams, the workshop convened ICT
+          directors from Africa’s HEIs to learn, collaborate, and most
+          importantly to be equipped with the necessary skills and tools to
+          effectively lead their respective institutions’ cybersecurity
+          initiatives.
+        </p>
+
+        <div class="image-row" style="
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 30px; 
+  flex-wrap: wrap;
+">
+          <img src="img/ict_1.jpg" alt="Image 1" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+          <img src="img/ict_img1.JPG" alt="Image 2" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+          <p>
+            In his opening remarks, FIRST’s African Regional Liaison, Eric
+            Akumiah, highlighted the rise of cyber threats and cyber-attacks
+            worldwide and how the Forum, by enhancing cooperation among security
+            teams, was poised to tackle the menace. He revealed the
+            organization’s ongoing efforts under the Africa Cyber Programme, a
+            UK-funded initiative, to support cybersecurity capacity building
+            across the continent.
+          </p>
+          <p style="text-align: center; margin-top: 30px">
+            <a href="https://aau.org/2025/07/enhancing-cybersecurity-capacity-in-african-higher-education-ict-directors-trained-in-csirt-and-incident-response/"
+              style="
+                background: #4a90e2;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+              " target="_blank">
+              Find out More
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="page-container page-2" style="background: linear-gradient(135deg, #ffffff); padding: 40px">
+      <div class="title-section" style="text-align: center; margin-bottom: 30px">
+        <h3 id="#communication-partnerships">
+          Forging Connections: Pre-General Conference Workshop Highlights Role
+          of Communications and Partnerships in Policy Reforms
+        </h3>
+        <!-- <h2>A Call to Action</h2> -->
+      </div>
+
+      <div class="article">
+        <img src="img/policy_1.jpg" alt="Team photo" />
+
+        <p>
+          Ahead of the 16th Quadrennial General Conference of the Association
+          of African Universities (AAU), a two-day pre-conference workshop was
+          held from July 19 to 20, 2025, at the University Mohammed V (UM5) of
+          Rabat, Morocco. Under the theme “Driving Policy Through Research,
+          Communication, and Partnerships for Institutional Transformation,”
+          the workshop brought together academics, researchers, institutional
+          leaders, and policy influencers from across Africa to explore how
+          research, communication, and strategic partnerships could inform
+          institutional transformation across Africa.
+        </p>
+        <div class="image-row" style="
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 30px; 
+  flex-wrap: wrap;
+">
+          <img src="img/policy_2.jpg" alt="Image 1" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+          <img src="img/policy_3.jpg" alt="Image 2" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+          <p>
+            The workshop featured a series of interactive sessions led by three
+            facilitators, Dr. Konosoang Sobane, Ing. Ilyas Azzioui, and Prof.
+            Sanaa Zebakh. Participants engaged in practical exercises, case
+            studies, and collaborative group work to equip themselves with tools
+            and frameworks to drive change in their institutions. The sessions
+            covered topics such as crafting of policy briefs, science-policy
+            communication, and public-private partnerships (PPPs), all tailored
+            to the African higher education context.
+          </p>
+          <p style="text-align: center; margin-top: 30px">
+            <a href="https://aau.org/2025/07/forging-connections-pre-general-conference-workshop-highlights-role-of-communications-and-partnerships-in-policy-reforms/"
+              style="
+                background: #4a90e2;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+              " target="_blank">
+              Find out More
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div class="page-container page-2" style="
+          background: linear-gradient(135deg, #e0e8f0, #f2f2f2);
+          padding: 40px;
+        ">
+      <div class="title-section" style="text-align: center; margin-bottom: 30px">
+        <h3 id="#collective-intelligence">
+          Driving Innovation Through Collective Intelligence in African Higher
+          Education
+        </h3>
+        <!-- <h2>A Call to Action</h2> -->
+      </div>
+
+      <div class="article">
+        <img src="img/inno_2.jpg" alt="Team Photo" />
+        <!-- <h3>
+            CESA 2026–2035: A Vision for Inclusive, Future-Ready Education
+          </h3> -->
+        <!-- <div class="author">By L. Abidou & R. Traore</div> -->
+        <p>
+          As African universities navigate growing expectations to drive
+          innovation, address development challenges, and prepare future-ready
+          graduates, institutional transformation is no longer optional. It is
+          both essential and strategic. At the 16th Quadrennial General
+          Conference of the Association of African Universities (AAU), holding
+          in Rabat, Morocco, from July 21 to 25, 2025, two presentations from
+          Professor Lex Paulsen and Dr. Rachid Serraj of University Mohammed
+          VI Polytechnic (UM6P) offered compelling insights into how
+          universities can lead this transformation. The first, delivered by
+          Professor Paulsen, introduced UM6P’s internal planning model, Vision
+          2030, which seeks to redefine institutional strategy through
+          inclusive, bottom-up engagement. The second presentation, made by
+          Dr. Serraj, proposed a continent-wide framework grounded in
+          collective intelligence to foster collaboration, innovation, and
+          long-term impact.
+        </p>
+                  <div class="image-row" style="
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 30px; 
+  flex-wrap: wrap;
+">
+  <img src="img/inno_1.jpg" alt="Image 1" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+  <img src="img/inno_3.jpg" alt="Image 2" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+      </div>
+      
+        <p style="text-align: center; margin-top: 30px">
+          <a href="https://aau.org/2025/07/driving-innovation-through-collective-intelligence-in-african-higher-education/"
+            style="
+                background: #4a90e2;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+              " target="_blank">
+            Find out More
+          </a>
+        </p>
+      </div>
+      <!-- Page 2 -->
+
+    </div>
+    <div class="page-container page-2" style="background: linear-gradient(135deg, #ffffff); padding: 40px">
+      <div class="title-section" style="text-align: center; margin-bottom: 30px">
+        <h3 id="#converging-visions">
+          AAU-UNESCO Executive Leadership Training at 16th AAU General
+          Conference in Rabat, Morocco
+        </h3>
+        <!-- <h2>A Call to Action</h2> -->
+      </div>
+      <!-- <div
+          class="title-section"
+          style="text-align: center; margin-bottom: 30px"
+        >
+          <h1>Education for Sustainable Development in Africa</h1>
+          <h2>A Call to Action</h2>
+        </div> -->
+
+      <div class="article">
+        <img src="img/unesco_1.JPG" alt="Team photo" />
+
+        <!-- <div class="author">By S. Diallo</div> -->
+        <p>
+          The Association of African Universities (AAU), in collaboration with
+          UNESCO, launched its Executive Leadership Training Programme on
+          Sunday, July 20, 2025, at the UNESCO Regional Office for the Maghreb
+          in Rabat, Morocco. The venue symbolizes UNESCO’s commitment to
+          regional collaboration and leadership development in African higher
+          education.
+        </p>
+                  <div class="image-row" style="
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 30px; 
+  flex-wrap: wrap;
+">
+  <img src="img/unesco_2.jpg" alt="Image 1" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+  <img src="img/unesco_3.jpg" alt="Image 2" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+        <p>
+          This initiative aligns with SDG 4 (Quality Education) and SDG 5
+          (Gender Equality) and contributes to UNESCO’s Campus Africa
+          Flagship.
+        </p>
+        <p style="text-align: center; margin-top: 30px">
+          <a href="https://aau.org/2025/07/aau-unesco-executive-leadership-training-at-16th-aau-general-conference-in-rabat-morocco/"
+            style="
+                background: #4a90e2;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+              " target="_blank">
+            Find out More
+          </a>
+        </p>
+      </div>
+    </div>
+    </div>
+    <div class="page-container page-2" style="
+          background: linear-gradient(135deg, #e0e8f0, #f2f2f2);
+          padding: 40px;
+        ">
+      <div class="title-section" style="text-align: center; margin-bottom: 30px">
+        <h3 id="#leading-lights">
+          Leading lights in Africa’s higher education honoured by the
+          Association of African Universities
+        </h3>
+        <!-- <h2>A Call to Action</h2> -->
+      </div>
+
+      <div class="article">
+        <img src="img/lead_1.jpg" alt="Team Photo" />
+        <!-- <h3>
+            CESA 2026–2035: A Vision for Inclusive, Future-Ready Education
+          </h3> -->
+        <!-- <div class="author">By L. Abidou & R. Traore</div> -->
+        <p>
+          The AAU Higher Education Excellence Awards ceremony, held at the
+          16th Quadrennial General Conference at the University Mohammed VI
+          Polytechnique in Rabat, Morocco, celebrated visionary leaders
+          shaping the future of academia. From groundbreaking research to
+          transformative educational initiatives, these honorees exemplify
+          innovation and dedication. Their inspiring contributions are setting
+          new benchmarks in higher education, and their stories promise a
+          captivating glimpse into the possibilities of academic excellence
+          and leadership.
+                  <div class="image-row" style="
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 30px; 
+  flex-wrap: wrap;
+">
+  <img src="img/lead_2.jpg" alt="Image 1" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " />
+  <img src="img/lead_3.jpg" alt="Image 2" style="
+    width: 250px; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    flex: 1 1 200px;
+    min-width: 150px;
+  " /></div>
+        </p>
+
+        <p style="text-align: center; margin-top: 30px">
+          <a href="https://aau.org/2025/07/leading-lights-in-africas-higher-education-honoured-by-the-association-of-african-universities/"
+            style="
+                background: #4a90e2;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+              " target="_blank">
+            Find out More
+          </a>
+        </p>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer" style="background: #2a3962">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4 class="footer-title">Contact Us</h4>
+
+          <i class="fas fa-map-marker-alt"></i> Association of African
+          Universities, East-Legon, Accra, Ghana
+          </li>
+          <!-- <li><i class="fas fa-phone"></i> +233-547-728975</li> -->
+          <!-- <li><i class="fas fa-envelope"></i>smkandawire@aau.org</li> -->
+
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Connect With Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/AAU67/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/aau_67" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg" class="social-icon"><i
+                class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.flickr.com/people/aau-africa/" class="social-icon"><i class="fab fa-flickr"></i></a>
+            <a href="https://www.linkedin.com/company/association-of-african-universities" class="social-icon"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; Association of African Universities.
+        All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
