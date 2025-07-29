@@ -6,585 +6,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AAU General Conference Newsletter</title>
 
-  <style>
-    /* --- Base & Font Styles --- */
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      background-color: #e9e9e9;
-    }
 
-    /* --- Main Newsletter Container --- */
-    .newsletter-container {
-      max-width: 850px;
-      margin: 0 auto;
-      background-color: #ffffff;
-      border: 1px solid #d1d1d1;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    /* --- Header Section --- */
-    .header {
-      padding: 15px 30px;
-      border-bottom: 1px solid #eee;
-      background-color: #f8f9fa;
-    }
-
-    .header .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: #6c757d;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 15px;
-    }
-
-    .header .main-logo-container {
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    .header .main-logo {
-      max-width: 80%;
-      height: auto;
-    }
-
-    .hosts-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15px;
-      padding-top: 15px;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .hosts-section .host-title {
-      font-weight: bold;
-      color: #343a40;
-      margin-right: 20px;
-      font-size: 15px;
-    }
-
-    .hosts-section .host-logo {
-      max-height: 50px;
-      margin: 0 15px;
-    }
-
-    /* --- Hero Image --- */
-    .hero-image-container img {
-      width: 100%;
-      display: block;
-    }
-
-    /* --- Main Content Layout --- */
-    .content-body {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #ffffff;
-    }
-
-    /* --- Sidebar--- */
-    .sidebar {
-      flex: 0 0 250px;
-      background-color: #2a3962;
-      color: #ffffff;
-      padding: 25px;
-      box-sizing: border-box;
-    }
-
-    .sidebar h2 {
-      font-family: "Helvetica", "Arial Black", sans-serif;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 0;
-      padding-bottom: 10px;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    }
-
-    .sidebar ul {
-      padding: 0;
-      margin: 0;
-    }
-
-    .sidebar ul li {
-      margin: 20px 0;
-    }
-
-    .sidebar ul li a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 1.4;
-      transition: color 0.3s;
-    }
-
-    .sidebar ul li a:hover {
-      color: #d9532c;
-    }
-
-    /* .sidebar ul li.featured a {
-      font-size: 18px;
-      color: #fff;
-    } */
-
-    /* --- Main Article --- */
-    .main-article {
-      flex: 1;
-      padding: 25px 35px;
-      box-sizing: border-box;
-    }
-
-    .main-article h1 {
-      font-family: "Georgia", serif;
-      font-size: 32px;
-      line-height: 1.2;
-      color: #d9532c;
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-
-    .main-article .byline {
-      font-size: 14px;
-      color: #6c757d;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    .main-article .article-text {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #343a40;
-      text-align: justify;
-    }
-
-    /* --- Additional Articles --- */
-    .article-section {
-      padding: 25px 35px;
-      border-top: 1px solid #eee;
-      background-color: #ffffff;
-    }
-
-    .article-section:nth-child(even) {
-      background: linear-gradient(135deg, #e0e8f0, #f2f2f2);
-    }
-
-    .article-section h3 {
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-      color: #2c315f;
-      text-align: center;
-    }
-
-    .article-section img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin: 15px 0;
-    }
-
-    .article-section p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: #333;
-      text-align: justify;
-      margin-bottom: 15px;
-    }
-
-    .image-row {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-
-    .image-row img {
-      width: 250px;
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
-      flex: 1 1 200px;
-      min-width: 150px;
-    }
-
-    .more-link {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .more-link a {
-      background: #4a90e2;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .more-link a:hover {
-      background: #357abd;
-    }
-
-    /* --- Footer --- */
-    .footer {
-      background: #2a3962;
-      color: white;
-      padding: 30px 40px;
-      text-align: center;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .footer-section {
-      flex: 1;
-      min-width: 200px;
-      text-align: left;
-    }
-
-    .footer-title {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      color: #e2e8f0;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .social-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      color: white;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .social-icon:hover {
-      background: #d9532c;
-      transform: translateY(-3px);
-    }
-
-    .copyright {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.9rem;
-      color: #a0aec0;
-    }
-
-    /* --- Responsive Adjustments --- */
-    @media (max-width: 768px) {
-      .content-body {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        flex: 1 1 auto;
-      }
-
-      .main-article h1 {
-        font-size: 28px;
-      }
-
-      .article-section h3 {
-        font-size: 1.2rem;
-      }
-
-      .footer-content {
-        flex-direction: column;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .image-row {
-        flex-direction: column !important;
-        align-items: center;
-        gap: 10px !important;
-      }
-
-      .image-row img {
-        width: 90% !important;
-        min-width: unset !important;
-        max-width: 350px !important;
-      }
-    }
-
-    .video-link:hover {
-      color: #fff700 !important;
-      background: rgba(255, 215, 0, 0.08);
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .video-link:hover i {
-      color: #fff700 !important;
-      transition: color 0.2s;
-    }
-
-
-    .header {
-      /* max-width: 800px; */
-      /* margin: 0 auto; */
-      /* background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%); */
-      /* border-radius: 20px; */
-      box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.1),
-        0 0 0 1px rgba(255, 255, 255, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
-      /* overflow: hidden; */
-      position: relative;
-    }
-
-    .header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #2c315f, #4a527a, #2c315f);
-      background-size: 300% 100%;
-      animation: gradientShift 8s ease-in-out infinite;
-    }
-
-
-
-
-    .title {
-      font-weight: 700;
-      color: #2c315f;
-      line-height: 1.2;
-      max-width: 65%;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(135deg, #2c315f 0%, #4a527a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .date {
-      font-size: 1.1rem;
-      color: #2c315f;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 25px;
-      border: 2px solid rgba(44, 49, 95, 0.2);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 15px rgba(44, 49, 95, 0.15);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .date::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-      transition: left 0.5s;
-    }
-
-    .date:hover::before {
-      left: 100%;
-    }
-
-
-
-
-
-
-
-    .host-title {
-      font-size: 1.1rem;
-      color: #2c315f;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      position: relative;
-    }
-
-    .host-title::after {
-      content: '';
-      position: absolute;
-      right: -15px;
-      top: 50%;
-      width: 6px;
-      height: 6px;
-      background: #2c315f;
-      border-radius: 50%;
-      transform: translateY(-50%);
-    }
-
-    .host-logo {
-      height: 50px;
-      width: auto;
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
-      transition: all 0.3s ease;
-      border-radius: 8px;
-    }
-
-    .host-logo:hover {
-      transform: translateY(-2px) scale(1.05);
-      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .header {
-        margin: 10px;
-        border-radius: 15px;
-      }
-
-      .top-bar {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 30px 20px;
-        gap: 20px;
-      }
-
-      .title {
-        font-size: 1.3rem;
-        max-width: 100%;
-      }
-
-      .date {
-        font-size: 1rem;
-        padding: 10px 16px;
-      }
-
-      .main-logo-container,
-      .hosts-section {
-        padding: 25px 30px;
-      }
-
-      .main-logo-container img {
-        max-width: 280px;
-      }
-
-      .hosts-section {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .host-title::after {
-        display: none;
-      }
-    }
-
-    /* Subtle animations */
-    .header {
-      animation: slideInUp 0.8s ease-out;
-    }
-
-    @keyframes slideInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
 </head>
 
-<body>
-  <div class="newsletter-container">
-    <header class="header">
-      <div class="top-bar">
-        <h1 class="title">16th AAU General Conference Special Newsletter – Edition 1</h1>
-        <span class="date">July 29, 2025</span>
+<body style="  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e9e9e9;">
+
+  <div style="  max-width: 850px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+
+    <!-- Header Section -->
+    <header style="  background-color: #f8f9fa;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.2), inset 0 1px 0 rgba(255,255,255,0.8);
+  position: relative; overflow: hidden;">
+
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, #2c315f, #4a527a, #2c315f);"></div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center;
+    font-size: 12px; color: #6c757d; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; padding-top: 10px;
+    background-color: #f8fafd; width: 100%;">
+
+        <h1 style="margin: 0 0 10px 0; font-size: 24px; font-weight: 700; color: #2c315f; line-height: 1.2; padding-top: 15px;
+      max-width: 90%; text-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+          16th AAU General Conference Special Newsletter – Edition 1
+        </h1>
+        <br>
+        <span style="font-size: 0.9rem; color: #2c315f; font-weight: 500; letter-spacing: 0.5px;
+      text-transform: uppercase; padding: 8px 15px; background: rgba(255,255,255,0.9); border-radius: 20px;
+      border: 1px solid rgba(44,49,95,0.1); box-shadow: 0 2px 8px rgba(44,49,95,0.1);">
+          July 29, 2025
+        </span>
       </div>
-      <div class="main-logo-container">
+
+      <div
+        style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; background:linear-gradient(135deg,#e0e8f0,#f2f2f2);">
         <img src="https://aau.org/subs/newsletters/aau-16-gencon-01.png" alt="AAU General Conference Logo"
-          style="max-width: 300px; height: auto;" />
-      </div>
-      <div class="hosts-section">
-        <!-- <span class="host-title">Hosted by</span> -->
-        <img class="host-logo" src="https://aau.org/subs/newsletters/logo.png"
-          alt="African Association of Universities Logo" />
+          style="max-width: 45%; height: auto; display: block; margin: 0; flex-grow: 1; object-fit: contain;">
+        <img src="https://aau.org/subs/newsletters/logo.png" alt="African Association of Universities Logo"
+          style="max-width: 45%; height: auto; display: block; margin: 0; flex-grow: 1; object-fit: contain;">
       </div>
     </header>
+<div style="
+  display:block;
+  width:100%;
+  max-width:100%; 
+  margin:0 auto;
+  overflow:hidden;
+  box-sizing:border-box;
+">
+  <img 
+    src="https://aau.org/subs/newsletters/cover_2.jpg" 
+    alt="Event Group Photo" 
+    style="
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:cover;
+      max-width:100%;
+    " 
+  />
+</div>
 
-    <div class="hero-image-container">
-      <img src="https://aau.org/subs/newsletters/cover_2.jpg" alt="Event Group Photo" />
-    </div>
 
-    <div class="content-body">
-      <aside class="sidebar">
-        <h2>In This Issue</h2>
-        <ul>
-          <li><a href="#gen-conference">16th General Conference Charts Bold Future for African Higher
-              Education</a></li>
-          <li><a href="#af-rid-network"> AAU Unveils AfRID Network's Digital Platform </a></li>
-          <li><a href="#leading-light">Leading lights in Africa’s higher education Honoured by the AAU</a></li>
-          <li><a href="#cybersecurity">Enhancing Cybersecurity Capacity in African Higher Education</a></li>
-          <li><a href="#pre-gen-conference">Forging Connections: Role of Communications and Partnerships in Policy
-              Reforms</a></li>
-          <li><a href="#innovation">Innovation on Display: African HEIs Shine at AAU Conference Exhibition</a></li>
-          <li><a href="#collective-intelligence">Driving Innovation through Collective Intelligence in African Higher
-              Education</a></li>
-          <li><a href="#executive-leadership">AAU-UNESCO Executive Leadership Training at 16th AAU General
-              Conference</a></li>
-          <li><a href="#communique">Communique of the 16th General Conference of the Association of African
-              Universities</a></li>
+    <div style="display: flex; flex-wrap: wrap; background-color: #ffffff;">
+      <aside style="flex: 0 0 300px; background-color: #2a3962; color: #ffffff; padding: 25px; box-sizing: border-box;">
+        <h2
+          style="font-family: 'Helvetica', 'Arial Black', sans-serif; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; padding-bottom: 10px; border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
+          In This Issue
+        </h2>
+        <ul style="padding: 0; margin: 0;">
+          <li style="margin: 20px 0;">
+            <a href="#gen-conference"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              16th General Conference Charts Bold Future for African Higher Education
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#af-rid-network"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              AAU Unveils AfRID Network's Digital Platform
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#leading-light"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              Leading lights in Africa's higher education Honoured by the AAU
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#cybersecurity"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              Enhancing Cybersecurity Capacity in African Higher Education
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#pre-gen-conference"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              Forging Connections: Role of Communications and Partnerships in Policy Reforms
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#innovation"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              Innovation on Display: African HEIs Shine at AAU Conference Exhibition
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#collective-intelligence"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              Driving Innovation through Collective Intelligence in African Higher Education
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#executive-leadership"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              AAU-UNESCO Executive Leadership Training at 16th AAU General Conference
+            </a>
+          </li>
+          <li style="margin: 20px 0;">
+            <a href="#communique"
+              style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: bold; line-height: 1.4;"
+              onmouseover="this.style.color='#d9532c'" onmouseout="this.style.color='#ffffff'">
+              Communique of the 16th General Conference of the Association of African Universities
+            </a>
+          </li>
         </ul><br><br>
 
-        <h2>Daily Video Highlights</h2>
+        <h2
+          style="font-family: 'Helvetica', 'Arial Black', sans-serif; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; padding-bottom: 10px; border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
+          Daily Video Highlights
+        </h2>
         <ul style="list-style: none; padding: 0; margin: 0;">
           <li style="margin-bottom: 12px;">
             <a href="https://www.youtube.com/watch?v=xXiBAXIOGTU&list=PLhbR8lC_mvZoWzYK-j3Gn_BMlk3o8zMiV&index=3"
-              target="_blank" class="video-link"
-              style="color: #ffd700; text-decoration: none; display: flex; align-items: center;">
+              target="_blank" style="color: #ffd700; text-decoration: none; display: flex; align-items: center;"
+              onmouseover="this.style.background='rgba(255, 215, 0, 0.08)'; this.style.color='#fff700'; this.style.borderRadius='6px';"
+              onmouseout="this.style.background='transparent'; this.style.color='#ffd700';">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                 style="margin-right: 8px; vertical-align: middle; fill: #ffd700;" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" fill="#ffd700" />
-                <polygon points="10,8 16,12 10,16" fill="#fff" />
+                <circle cx="12" cy="12" r="10" fill="#ffd700"></circle>
+                <polygon points="10,8 16,12 10,16" fill="#fff"></polygon>
               </svg>
               Day 1: 16th AAU General Conference
             </a>
           </li>
           <li style="margin-bottom: 12px;">
             <a href="https://www.youtube.com/watch?v=UNDi6TNNCCw&list=PLhbR8lC_mvZoWzYK-j3Gn_BMlk3o8zMiV&index=2"
-              target="_blank" class="video-link"
-              style="color: #ffd700; text-decoration: none; display: flex; align-items: center;">
+              target="_blank" style="color: #ffd700; text-decoration: none; display: flex; align-items: center;"
+              onmouseover="this.style.background='rgba(255, 215, 0, 0.08)'; this.style.color='#fff700'; this.style.borderRadius='6px';"
+              onmouseout="this.style.background='transparent'; this.style.color='#ffd700';">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                 style="margin-right: 8px; vertical-align: middle; fill: #ffd700;" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" fill="#ffd700" />
-                <polygon points="10,8 16,12 10,16" fill="#fff" />
+                <circle cx="12" cy="12" r="10" fill="#ffd700"></circle>
+                <polygon points="10,8 16,12 10,16" fill="#fff"></polygon>
               </svg>
               Day 2: 16th AAU General Conference
             </a>
           </li>
-          <li>
+          <li style="margin-bottom: 12px;">
             <a href="https://www.youtube.com/watch?v=xfhO0iSKUtc&list=PLhbR8lC_mvZoWzYK-j3Gn_BMlk3o8zMiV&index=1"
-              target="_blank" class="video-link"
-              style="color: #ffd700; text-decoration: none; display: flex; align-items: center;">
+              target="_blank" style="color: #ffd700; text-decoration: none; display: flex; align-items: center;"
+              onmouseover="this.style.background='rgba(255, 215, 0, 0.08)'; this.style.color='#fff700'; this.style.borderRadius='6px';"
+              onmouseout="this.style.background='transparent'; this.style.color='#ffd700';">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                 style="margin-right: 8px; vertical-align: middle; fill: #ffd700;" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" fill="#ffd700" />
@@ -593,9 +190,11 @@
               Day 3: 16th AAU General Conference
             </a>
           </li>
-          <li>
-            <a href="https://youtu.be/MrALde7WZio" target="_blank" class="video-link"
-              style="color: #ffd700; text-decoration: none; display: flex; align-items: center;">
+          <li style="margin-bottom: 12px;">
+            <a href="https://youtu.be/MrALde7WZio" target="_blank"
+              style="color: #ffd700; text-decoration: none; display: flex; align-items: center;"
+              onmouseover="this.style.background='rgba(255, 215, 0, 0.08)'; this.style.color='#fff700'; this.style.borderRadius='6px';"
+              onmouseout="this.style.background='transparent'; this.style.color='#ffd700';">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                 style="margin-right: 8px; vertical-align: middle; fill: #ffd700;" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" fill="#ffd700" />
@@ -605,8 +204,10 @@
             </a>
           </li>
           <li>
-            <a href="https://youtu.be/hotAKEKciEg" target="_blank" class="video-link"
-              style="color: #ffd700; text-decoration: none; display: flex; align-items: center;">
+            <a href="https://youtu.be/hotAKEKciEg" target="_blank"
+              style="color: #ffd700; text-decoration: none; display: flex; align-items: center;"
+              onmouseover="this.style.background='rgba(255, 215, 0, 0.08)'; this.style.color='#fff700'; this.style.borderRadius='6px';"
+              onmouseout="this.style.background='transparent'; this.style.color='#ffd700';">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                 style="margin-right: 8px; vertical-align: middle; fill: #ffd700;" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" fill="#ffd700" />
@@ -618,113 +219,206 @@
         </ul>
         <br><br>
 
-        <h2>Follow Our Socials</h2>
-        <div class="social-icons" style="display: flex; gap: 16px; margin-top: 10px;">
-            <a href="https://www.facebook.com/AAU67/" class="social-icon" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
-                <path
-                  d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.316C0 23.4.6 24 1.325 24h11.494v-9.294H9.847v-3.622h2.972V8.413c0-2.943 1.796-4.551 4.417-4.551 1.255 0 2.336.093 2.649.135v3.07l-1.818.001c-1.427 0-1.704.678-1.704 1.672v2.191h3.408l-.444 3.622h-2.964V24h5.813C23.4 24 24 23.4 24 22.658V1.342C24 .6 23.4 0 22.675 0z" />
-              </svg>
-            </a>
+        <h2 style="
+  font-family: 'Helvetica', 'Arial Black', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+">
+          Follow Our Socials
+        </h2>
 
-            <a href="https://www.twitter.com/aau_67" class="social-icon" aria-label="Twitter">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
-                <path
-                  d="M24 4.556c-.883.392-1.832.656-2.828.775a4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.924 4.924 0 0 0-8.384 4.482A13.978 13.978 0 0 1 1.67 3.149a4.922 4.922 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.23-.616v.062a4.926 4.926 0 0 0 3.946 4.827 4.93 4.93 0 0 1-2.224.084 4.926 4.926 0 0 0 4.6 3.417A9.867 9.867 0 0 1 0 19.54 13.944 13.944 0 0 0 7.548 22c9.057 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.556z" />
-              </svg>
-            </a>
+        <div style="display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
 
-            <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg" class="social-icon" aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
-                <path
-                  d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.117C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.392.569a2.99 2.99 0 0 0-2.106 2.117C0 8.083 0 12 0 12s0 3.917.502 5.814a2.99 2.99 0 0 0 2.106 2.117C4.495 20.5 12 20.5 12 20.5s7.505 0 9.392-.569a2.99 2.99 0 0 0 2.106-2.117C24 15.917 24 12 24 12s0-3.917-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
-              </svg>
-            </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/AAU67/" aria-label="Facebook" style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    " onmouseover="this.style.background='#d9532c'; this.style.transform='translateY(-3px)'"
+            onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+              <path
+                d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.316C0 23.4.6 24 1.325 24h11.494v-9.294H9.847v-3.622h2.972V8.413c0-2.943 1.796-4.551 4.417-4.551 1.255 0 2.336.093 2.649.135v3.07l-1.818.001c-1.427 0-1.704.678-1.704 1.672v2.191h3.408l-.444 3.622h-2.964V24h5.813C23.4 24 24 23.4 24 22.658V1.342C24 .6 23.4 0 22.675 0z" />
+            </svg>
+          </a>
 
-            <a href="https://www.flickr.com/photos/aau-africa/albums/" class="social-icon" aria-label="Flickr">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
-                <circle cx="6.5" cy="12" r="4.5" />
-                <circle cx="17.5" cy="12" r="4.5" />
-              </svg>
-            </a>
+          <!-- Twitter -->
+          <a href="https://www.twitter.com/aau_67" aria-label="Twitter" style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    " onmouseover="this.style.background='#d9532c'; this.style.transform='translateY(-3px)'"
+            onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+              <path
+                d="M24 4.556c-.883.392-1.832.656-2.828.775a4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.924 4.924 0 0 0-8.384 4.482A13.978 13.978 0 0 1 1.67 3.149a4.922 4.922 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.23-.616v.062a4.926 4.926 0 0 0 3.946 4.827 4.93 4.93 0 0 1-2.224.084 4.926 4.926 0 0 0 4.6 3.417A9.867 9.867 0 0 1 0 19.54 13.944 13.944 0 0 0 7.548 22c9.057 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.556z" />
+            </svg>
+          </a>
 
-            <a href="https://www.linkedin.com/company/association-of-african-universities" class="social-icon"
-              aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
-                <path
-                  d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0zM7.118 20.452H3.56V9h3.559v11.452zM5.338 7.594a2.064 2.064 0 1 1 0-4.128 2.064 2.064 0 0 1 0 4.128zm15.114 12.858h-3.559v-5.828c0-1.388-.025-3.176-1.936-3.176-1.938 0-2.236 1.513-2.236 3.078v5.926h-3.559V9h3.418v1.561h.049c.477-.901 1.64-1.85 3.377-1.85 3.61 0 4.276 2.376 4.276 5.467v6.274z" />
-              </svg>
-            </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg" aria-label="YouTube" style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    " onmouseover="this.style.background='#d9532c'; this.style.transform='translateY(-3px)'"
+            onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+              <path
+                d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.117C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.392.569a2.99 2.99 0 0 0-2.106 2.117C0 8.083 0 12 0 12s0 3.917.502 5.814a2.99 2.99 0 0 0 2.106 2.117C4.495 20.5 12 20.5 12 20.5s7.505 0 9.392-.569a2.99 2.99 0 0 0 2.106-2.117C24 15.917 24 12 24 12s0-3.917-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
+            </svg>
+          </a>
+
+          <!-- Flickr -->
+          <a href="https://www.flickr.com/photos/aau-africa/albums/" aria-label="Flickr" style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    " onmouseover="this.style.background='#d9532c'; this.style.transform='translateY(-3px)'"
+            onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+              <circle cx="6.5" cy="12" r="4.5" />
+              <circle cx="17.5" cy="12" r="4.5" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/association-of-african-universities" aria-label="LinkedIn" style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    " onmouseover="this.style.background='#d9532c'; this.style.transform='translateY(-3px)'"
+            onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+              <path
+                d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0zM7.118 20.452H3.56V9h3.559v11.452zM5.338 7.594a2.064 2.064 0 1 1 0-4.128 2.064 2.064 0 0 1 0 4.128zm15.114 12.858h-3.559v-5.828c0-1.388-.025-3.176-1.936-3.176-1.938 0-2.236 1.513-2.236 3.078v5.926h-3.559V9h3.418v1.561h.049c.477-.901 1.64-1.85 3.377-1.85 3.61 0 4.276 2.376 4.276 5.467v6.274z" />
+            </svg>
+          </a>
+
+        </div>
 
       </aside>
 
       <!-- Article 1 -->
-      <article class="main-article" id="gen-conference">
-        <h1>AAU 16th General Conference Charts Bold Future for African Higher Education</h1>
-        <p class="article-text">The Association of African Universities (AAU) has returned to its founding city, Rabat
+      <article style="flex: 1; padding: 30px; max-width: 100%; box-sizing: border-box; word-wrap: break-word;"
+        id="gen-conference">
+        <h1 style="color: #2a3962; font-size: 28px; margin-bottom: 20px; line-height: 1.3; word-wrap: break-word;">
+          AAU 16th General Conference Charts Bold Future for African Higher Education
+        </h1>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px; color: #333;">
+          The Association of African Universities (AAU) has returned to its founding city, Rabat
           in Morocco for its 16th Quadrennial General Conference, marking a historic homecoming 58 years after its
           establishment in 1967. Close to 500 higher education thought leaders, including university vice-chancellors,
           researchers, policymakers, industry players, and development partners, converged at the conference, held from
-          Monday, 21 July 2025 to today, Friday, 25 July 2025.</p>
-        <p class="article-text">
+          Monday, 21 July 2025 to today, Friday, 25 July 2025.
+        </p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px; color: #333;">
           Hosted by University Mohammed VI Polytechnic (UM6P), the landmark conference, themed
           <b>Shaping the Future of Higher Education for Innovation and Sustainable Development in Africa</b>,
           spotlighted Africa's pressing education issues—from demographic surge
           and digital transformation to equity and research sovereignty — while presenting bold, actionable solutions to
           reengineer the continent's higher education systems for long-term, sustainable impact.
         </p>
-        <div class="image-row">
-          <img src="https://aau.org/subs/newsletters/1.jpg" alt="Image 1" />
-          <img src="https://aau.org/subs/newsletters/2.jpg" alt="Image 2" />
+        <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+          <img src="https://aau.org/subs/newsletters/1.jpg" alt="Image 1"
+            style="width: 48%; height: auto; border-radius: 5px; display:block;" />
+          <img src="https://aau.org/subs/newsletters/2.jpg" alt="Image 2"
+            style="width: 48%; height: auto; border-radius: 5px; display:block;" />
         </div>
-        <p class="article-text">
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px; color: #333;">
           Setting the tone at the opening plenary, Prof. Hicham El Habti, President of UM6P, urged African universities
           to transcend their traditional roles and act as "living laboratories" to drive the real-world change it is
           seeking. "African universities must become engines of knowledge and innovation. Collaboration and resilience
           are no longer optional — they are our lifelines," he emphasized.
         </p>
-        <div class="more-link">
+        <div style="text-align:center; margin-top:20px;">
           <a href="https://aau.org/2025/07/press-release-aau-16th-general-conference-charts-bold-future-for-african-higher-education/"
-            target="_blank">
-            Find out More
+            target="_blank"
+            style="background:#4a90e2; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none; display:inline-block;">
+            Find Out More
           </a>
         </div>
       </article>
+
     </div>
 
     <!-- Article 2 -->
-    <div class="article-section" id="af-rid-network">
-      <h3>AAU Unveils AfRID Network's Digital Platform to Revolutionalise Research Collaboration Across Africa</h3>
-      <img src="https://aau.org/subs/newsletters/Afrid-Dashboard.jpg" alt="Team Photo" />
-      <p>
+    <div class="article-section" id="af-rid-network"
+      style="padding:25px 35px;border-top:1px solid #eee;background:linear-gradient(135deg,#e0e8f0,#f2f2f2);">
+      <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #2c315f; text-align: center;">AAU Unveils AfRID
+        Network's Digital Platform to Revolutionalise Research Collaboration Across Africa</h3>
+      <img src="https://aau.org/subs/newsletters/Afrid-Dashboard.jpg" alt="Team Photo"
+        style="width: 100%; height: auto; border-radius: 5px; margin: 15px 0;" />
+      <p style="font-size: 1.05rem; line-height: 1.6; color: #333; text-align: justify; margin-bottom: 15px;">
         A transformative new chapter in African higher education and research was written today as the Secretary
         General of the Association of African Universities (AAU), Professor Olusola Bandele Oyewole, officially
         launched the <b>African Research Innovation and Development (AFRID) Network</b> digital platform during the
         16th AAU Quadrennial Conference in Rabat, Morocco. The unveiling of the AFRID Network marks a significant
         milestone in the continent's pursuit of a more interconnected, data-driven, and impactful research ecosystem.
       </p>
-      <div class="image-row">
-        <img src="https://aau.org/subs/newsletters/Afrid-Presentation-by-the-SG.jpg" alt="Image 1" />
-        <img src="https://aau.org/subs/newsletters/Afrid.jpg" alt="Image 2" />
+      <div class="image-row"
+        style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
+        <img src="https://aau.org/subs/newsletters/Afrid-Presentation-by-the-SG.jpg" alt="Image 1"
+          style="width: 250px; max-width: 100%; height: auto; border-radius: 5px; flex: 1 1 200px; min-width: 150px;" />
+        <img src="https://aau.org/subs/newsletters/Afrid.jpg" alt="Image 2"
+          style="width: 250px; max-width: 100%; height: auto; border-radius: 5px; flex: 1 1 200px; min-width: 150px;" />
       </div>
-      <p>Described as a groundbreaking initiative, the AFRID Network's platform is poised to dramatically reshape how
+      <p style="font-size: 1.05rem; line-height: 1.6; color: #333; text-align: justify; margin-bottom: 15px;">Described
+        as a groundbreaking initiative, the AFRID Network's platform is poised to dramatically reshape how
         African researchers, institutions, and communities collaborate, measure progress, and respond to the
         continent's most pressing challenges. At its core, AFRID is a digital infrastructure that combines powerful
         data analytics, artificial intelligence, and interactive visualization to provide stakeholders with
         unprecedented insights into the dynamics of academic research across Africa and beyond.</p>
-      <div class="more-link">
+      <div class="more-link" style="text-align: center; margin-top: 20px;">
         <a href="https://aau.org/2025/07/aau-unveils-afrid-networks-digital-platform-to-revolutionize-research-collaboration-across-africa/"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background: #4a90e2; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
 
     <!-- Article 3 -->
-    <div class="article-section" id="leading-light">
-      <h3>Leading lights in Africa's higher education honoured by the Association of African Universities</h3>
-      <img src="https://aau.org/subs/newsletters/lead_1.jpg" alt="Team Photo" />
-      <p>
+    <div class="article-section" id="leading-light"
+      style="padding: 25px 35px; border-top: 1px solid #eee; background: #ffffff;">
+      <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #2c315f; text-align: center;">Leading lights in Africa's
+        higher education honoured by the Association of African Universities</h3>
+      <img src="https://aau.org/subs/newsletters/lead_1.jpg" alt="Team Photo"
+        style="width: 100%; height: auto; border-radius: 5px; margin: 15px 0;" />
+      <p style="font-size: 1.05rem; line-height: 1.6; color: #333; text-align: justify; margin-bottom: 15px;">
         The AAU Higher Education Excellence Awards ceremony, held at the 16th Quadrennial General Conference at the
         University Mohammed VI Polytechnique in Rabat, Morocco, celebrated visionary leaders shaping the future of
         academia. <b>Professor El Fasi, Professor Is-Haq Olanrewaju Oloyede, and Professor Nana Aba Appiah Amfo were the
@@ -732,25 +426,31 @@
         contributions are setting new benchmarks in higher education, and their stories promise a captivating glimpse
         into the possibilities of academic excellence and leadership.
       </p>
-      <div class="image-row">
+      <div class="image-row"
+        style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
         <img src="https://aau.org/subs/newsletters/lead_2.jpg" alt="Image 1"
-          style="height: 270px; width: auto; object-fit: cover; object-position: top;" />
-        <img src="https://aau.org/subs/newsletters/lead_3.jpg" alt="Image 2" />
+          style="width: 250px; max-width: 100%; height: 270px; border-radius: 5px; flex: 1 1 200px; min-width: 150px; object-fit: cover; object-position: top;" />
+        <img src="https://aau.org/subs/newsletters/lead_3.jpg" alt="Image 2"
+          style="width: 250px; max-width: 100%; height: auto; border-radius: 5px; flex: 1 1 200px; min-width: 150px;" />
       </div>
-      <div class="more-link">
+      <div class="more-link" style="text-align: center; margin-top: 20px;">
         <a href="https://aau.org/2025/07/leading-lights-in-africas-higher-education-honoured-by-the-association-of-african-universities/"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background: #4a90e2; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
 
     <!-- Article 4 -->
-    <div class="article-section" id="cybersecurity">
-      <h3>Enhancing Cybersecurity Capacity in African Higher Education: ICT Directors Trained in CSIRT and Incident
+    <div class="article-section" id="cybersecurity"
+      style="padding:25px 35px;border-top:1px solid #eee;background:linear-gradient(135deg,#e0e8f0,#f2f2f2);">
+      <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #2c315f; text-align: center;">Enhancing Cybersecurity
+        Capacity in African Higher Education: ICT Directors Trained in CSIRT and Incident
         Response</h3>
-      <img src="https://aau.org/subs/newsletters/ict_2.jpg" alt="Team photo" />
-      <p>
+      <img src="https://aau.org/subs/newsletters/ict_2.jpg" alt="Team photo"
+        style="width: 100%; height: auto; border-radius: 5px; margin: 15px 0;" />
+      <p style="font-size: 1.05rem; line-height: 1.6; color: #333; text-align: justify; margin-bottom: 15px;">
         As cyber threats continue to rise in both complexity and frequency, so must African higher education
         institutions (HEIs) be equipped with the necessary digital infrastructure, physical structures, and in-depth
         knowledge to protect the cyber space. With this in mind, the Association of African Universities (AAU),
@@ -761,228 +461,293 @@
         directors from Africa's HEIs to learn, collaborate, and most importantly to be equipped with the necessary
         skills and tools to effectively lead their respective institutions' cybersecurity initiatives.
       </p>
-      <div class="image-row">
-        <img src="https://aau.org/subs/newsletters/ict_1.jpg" alt="Image 1" />
-        <img src="https://aau.org/subs/newsletters/ict_img1.JPG" alt="Image 2" />
+      <div class="image-row"
+        style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
+        <img src="https://aau.org/subs/newsletters/ict_1.jpg" alt="Image 1"
+          style="width: 250px; max-width: 100%; height: auto; border-radius: 5px; flex: 1 1 200px; min-width: 150px;" />
+        <img src="https://aau.org/subs/newsletters/ict_img1.JPG" alt="Image 2"
+          style="width: 250px; max-width: 100%; height: auto; border-radius: 5px; flex: 1 1 200px; min-width: 150px;" />
       </div>
-      <p>
+      <p style="font-size: 1.05rem; line-height: 1.6; color: #333; text-align: justify; margin-bottom: 15px;">
         In his opening remarks, FIRST's African Regional Liaison, Eric Akumiah, highlighted the rise of cyber threats
         and cyber-attacks worldwide and how the Forum, by enhancing cooperation among security teams, was poised to
         tackle the menace. He revealed the organization's ongoing efforts under the <b><i>Africa Cyber
             Programme</i></b>, a
         UK-funded initiative, to support cybersecurity capacity building across the continent.
       </p>
-      <div class="more-link">
+      <div class="more-link" style="text-align: center; margin-top: 20px;">
         <a href="https://aau.org/2025/07/enhancing-cybersecurity-capacity-in-african-higher-education-ict-directors-trained-in-csirt-and-incident-response/"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background: #4a90e2; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
 
+
     <!-- Article 5 -->
-    <div class="article-section" id="pre-gen-conference">
-      <h3>Forging Connections: Pre-General Conference Workshop Highlights Role of Communications and Partnerships in
-        Policy Reforms</h3>
-      <img src="https://aau.org/subs/newsletters/policy_1.jpg" alt="Team Photo" />
-      <p>
+    <div id="pre-gen-conference" style="padding:25px 35px;border-top:1px solid #eee;background-color:#ffffff;">
+      <h3 style="font-size:1.4rem;margin-bottom:15px;color:#2c315f;text-align:center;">
+        Forging Connections: Pre-General Conference Workshop Highlights Role of Communications and Partnerships in
+        Policy Reforms
+      </h3>
+      <img src="https://aau.org/subs/newsletters/policy_1.jpg" alt="Team Photo"
+        style="width:100%;height:auto;border-radius:5px;margin:15px 0;">
+      <p style="font-size:1.05rem;line-height:1.6;color:#333;text-align:justify;margin-bottom:15px;">
         Ahead of the 16th Quadrennial General Conference of the Association of African Universities (AAU), a two-day
         pre-conference workshop was held from July 19 to 20, 2025, at the University Mohammed V (UM5) of Rabat, Morocco.
         Under the theme "Driving Policy Through Research, Communication, and Partnerships for Institutional
-        Transformation," the workshop brought together academics, researchers, institutional leaders, and policy
-        influencers from across Africa to explore how research, communication, and strategic partnerships could inform
-        institutional transformation across Africa.
+        Transformation,"
+        the workshop brought together academics, researchers, institutional leaders, and policy influencers from across
+        Africa
+        to explore how research, communication, and strategic partnerships could inform institutional transformation
+        across Africa.
       </p>
-      <div class="image-row">
-        <img src="https://aau.org/subs/newsletters/policy_2.jpg" alt="Image 1" />
-        <img src="https://aau.org/subs/newsletters/policy_3.jpg" alt="Image 2" />
+      <div style="display:flex;justify-content:center;gap:15px;margin:20px 0;flex-wrap:wrap;">
+        <img src="https://aau.org/subs/newsletters/policy_2.jpg" alt="Image 1"
+          style="width:250px;max-width:100%;height:auto;border-radius:5px;flex:1 1 200px;min-width:150px;">
+        <img src="https://aau.org/subs/newsletters/policy_3.jpg" alt="Image 2"
+          style="width:250px;max-width:100%;height:auto;border-radius:5px;flex:1 1 200px;min-width:150px;">
       </div>
-      <p>The workshop featured a series of interactive sessions led by three facilitators, Dr. Konosoang Sobane, Ing.
+      <p style="font-size:1.05rem;line-height:1.6;color:#333;text-align:justify;margin-bottom:15px;">
+        The workshop featured a series of interactive sessions led by three facilitators, Dr. Konosoang Sobane, Ing.
         Ilyas Azzioui, and Prof. Sanaa Zebakh. Participants engaged in practical exercises, case studies, and
-        collaborative group work to equip themselves with tools and frameworks to drive change in their institutions.
-        The sessions covered topics such as crafting of policy briefs, science-policy communication, and public-private
-        partnerships (PPPs), all tailored to the African higher education context.</p>
-      <div class="more-link">
+        collaborative
+        group work to equip themselves with tools and frameworks to drive change in their institutions. The sessions
+        covered topics
+        such as crafting of policy briefs, science-policy communication, and public-private partnerships (PPPs), all
+        tailored
+        to the African higher education context.
+      </p>
+      <div style="text-align:center;margin-top:20px;">
         <a href="https://aau.org/2025/07/forging-connections-pre-general-conference-workshop-highlights-role-of-communications-and-partnerships-in-policy-reforms/"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background:#4a90e2;color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;display:inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
 
     <!-- Article 6 -->
-    <div class="article-section" id="innovation">
-      <h3>Innovation on Display: African HEIs Shine at AAU Conference Exhibition</h3>
-      <img src="https://aau.org/subs/newsletters/Exhibition-1024x683.jpg" alt="Team photo" />
-      <p>
+    <div id="innovation"
+      style="padding:25px 35px;border-top:1px solid #eee;background:linear-gradient(135deg,#e0e8f0,#f2f2f2);">
+      <h3 style="font-size:1.4rem;margin-bottom:15px;color:#2c315f;text-align:center;">
+        Innovation on Display: African HEIs Shine at AAU Conference Exhibition
+      </h3>
+      <img src="https://aau.org/subs/newsletters/Exhibition-1024x683.jpg" alt="Team photo"
+        style="width:100%;height:auto;border-radius:5px;margin:15px 0;">
+      <p style="font-size:1.05rem;line-height:1.6;color:#333;text-align:justify;margin-bottom:15px;">
         The 16th General Conference of the Association of African Universities (AAU) featured a dynamic exhibition
         showcasing the latest innovations, research breakthroughs, and strategic partnerships of Africa's premier
-        universities and partner institutions. Held at the University Mohammed VI Polytechnic (UM6P) exhibition
-        pavilion, the exhibition served as a vibrant centerpiece of the conference, highlighting the diversity of
-        African academic excellence and the continent's commitment to innovation and collaboration.
+        universities
+        and partner institutions. Held at the University Mohammed VI Polytechnic (UM6P) exhibition pavilion, the
+        exhibition served
+        as a vibrant centerpiece of the conference, highlighting the diversity of African academic excellence and the
+        continent's
+        commitment to innovation and collaboration.
       </p>
-      <p>Rows of colorful, elegantly decorated booths transformed the university's central hall into a living gallery.
+      <p style="font-size:1.05rem;line-height:1.6;color:#333;text-align:justify;margin-bottom:15px;">
+        Rows of colorful, elegantly decorated booths transformed the university's central hall into a living gallery.
         From Ghana to South Africa, Ethiopia to Tunisia, universities brought to life the diversity of African academic
         excellence. The exhibition was as much about cultural pride as it was about innovation—featuring prototypes
         based on indigenous knowledge, renewable energy solutions, digital learning platforms, brochures of flagship
-        graduate programs, and looping documentaries capturing vibrant campus life and success stories.</p>
-      <div class="image-row">
-        <img src="https://aau.org/subs/newsletters/Exhibition-at-the-16th-General-Conference-1024x683.jpg"
-          alt="Image 1" />
-        <img src="https://aau.org/subs/newsletters/16th-General-Conference-Exhibition-scaled.jpg" alt="Image 2" />
-      </div>
-      <p>
-        "It's inspiring," said Ziblim Alhassan, a delegate from the University for Development Studies, Ghana. "You
-        walk around the exhibition area and realize that Africa is not behind. We're just not telling our stories
-        enough. This exhibition is changing that."
+        graduate programs, and looping documentaries capturing vibrant campus life and success stories.
       </p>
-      <div class="more-link">
+      <div style="display:flex;justify-content:center;gap:15px;margin:20px 0;flex-wrap:wrap;">
+        <img src="https://aau.org/subs/newsletters/Exhibition-at-the-16th-General-Conference-1024x683.jpg" alt="Image 1"
+          style="width:250px;max-width:100%;height:auto;border-radius:5px;flex:1 1 200px;min-width:150px;">
+        <img src="https://aau.org/subs/newsletters/16th-General-Conference-Exhibition-scaled.jpg" alt="Image 2"
+          style="width:250px;max-width:100%;height:auto;border-radius:5px;flex:1 1 200px;min-width:150px;">
+      </div>
+      <p style="font-size:1.05rem;line-height:1.6;color:#333;text-align:justify;margin-bottom:15px;">
+        "It's inspiring," said Ziblim Alhassan, a delegate from the University for Development Studies, Ghana.
+        "You walk around the exhibition area and realize that Africa is not behind. We're just not telling our stories
+        enough.
+        This exhibition is changing that."
+      </p>
+      <div style="text-align:center;margin-top:20px;">
         <a href="https://aau.org/2025/07/innovation-on-display-african-heis-shine-at-aau-conference-exhibition/"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background:#4a90e2;color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;display:inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
 
     <!-- Article 7 -->
-    <div class="article-section" id="collective-intelligence">
-      <h3>Driving Innovation Through Collective Intelligence in African Higher Education</h3>
-      <img src="https://aau.org/subs/newsletters/inno_2.jpg" alt="Team Photo" />
-      <p>
+    <div id="collective-intelligence" style="padding:25px 35px;border-top:1px solid #eee;background-color:#ffffff;">
+      <h3 style="font-size:1.4rem;margin-bottom:15px;color:#2c315f;text-align:center;">
+        Driving Innovation Through Collective Intelligence in African Higher Education
+      </h3>
+      <img src="https://aau.org/subs/newsletters/inno_2.jpg" alt="Team Photo"
+        style="width:100%;height:auto;border-radius:5px;margin:15px 0;">
+      <p style="font-size:1.05rem;line-height:1.6;color:#333;text-align:justify;margin-bottom:15px;">
         As African universities navigate growing expectations to drive innovation, address development challenges, and
         prepare future-ready graduates, institutional transformation is no longer optional. It is both essential and
-        strategic. At the 16th Quadrennial General Conference of the Association of African Universities (AAU), held
-        in Rabat, Morocco, from July 21 to 25, 2025, two presentations from Professor Lex Paulsen and Dr. Rachid Serraj
-        of University Mohammed VI Polytechnic (UM6P) offered compelling insights into how universities can lead this
-        transformation.
+        strategic.
+        At the 16th Quadrennial General Conference of the Association of African Universities (AAU), held in Rabat,
+        Morocco,
+        from July 21 to 25, 2025, two presentations from Professor Lex Paulsen and Dr. Rachid Serraj of University
+        Mohammed VI Polytechnic (UM6P)
+        offered compelling insights into how universities can lead this transformation.
       </p>
-      <div class="image-row">
-        <img src="https://aau.org/subs/newsletters/inno_1.jpg" alt="Image 1" />
-        <img src="https://aau.org/subs/newsletters/inno_3.jpg" alt="Image 2" />
+      <div style="display:flex;justify-content:center;gap:15px;margin:20px 0;flex-wrap:wrap;">
+        <img src="https://aau.org/subs/newsletters/inno_1.jpg" alt="Image 1"
+          style="width:250px;max-width:100%;height:auto;border-radius:5px;flex:1 1 200px;min-width:150px;">
+        <img src="https://aau.org/subs/newsletters/inno_3.jpg" alt="Image 2"
+          style="width:250px;max-width:100%;height:auto;border-radius:5px;flex:1 1 200px;min-width:150px;">
       </div>
-      <p>
+      <p style="font-size:1.05rem;line-height:1.6;color:#333;text-align:justify;margin-bottom:15px;">
         The first, delivered by Professor Paulsen, introduced UM6P’s internal planning model, Vision 2030, which seeks
         to redefine institutional strategy through inclusive, bottom-up engagement. The second presentation, made by Dr.
         Serraj, proposed a continent-wide framework grounded in collective intelligence to foster collaboration,
         innovation, and long-term impact.
       </p>
-      <div class="more-link">
+      <div style="text-align:center;margin-top:20px;">
         <a href="https://aau.org/2025/07/driving-innovation-through-collective-intelligence-in-african-higher-education/"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background:#4a90e2;color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;display:inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
 
     <!-- Article 8 -->
-    <div class="article-section" id="executive-leadership">
-      <h3>AAU-UNESCO Executive Leadership Training at 16th AAU General Conference in Rabat, Morocco</h3>
-      <img src="https://aau.org/subs/newsletters/unesco_1.jpg" alt="UNESCO Training" />
-      <p>
+    <div id="executive-leadership"
+      style="padding:25px 35px;border-top:1px solid #eee;background:linear-gradient(135deg,#e0e8f0,#f2f2f2);">
+      <h3 style="font-size:1.4rem;margin-bottom:15px;color:#2c315f;text-align:center;">
+        AAU-UNESCO Executive Leadership Training at 16th AAU General Conference in Rabat, Morocco
+      </h3>
+      <img src="https://aau.org/subs/newsletters/unesco_1.jpg" alt="UNESCO Training"
+        style="width:100%; height:auto; border-radius:5px; margin:15px 0;">
+      <p style="font-size:1.05rem; line-height:1.6; color:#333; text-align:justify; margin-bottom:15px;">
         The Association of African Universities (AAU), in collaboration with UNESCO, launched its Executive Leadership
         Training Programme on Sunday, July 20, 2025, at the UNESCO Regional Office for the Maghreb in Rabat, Morocco.
         The venue symbolizes UNESCO’s commitment to regional collaboration and leadership development in African higher
         education.
       </p>
-      <div class="image-row">
-        <img src="https://aau.org/subs/newsletters/unesco_2.jpg" alt="Training Session 1" />
-        <img src="https://aau.org/subs/newsletters/unesco_3.jpg" alt="Training Session 2" />
+      <div style="display:flex; justify-content:center; gap:15px; margin:20px 0; flex-wrap:wrap;">
+        <img src="https://aau.org/subs/newsletters/unesco_2.jpg" alt="Training Session 1"
+          style="width:250px; max-width:100%; height:auto; border-radius:5px; flex:1 1 200px; min-width:150px;">
+        <img src="https://aau.org/subs/newsletters/unesco_3.jpg" alt="Training Session 2"
+          style="width:250px; max-width:100%; height:auto; border-radius:5px; flex:1 1 200px; min-width:150px;">
       </div>
-      <p>
+      <p style="font-size:1.05rem; line-height:1.6; color:#333; text-align:justify; margin-bottom:15px;">
         This full-day session marked the beginning of a transformative initiative aimed at equipping senior leaders in
         African higher education institutions with the tools, knowledge, and networks necessary to lead digital
         transformation and institutional change.
       </p>
-      <div class="more-link">
+      <div style="text-align:center; margin-top:20px;">
         <a href="https://aau.org/2025/07/aau-unesco-executive-leadership-training-at-16th-aau-general-conference-in-rabat-morocco/"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background:#4a90e2; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none; display:inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
-
     <!-- Article 9 -->
-    <div class="article-section" id="communique">
-      <h3>Communiqué of the 16th General Conference of the Association of African Universities</h3>
-      <img src="https://aau.org/subs/newsletters/Prof_Obadina.jpg" alt="Conference Communique" />
-      <p>
+    <div id="communique" style="padding:25px 35px; border-top:1px solid #eee; background:#ffffff;">
+      <h3 style="font-size:1.4rem; margin-bottom:15px; color:#2c315f; text-align:center;">
+        Communiqué of the 16th General Conference of the Association of African Universities
+      </h3>
+      <img src="https://aau.org/subs/newsletters/Prof_Obadina.jpg" alt="Conference Communique"
+        style="width:100%; height:auto; border-radius:5px; margin:15px 0;">
+      <p style="font-size:1.05rem; line-height:1.6; color:#333; text-align:justify; margin-bottom:15px;">
         The Association of African Universities (AAU) held its <b>16th Quadrennial General Conference</b> from <b>July
           21st to 25th, 2025,</b> bringing together close to 500 delegates — including university vice-chancellors,
-        researchers,
-        policymakers, industry players, and development partners — to chart the <b>future of African higher
+        researchers, policymakers, industry players, and development partners — to chart the <b>future of African higher
           education</b>.
       </p>
-      <p>
+      <p style="font-size:1.05rem; line-height:1.6; color:#333; text-align:justify; margin-bottom:15px;">
         Themed “<b>Shaping the Future of Higher Education for Innovation and Sustainable Development in Africa</b>,” the
         conference was co-hosted by the <b>University Mohammed VI Polytechnic (UM6P)</b>. Across <b>12 plenary sessions,
           stakeholder dialogues and parallel sessions</b>, participants tackled the continent’s most pressing higher
-        education
-        challenges and opportunities, such as demographic boom, research sovereignty, AI adoption, quality assurance,
-        and
-        the inclusion of marginalized youth in higher education.
+        education challenges and opportunities, such as demographic boom, research sovereignty, AI adoption, quality
+        assurance, and the inclusion of marginalized youth in higher education.
       </p>
-      <div class="more-link">
+      <div style="text-align:center; margin-top:20px;">
         <a href="https://aau.org/wp-content/uploads/2025/07/Communique-of-the-16th-General-Conference-of-the-Association-of-African-Universities.pdf"
-          target="_blank">
-          Find out More
+          target="_blank"
+          style="background:#4a90e2; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none; display:inline-block;">
+          Find Out More
         </a>
       </div>
     </div>
+
     <!-- End of content-body -->
 
     <!-- Footer -->
-    <div class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4 class="footer-title">Contact Us</h4>
-          <p><i class="fas fa-map-marker-alt"></i> Association of African Universities, East-Legon, Accra, Ghana</p>
+    <div style="background:#2a3962; color:white; padding:30px 40px; text-align:center;">
+      <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+
+        <!-- Contact Section -->
+        <div style="flex:1; min-width:200px; text-align:left;">
+          <h4 style="font-size:1.2rem; margin-bottom:15px; color:#e2e8f0; margin-top:0;">Contact Us</h4>
+          <p style="margin:0;">
+            <i class="fas fa-map-marker-alt"></i> Association of African Universities, East-Legon, Accra, Ghana
+          </p>
         </div>
-        <div class="footer-section">
-          <h4 class="footer-title">Connect With Us</h4>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/AAU67/" class="social-icon" aria-label="Facebook">
+
+        <!-- Social Section -->
+        <div style="flex:1; min-width:200px; text-align:left;">
+          <h4 style="font-size:1.2rem; margin-bottom:15px; color:#e2e8f0; margin-top:0;">Connect With Us</h4>
+          <div style="display:flex; gap:15px; margin-top:15px;">
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/AAU67/" aria-label="Facebook"
+              style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; background:rgba(255,255,255,0.1); border-radius:50%; color:white; text-decoration:none;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
                 <path
                   d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.316C0 23.4.6 24 1.325 24h11.494v-9.294H9.847v-3.622h2.972V8.413c0-2.943 1.796-4.551 4.417-4.551 1.255 0 2.336.093 2.649.135v3.07l-1.818.001c-1.427 0-1.704.678-1.704 1.672v2.191h3.408l-.444 3.622h-2.964V24h5.813C23.4 24 24 23.4 24 22.658V1.342C24 .6 23.4 0 22.675 0z" />
               </svg>
             </a>
 
-            <a href="https://www.twitter.com/aau_67" class="social-icon" aria-label="Twitter">
+            <!-- Twitter -->
+            <a href="https://www.twitter.com/aau_67" aria-label="Twitter"
+              style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; background:rgba(255,255,255,0.1); border-radius:50%; color:white; text-decoration:none;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
                 <path
                   d="M24 4.556c-.883.392-1.832.656-2.828.775a4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.924 4.924 0 0 0-8.384 4.482A13.978 13.978 0 0 1 1.67 3.149a4.922 4.922 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.23-.616v.062a4.926 4.926 0 0 0 3.946 4.827 4.93 4.93 0 0 1-2.224.084 4.926 4.926 0 0 0 4.6 3.417A9.867 9.867 0 0 1 0 19.54 13.944 13.944 0 0 0 7.548 22c9.057 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.556z" />
               </svg>
             </a>
 
-            <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg" class="social-icon" aria-label="YouTube">
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg" aria-label="YouTube"
+              style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; background:rgba(255,255,255,0.1); border-radius:50%; color:white; text-decoration:none;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
                 <path
                   d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.117C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.392.569a2.99 2.99 0 0 0-2.106 2.117C0 8.083 0 12 0 12s0 3.917.502 5.814a2.99 2.99 0 0 0 2.106 2.117C4.495 20.5 12 20.5 12 20.5s7.505 0 9.392-.569a2.99 2.99 0 0 0 2.106-2.117C24 15.917 24 12 24 12s0-3.917-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
               </svg>
             </a>
 
-            <a href="https://www.flickr.com/photos/aau-africa/albums/" class="social-icon" aria-label="Flickr">
+            <!-- Flickr -->
+            <a href="https://www.flickr.com/photos/aau-africa/albums/" aria-label="Flickr"
+              style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; background:rgba(255,255,255,0.1); border-radius:50%; color:white; text-decoration:none;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
                 <circle cx="6.5" cy="12" r="4.5" />
                 <circle cx="17.5" cy="12" r="4.5" />
               </svg>
             </a>
 
-            <a href="https://www.linkedin.com/company/association-of-african-universities" class="social-icon"
-              aria-label="LinkedIn">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/association-of-african-universities" aria-label="LinkedIn"
+              style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; background:rgba(255,255,255,0.1); border-radius:50%; color:white; text-decoration:none;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
                 <path
                   d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0zM7.118 20.452H3.56V9h3.559v11.452zM5.338 7.594a2.064 2.064 0 1 1 0-4.128 2.064 2.064 0 0 1 0 4.128zm15.114 12.858h-3.559v-5.828c0-1.388-.025-3.176-1.936-3.176-1.938 0-2.236 1.513-2.236 3.078v5.926h-3.559V9h3.418v1.561h.049c.477-.901 1.64-1.85 3.377-1.85 3.61 0 4.276 2.376 4.276 5.467v6.274z" />
               </svg>
             </a>
-
           </div>
         </div>
       </div>
-      <div class="copyright">
+
+      <!-- Copyright -->
+      <div
+        style="margin-top:30px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:0.9rem; color:#a0aec0;">
         &copy; Association of African Universities. All Rights Reserved.
       </div>
     </div>
+
   </div>
 </body>
 
