@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAU Internal Newsletter - Staff Edition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #312c564d;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .main-table {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+        
+        .header-row td {
+            background: linear-gradient(135deg, #312c56 0%, #4a4575 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .header-row h1 {
+            color: #f4da35;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-row p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .date-badge {
+            background: #f4da35;
+            color: #312c56;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+        
+        .section-header {
+            background: #312c56;
+            color: #ffffff;
+            padding: 20px 30px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .section-icon {
+            width: 30px;
+            height: 30px;
+            background: #f4da35;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #312c56;
+            font-size: 1rem;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        
+        .section-content {
+            padding: 25px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .section-content:hover {
+            background: #f8fafc;
+        }
+        
+        .content-text {
+            width: 60%;
+            vertical-align: top;
+            padding-right: 25px;
+        }
+        
+        .content-image {
+            width: 40%;
+            vertical-align: top;
+        }
+        
+        .content-text h3 {
+            color: #312c56;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .content-text p {
+            color: #4b5563;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .content-text ul {
+            color: #4b5563;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .content-text li {
+            margin-bottom: 8px;
+        }
+        
+        .section-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #312c56;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #312c56;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box p {
+            color: #92400e;
+            font-size: 0.95rem;
+        }
+        
+        .footer-row td {
+            background: #312c56;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer-row h3 {
+            color: #f4da35;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-row p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .footer-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #f4da35 50%, transparent 100%);
+            margin: 20px 0;
+        }
+        
+        .feedback-section {
+            background: rgba(145, 162, 225, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 15px;
+        }
+        
+        .feedback-section h4 {
+            color: #312c56;
+            margin-bottom: 10px;
+        }
+        
+        .feedback-section p {
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header-row td {
+                padding: 30px 20px;
+            }
+            
+            .header-row h1 {
+                font-size: 2rem;
+            }
+            
+            .section-header {
+                padding: 15px 20px;
+                font-size: 1.2rem;
+            }
+            
+            .content-text, .content-image {
+                width: 100%;
+                display: block;
+                padding: 0;
+            }
+            
+            .content-image {
+                padding-top: 20px;
+            }
+            
+            .section-image {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table class="main-table" width="100%">
+        <!-- Header -->
+        <tr class="header-row">
+            <td colspan="2">
+                <h1>Staff Connect</h1>
+                <p>Internal Newsletter - Association of African Universities</p>
+                <span class="date-badge">August 2025 Edition</span>
+            </td>
+        </tr>
+        
+        <!-- Company News Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">1</span>Company News & Updates
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Latest Organizational Developments</h3>
+                            <p>Stay informed about important announcements, organizational milestones, and strategic changes that impact our work environment.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>This Month's Highlights</h4>
+                                <p>Major announcements, policy changes, and organizational achievements will be featured here with detailed explanations and impact assessments.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Recent organizational achievements and milestones</li>
+                                <li>Strategic updates and future planning initiatives</li>
+                                <li>Important procedural changes and implementations</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Business Meeting" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Employee Spotlights Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">2</span>Employee Spotlights
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Celebrating Our Team Members</h3>
+                            <p>Get to know your colleagues better through featured profiles highlighting their professional achievements, interesting projects, and personal interests.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Featured Employee</h4>
+                                <p>Each month we showcase team members who have made significant contributions or achieved notable milestones in their roles.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Professional achievements and career highlights</li>
+                                <li>Current projects and responsibilities</li>
+                                <li>Personal interests and hobbies</li>
+                                <li>Tips and insights from experienced team members</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Professional Portrait" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Departmental Updates Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">3</span>Departmental Updates
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Cross-Departmental Progress Reports</h3>
+                            <p>Discover what different teams across the organization are working on, their recent successes, and ongoing challenges.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Department Focus</h4>
+                                <p>Monthly rotation featuring different departments, their current projects, achievements, and collaborative opportunities.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Current projects and initiatives by department</li>
+                                <li>Recent successes and accomplishments</li>
+                                <li>Challenges being addressed and solutions implemented</li>
+                                <li>Opportunities for cross-departmental collaboration</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Team Collaboration" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Upcoming Events Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">4</span>Upcoming Events
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Mark Your Calendars</h3>
+                            <p>Stay updated on company-wide meetings, professional development opportunities, team building activities, and important conferences.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Priority Events</h4>
+                                <p>Key upcoming events that require advance planning, registration, or preparation from staff members.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Company-wide meetings and all-hands sessions</li>
+                                <li>Training workshops and skill development programs</li>
+                                <li>Social events and team building activities</li>
+                                <li>Industry conferences and networking opportunities</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Conference Event" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Policy Updates Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">5</span>Policy Updates
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Important Policy Changes</h3>
+                            <p>Stay informed about updates to company policies, procedures, and benefits that affect your work experience and employment.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Recent Changes</h4>
+                                <p>Clear explanations of policy modifications, effective dates, and practical implications for daily operations.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Updates to employee handbook and procedures</li>
+                                <li>Changes to benefits packages and enrollment</li>
+                                <li>New safety protocols and compliance requirements</li>
+                                <li>Technology and security policy modifications</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Policy Documents" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Employee Recognition Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">6</span>Employee Recognition
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Celebrating Excellence</h3>
+                            <p>Recognizing outstanding contributions, achievements, and dedication of our team members across all departments and roles.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Recognition Programs</h4>
+                                <p>Various awards and recognition programs designed to acknowledge exceptional performance and contributions.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Employee of the month awards and nominations</li>
+                                <li>Project completion celebrations and team achievements</li>
+                                <li>Length of service recognition and milestones</li>
+                                <li>Peer-nominated appreciation and kudos</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Awards Ceremony" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Industry Insights Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">7</span>Industry Insights
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Higher Education Landscape</h3>
+                            <p>Keep abreast of trends, developments, and analysis relevant to African higher education and our organizational mission.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Trending Topics</h4>
+                                <p>Current issues and opportunities in African higher education that impact our strategic direction and operations.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Latest research and educational technology trends</li>
+                                <li>Funding opportunities and partnership developments</li>
+                                <li>Regulatory changes in higher education sector</li>
+                                <li>Innovation and best practices from member institutions</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="University Campus" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Team Achievements Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">8</span>Team Member Achievements
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Career Milestones & Changes</h3>
+                            <p>Celebrating promotions, welcoming new team members, and acknowledging the contributions of departing colleagues.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Recent Updates</h4>
+                                <p>Important personnel changes and career advancement announcements within our organization.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Recent promotions and role transitions</li>
+                                <li>New hire introductions and welcome messages</li>
+                                <li>Farewell messages and transition updates</li>
+                                <li>Professional development achievements and certifications</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Team Celebration" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Health & Wellness Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">9</span>Health & Wellness
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Employee Well-being Initiatives</h3>
+                            <p>Resources, tips, and programs designed to support physical and mental health, work-life balance, and overall well-being.</p>
+                            
+                            <div class="highlight-box">
+                                <h4>Wellness Programs</h4>
+                                <p>Available resources and upcoming initiatives to help maintain a healthy and productive work environment.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Mental health resources and support services</li>
+                                <li>Fitness programs and physical activity initiatives</li>
+                                <li>Work-life balance tips and time management strategies</li>
+                                <li>Nutrition advice and healthy workplace practices</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Wellness Activities" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Feedback Section -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">10</span>Feedback & Suggestions
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table width="100%">
+                    <tr>
+                        <td class="content-text">
+                            <h3>Your Voice Matters</h3>
+                            <p>We value your input and ideas for improving our workplace, processes, and organizational culture.</p>
+                            
+                            <div class="feedback-section">
+                                <h4>How to Share Your Ideas</h4>
+                                <p>Multiple channels available for submitting feedback, suggestions, and concerns. All contributions are reviewed and considered for implementation.</p>
+                            </div>
+                            
+                            <ul>
+                                <li>Anonymous suggestion box and online forms</li>
+                                <li>Regular feedback sessions with management</li>
+                                <li>Process improvement recommendations</li>
+                                <li>Workplace culture enhancement ideas</li>
+                            </ul>
+                        </td>
+                        <td class="content-image">
+                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Feedback Communication" class="section-image">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr class="footer-row">
+            <td colspan="2">
+                <h3>Stay Connected</h3>
+                <p>This newsletter is published monthly for internal staff communication.</p>
+                <p>Questions or suggestions? Contact HR or the Communications Team.</p>
+                
+                <!-- Social Media Icons -->
+                <table style="margin: 20px auto; border-collapse: separate; border-spacing: 0;">
+                    <tr>
+                      <td style="padding: 0 8px 0 0;">
+                        <a href="https://www.facebook.com/AAU67/" style="text-decoration: none;">
+                          <img src="https://cdn-icons-png.flaticon.com/32/733/733547.png" alt="Facebook" width="32"
+                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                        </a>
+                      </td>
+                      <td style="padding: 0 8px;">
+                        <a href="https://www.twitter.com/aau_67" style="text-decoration: none;">
+                          <img src="https://cdn-icons-png.flaticon.com/32/733/733579.png" alt="Twitter" width="32"
+                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                        </a>
+                      </td>
+                      <td style="padding: 0 8px;">
+                        <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg"
+                          style="text-decoration: none;">
+                          <img src="https://cdn-icons-png.flaticon.com/32/1384/1384060.png" alt="YouTube" width="32"
+                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                        </a>
+                      </td>
+                      <td style="padding: 0 8px;">
+                        <a href="https://www.flickr.com/photos/aau-africa/albums/" style="text-decoration: none;">
+                          <img src="https://cdn-icons-png.flaticon.com/32/733/733614.png" alt="Flickr" width="32"
+                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                        </a>
+                      </td>
+                      <td style="padding: 0 0 0 8px;">
+                        <a href="https://www.linkedin.com/company/association-of-african-universities"
+                          style="text-decoration: none;">
+                          <img src="https://cdn-icons-png.flaticon.com/32/733/733561.png" alt="LinkedIn" width="32"
+                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                        </a>
+                      </td>
+                    </tr>
+                </table>
+                
+                <div class="footer-divider"></div>
+                <p style="font-size: 0.9rem; opacity: 0.7;">Association of African Universities - Internal Communications</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
