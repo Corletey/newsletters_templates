@@ -452,6 +452,51 @@
                 margin: 10px;
             }
         }
+        .back-to-index {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #3B4A87 0%, #2c3a6b 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(59, 74, 135, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-to-index:hover {
+    background: linear-gradient(135deg, #2c3a6b 0%, #1a2547 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 74, 135, 0.4);
+}
+
+.back-to-index:active {
+    transform: translateY(0);
+}
+
+.back-to-index::before {
+    content: '←';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .back-to-index {
+        top: 10px;
+        left: 10px;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
     </style>
 </head>
 <body>
@@ -459,7 +504,7 @@
         <!-- Header with AAU branding -->
         <div class="aau-header">
             <div class="aau-brand">
-                <img src="logo\aau-16-gencon-02.png" class="aau-logo-circle" alt="AAU Logo">
+                <img src="logo/aau-16-gencon-02.png" class="aau-logo-circle" alt="AAU Logo" style="width: 100%; height: auto; object-fit: contain;">
             </div>
             <div class="conference-title">16th GENERAL CONFERENCE</div>
         </div>
@@ -583,8 +628,9 @@
             <div class="article full-width">
                 <div class="article-content">
                     <h2 class="article-title">Sports Update: Track and Field Season Begins</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: center;">
-                        <div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" alt="Track and field athletes" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+                        <div style="max-width: 600px;">
                             <p class="article-text">
                                 Our track and field team has officially begun their season with impressive early performances. The team has been training hard throughout the winter months, and their dedication is already paying off with several personal records being broken in the first meet.
                             </p>
@@ -592,7 +638,6 @@
                                 Coach Martinez reports that this year's team shows exceptional promise, with strong performances across all events. The next home meet is scheduled for April 20th, and we encourage all students and families to come out and support our athletes.
                             </p>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" alt="Track and field athletes" style="border-radius: 8px;">
                     </div>
                 </div>
             </div>
@@ -608,4 +653,7 @@
         </div>
     </div>
 </body>
+<a href="index.html" class="back-to-index">
+    Back to Templates
+</a>
 </html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAU General Conference Newsletter</title>
+    <style>
+      /* --- Base & Font Styles --- */
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #e9e9e9;
+      }
+
+      /* --- Main Newsletter Container --- */
+      .newsletter-container {
+        max-width: 850px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #d1d1d1;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* --- Header Section --- */
+      .header {
+        padding: 15px 30px;
+        border-bottom: 1px solid #eee;
+        background-color: #f8f9fa;
+      }
+
+      .header .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        color: #6c757d;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+      }
+
+      .header .main-logo-container {
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .header .main-logo {
+        max-width: 80%;
+        height: auto;
+      }
+
+      .hosts-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .hosts-section .host-title {
+        font-weight: bold;
+        color: #343a40;
+        margin-right: 20px;
+        font-size: 15px;
+      }
+
+      .hosts-section .host-logo {
+        max-height: 50px;
+        margin: 0 15px;
+      }
+
+      /* --- Hero Image --- */
+      .hero-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* --- Main Content Layout --- */
+      .content-body {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+      }
+
+      /* --- Sidebar--- */
+      .sidebar {
+        flex: 0 0 250px;
+        background-color: #2a3962;
+        color: #ffffff;
+        padding: 25px;
+        box-sizing: border-box;
+      }
+
+      .sidebar h2 {
+        font-family: "Helvetica", "Arial Black", sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .sidebar ul {
+        /* list-style: none; */
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li {
+        margin: 20px 0;
+      }
+
+      .sidebar ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.4;
+        transition: color 0.3s;
+      }
+      .sidebar ul li a:hover {
+        color: #d9532c;
+      }
+
+      .sidebar ul li.featured a {
+        font-size: 18px;
+        color: #fff;
+      }
+
+      /* --- Main Article --- */
+      .main-article {
+        flex: 1;
+        padding: 25px 35px;
+        box-sizing: border-box;
+      }
+
+      .main-article h1 {
+        font-family: "Georgia", serif;
+        font-size: 32px;
+        line-height: 1.2;
+        color: #d9532c;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .main-article .byline {
+        font-size: 14px;
+        color: #6c757d;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      .main-article .article-text {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #343a40;
+        text-align: justify;
+      }
+
+      /* --- Responsive Adjustments --- */
+      @media (max-width: 768px) {
+        .content-body {
+          flex-direction: column;
+        }
+        .sidebar {
+          flex: 1 1 auto;
+        }
+        .main-article h1 {
+          font-size: 28px;
+        }
+      }
+
+      /* page 2 */
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        color: #2c315f;
+      }
+
+      .page-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 40px 50px;
+      }
+
+      .title-section {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      .title-section h1 {
+        font-size: 2rem;
+        color: #2c315f;
+        margin: 0;
+      }
+
+      .title-section h2 {
+        font-size: 1.2rem;
+        color: #c1272d;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+      .article {
+        margin-bottom: 40px;
+      }
+
+      .article img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .article h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #2c315f;
+      }
+
+      .article .author {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .article p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .footer-tag {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #006837;
+        margin-top: 50px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px;
+        }
+
+        .article h3 {
+          font-size: 1.2rem;
+        }
+
+        .title-section h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="newsletter-container">
+      <header class="header">
+        <div class="top-bar">
+          <span class="date">JULY 23, 2025</span>
+          <!-- <span class="volume">INAUGURAL ISSUE</span> -->
+        </div>
+        <div class="main-logo-container" style="text-align: center">
+          <img
+            src="/public_html/subs/aau-16-gencon-01.png"
+            alt="AAU Gencon Logo"
+            style="max-width: 330px; height: auto"
+          />
+        </div>
+        <div class="hosts-section">
+          <span class="host-title">Hosted in Morocco By:</span>
+          <img
+            class="host-logo"
+            src="/public_html/subs/uni_M_VI.png"
+            alt="UMP Logo"
+          />
+          <img
+            class="host-logo"
+            src="/public_html/subs/Universite-Mohammed-V.png"
+            alt="University Mohammed VI Polytechnic"
+          />
+        </div>
+      </header>
+
+      <div class="hero-image-container">
+        <img src="/public_html/subs/unesco_hero.JPG" alt="Team Photo" />
+      </div>
+      <!-- 
+      <div class="content-body">
+        <aside class="sidebar">
+          <h2>In This Issue</h2>
+          <ul>
+            <li class="featured">
+              <a href="#"
+                >African Union Charts Bold Course for Africa’s Education and
+                Skills Future at AAU General Conference</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >CESA 2026–2035: A Vision for Inclusive, Future-Ready
+                Education</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >African Continental TVET Strategy: Skills for Prosperity and
+                Inclusion</a
+              >
+            </li>
+            <li>
+              <a href="#">Calls to Action: From Vision to Local Impact</a>
+            </li>
+            <li><a href="#">Perfecting Your Grant Application</a></li>
+          </ul>
+        </aside>
+
+        <article class="main-article">
+          <h1>
+            African Union Charts Bold Course for Africa’s Education and Skills
+            Future at AAU General Conference
+          </h1>
+          <p class="byline">By Dr. Amina Diallo, AAU Chief Correspondent</p>
+          <p class="article-text">
+            At the Association of African Universities’ 16th General Conference
+            in Rabat, Morocco, the African Union Commission, represented by
+            Chigozie Emmanuel Okonkwo, unveiled two landmark frameworks—the
+            Continental Education Strategy for Africa (CESA) 2026–2035 and the
+            African Continental TVET Strategy 2025–2034. The session highlighted
+            how these strategies aim to redefine Africa’s educational and skills
+            landscape, tackling systemic challenges and fostering human capital
+            development essential for the continent’s sustainable growth.
+          </p>
+          <p class="article-text">
+            Plenary Session III of AAU’s 16th Quadrennial General Conference in
+            Rabat, Morocco, spotlighted education as the cornerstone of Africa’s
+            sustainable future. With the African Union Commission’s Chigozie
+            Emmanuel Okonkwo delivering a compelling presentation, participants
+            were introduced to the ambitious Continental Education Strategy for
+            Africa (CESA) 2026–2035 and the African Continental Technical and
+            Vocational Education and Training (TVET) Strategy 2025–2034.
+            Together, these robust frameworks chart a transformative path to
+            empower Africa’s human capital for prosperity, equity, and
+            innovation.
+          </p>
+          <p class="article-text">Cras in justo eu risus tincidunt aliquam. Donec nec elit vel nunc consectetur tincidunt. Nullam nec nunc ut libero aliquam aliquam. Phasellus vel magna nec sem consequat cursus. Curabitur vel arcu vel urna vehicula pulvinar.</p>
+        </article>
+      </div> -->
+
+      <div
+        class="page-container page-2"
+        style="
+          background: linear-gradient(135deg, #e0e8f0, #f2f2f2);
+          padding: 40px;
+        "
+      >
+        <div
+          class="title-section"
+          style="text-align: center; margin-bottom: 30px"
+        >
+          <h1>
+            AAU-UNESCO Executive Leadership Training at 16th AAU General
+            Conference in Rabat, Morocco
+          </h1>
+          <h2>
+            Strategic Leadership for African Higher Education Transformation
+          </h2>
+        </div>
+
+        <div class="article">
+          <img src="/public_html/subs/unesco_img1.JPG" alt="Session Image" />
+          <!-- <h3>
+            CESA 2026–2035: A Vision for Inclusive, Future-Ready Education
+          </h3> -->
+          <!-- <div class="author">By L. Abidou & R. Traore</div> -->
+          <p>
+            The Association of African Universities (AAU), in collaboration with
+            UNESCO, launched its Executive Leadership Training Programme on
+            Sunday, July 20, 2025, at the UNESCO Regional Office for the Maghreb
+            in Rabat, Morocco. The venue symbolizes UNESCO’s commitment to
+            regional collaboration and leadership development in African higher
+            education.
+          </p>
+          <p>
+            This full-day session marked the beginning of a transformative
+            initiative aimed at equipping senior leaders in African higher
+            education institutions with the tools, knowledge, and networks
+            necessary to lead digital transformation and institutional change.
+          </p>
+          <p>
+            The Executive Training held as one of the three preconference events
+            to the 16th AAU General Conference , brought together
+            Vice-Chancellors, Rectors, Deans, and senior policymakers from
+            across the continent. The training which aimed to address leadership
+            gaps, promote gender-inclusive governance, and prepare African HEIs
+            for the challenges and opportunities of digital transformation went
+            beyond traditional workshops by positioning digital transformation
+            as a long-term, institution-wide journey to meet up growing demands
+            for digital integration and evolving expectations of students and
+            societies.
+          </p>
+          <p>
+            This initiative aligns with SDG 4 (Quality Education) and SDG 5
+            (Gender Equality) and contributes to UNESCO’s Campus Africa
+            Flagship.
+          </p>
+          <p>
+            The training was facilitated by a distinguished team of experts ,
+            including Dr. Borhene Chakroun, Director of the Division for
+            Policies and Lifelong Learning Systems at UNESCO, and Charaf
+            Ahmimed, Programme Specialist at the UNESCO Rabat Office. Other
+            notable contributors included Ilham Laaziz, Director of the GENIE
+            Programme at Morocco’s Ministry of Education; Salma Karim, Head of
+            Human Capital and Innovation at the Agence de développement du
+            Digital (ADD); and Rajid Serraj, Director of the Africa Initiative &
+            Strategy for Agriculture ,Water and Climate at Mohammed VI
+            Polytechnic University. International perspectives were shared by
+            Monique Brodeur, President of the Higher Education Council of
+            Quebec, and Sehl Mellouli, Deputy Vice-Rector at Université Laval in
+            Canada. The AAU and UNESCO leadership teams, including Prof. Juliet
+            Thondhlana, Carmela Salzano, and Hélène Guiol, also played key roles
+            in guiding the discussions.
+          </p>
+          <p>
+            The training began with welcome and opening remarks by Dr. Borhene
+            Chakroun, and Charaf Ahmimed all from UNESCO. Their remarks set the
+            tone for a day of deep reflection, strategic dialogue, and
+            collaborative learning.
+          </p>
+          <p>
+            The training featured series of panel discussions and workshops with
+            the first panel focused on institutional adaptation to digital
+            transformation and artificial intelligence, featuring African case
+            studies. Speakers shared real-world examples of how higher education
+            institutions on the continent are navigating the challenges and
+            opportunities of digital transformation. They highlighted innovative
+            strategies, leadership approaches, and lessons learned from their
+            respective contexts.
+          </p>
+        </div>
+
+        <div class="article">
+          <img src="/public_html/subs/unesco_img2.JPG" alt="Panel Image" />
+          <!-- <h3>
+            African Continental TVET Strategy: Skills for Prosperity and Inclusion
+          </h3> -->
+          <!-- <div class="author">By S. Diallo</div> -->
+          <p>
+            The second panel explored the role of higher education councils in
+            enabling and guiding digital transformation. Discussions emphasized
+            the importance of regulatory and policy frameworks, collaboration
+            among institutions, and the need for councils to support inclusive
+            and quality-driven digital education.
+          </p>
+          <p>
+            Following the panels, participants engaged in two interactive
+            workshops. The first workshop guided leaders through the process of
+            mapping their institutions’ digital and data ecosystems. This
+            hands-on session helped participants assess their digital maturity,
+            identify gaps, and begin drafting roadmaps for transformation.
+          </p>
+          <p>
+            The second workshop introduced Kotter’s 8-Step Change Model as a
+            practical framework for leading institutional change. Participants
+            examined how to build urgency, form guiding coalitions, and sustain
+            momentum for digital innovation within their institutions. The
+            workshop encouraged leaders to think strategically about change
+            management in the context of AI and digital integration.
+          </p>
+          <p>
+            Participants were introduced to UNESCO’s six key pillars of the
+            Digital Transformation Collaborative. These pillars outline the
+            essential components for effective and coordinated digital
+            transformation in higher education. They include leadership and
+            strategic coordination, robust connectivity and infrastructure,
+            institutional capacities and culture that support technology
+            adoption, and the use of data to inform decision-making. This
+            framework provided a structured lens through which participants
+            could assess their institutions’ readiness and plan for sustainable
+            digital change.
+          </p>
+          <p>
+            The day concluded with a closing plenary session titled “From
+            Reflection to Action – Your First Leadership Move.” This session
+            encouraged participants to consolidate their learning and articulate
+            concrete first step they would take to initiate or accelerate
+            digital transformation at their institutions. Each leader left with
+            a personalized action plan and a renewed sense of purpose.
+          </p>
+          <p>
+            This training session was not only a standalone event but also the
+            first module in a broader leadership development pathway under
+            UNESCO’s Campus Africa Flagship. The programme is designed to offer
+            ongoing mentorship, coaching, and peer learning opportunities over
+            the next 6 to 12 months. Participants will be supported in
+            implementing their institutional roadmaps and will have access to a
+            network of Digital Transformation Coaches and practical resources.
+          </p>
+          <p>
+            The Executive Leadership Training Programme is a timely and
+            strategic response to the challenges facing African higher
+            education. It aims to build a critical mass of digitally literate,
+            gender-responsive, and future-ready leaders who can drive
+            sustainable transformation across the continent. As the AAU General
+            Conference continues, the momentum generated on Day One sets the
+            stage for deeper engagement and long-term impact.
+          </p>
+          <p>
+            A second session of the Executive Leadership Programme will take
+            place on Wednesday, July 23, 2025, as a side event during the main
+            conference. This follow-up session will further consolidate the
+            lessons learned and provide additional tools for institutional
+            change and innovation.
+          </p>
+        </div>
+
+        <!-- <div class="footer-tag">
+          GenCon 2025 | Hosted by UM6P & UM5 | Powered by AAU
+        </div> -->
+      </div>
+      <!-- Page 2 -->
+      <div
+        class="page-container page-2"
+        style="background: linear-gradient(135deg, #ffffff); padding: 10px"
+      >
+        <!-- <div
+          class="title-section"
+          style="text-align: center; margin-bottom: 30px"
+        >
+          <h1>Education for Sustainable Development in Africa</h1>
+          <h2>A Call to Action</h2>
+        </div> -->
+
+        <div class="footer-tag">
+          GenCon 2025 | Hosted by UM6P & UM5 | Powered by AAU
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

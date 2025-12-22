@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAU General Conference Newsletter</title>
+    <style>
+      /* --- Base & Font Styles --- */
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #e9e9e9;
+      }
+
+      /* --- Main Newsletter Container --- */
+      .newsletter-container {
+        max-width: 850px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #d1d1d1;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* --- Header Section --- */
+      .header {
+        padding: 15px 30px;
+        border-bottom: 1px solid #eee;
+        background-color: #f8f9fa;
+      }
+
+      .header .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        color: #6c757d;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+      }
+
+      .header .main-logo-container {
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .header .main-logo {
+        max-width: 80%;
+        height: auto;
+      }
+
+      .hosts-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .hosts-section .host-title {
+        font-weight: bold;
+        color: #343a40;
+        margin-right: 20px;
+        font-size: 15px;
+      }
+
+      .hosts-section .host-logo {
+        max-height: 50px;
+        margin: 0 15px;
+      }
+
+      /* --- Hero Image --- */
+      .hero-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* --- Main Content Layout --- */
+      .content-body {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+      }
+
+      /* --- Sidebar--- */
+      .sidebar {
+        flex: 0 0 250px;
+        background-color: #2a3962;
+        color: #ffffff;
+        padding: 25px;
+        box-sizing: border-box;
+      }
+
+      .sidebar h2 {
+        font-family: "Helvetica", "Arial Black", sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .sidebar ul {
+        /* list-style: none; */
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li {
+        margin: 20px 0;
+      }
+
+      .sidebar ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.4;
+        transition: color 0.3s;
+      }
+      .sidebar ul li a:hover {
+        color: #d9532c;
+      }
+
+      .sidebar ul li.featured a {
+        font-size: 18px;
+        color: #fff;
+      }
+
+      /* --- Main Article --- */
+      .main-article {
+        flex: 1;
+        padding: 25px 35px;
+        box-sizing: border-box;
+      }
+
+      .main-article h1 {
+        font-family: "Georgia", serif;
+        font-size: 32px;
+        line-height: 1.2;
+        color: #d9532c;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .main-article .byline {
+        font-size: 14px;
+        color: #6c757d;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      .main-article .article-text {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #343a40;
+        text-align: justify;
+      }
+
+      /* --- Responsive Adjustments --- */
+      @media (max-width: 768px) {
+        .content-body {
+          flex-direction: column;
+        }
+        .sidebar {
+          flex: 1 1 auto;
+        }
+        .main-article h1 {
+          font-size: 28px;
+        }
+      }
+
+      /* page 2 */
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        color: #2c315f;
+      }
+
+      .page-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 40px 50px;
+      }
+
+      .title-section {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      .title-section h1 {
+        font-size: 2rem;
+        color: #2c315f;
+        margin: 0;
+      }
+
+      .title-section h2 {
+        font-size: 1.2rem;
+        color: #c1272d;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+      .article {
+        margin-bottom: 40px;
+      }
+
+      .article img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .article h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #2c315f;
+      }
+
+      .article .author {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .article p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .footer-tag {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #006837;
+        margin-top: 50px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px;
+        }
+
+        .article h3 {
+          font-size: 1.2rem;
+        }
+
+        .title-section h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="newsletter-container">
+      <header class="header">
+        <div class="top-bar">
+          <span class="date">JULY 23, 2025</span>
+          <!-- <span class="volume">INAUGURAL ISSUE</span> -->
+        </div>
+        <div class="main-logo-container" style="text-align: center">
+          <img
+            src="/public_html/subs/aau-16-gencon-01.png"
+            alt="AAU Gencon Logo"
+            style="max-width: 330px; height: auto"
+          />
+        </div>
+        <div class="hosts-section">
+          <span class="host-title">Hosted in Morocco By:</span>
+          <img class="host-logo" src="/public_html/subs/uni_M_VI.png" alt="UMP Logo" />
+          <img
+            class="host-logo"
+            src="/public_html/subs/Universite-Mohammed-V.png"
+            alt="University Mohammed VI Polytechnic"
+          />
+        </div>
+      </header>
+
+      <div class="hero-image-container">
+        <img
+          src="/public_html/subs/hero_III.jpg"
+          alt="Session Image"
+        />
+      </div>
+
+      <div class="content-body">
+        <aside class="sidebar">
+          <h2>In This Issue</h2>
+          <ul>
+            <li class="featured">
+              <a href="#african-union-section"
+                >African Union Charts Bold Course for Africa’s Education and
+                Skills Future at AAU General Conference</a
+              >
+            </li>
+            <li>
+              <a href="#cesa-section"
+                >CESA 2026–2035: A Vision for Inclusive, Future-Ready
+                Education</a
+              >
+            </li>
+            <li>
+              <a href="#tvets-section"
+                >African Continental TVET Strategy: Skills for Prosperity and
+                Inclusion</a
+              >
+            </li>
+            <li>
+              <a href="#calls-to-action-section"
+                >Calls to Action: From Vision to Local Impact</a
+              >
+            </li>
+            <!-- <li><a href="#">Perfecting Your Grant Application</a></li> -->
+          </ul>
+        </aside>
+
+        <article class="main-article">
+          <h1 id="african-union-section">
+            African Union Charts Bold Course for Africa’s Education and Skills
+            Future at AAU General Conference
+          </h1>
+          <!-- <p class="byline">By Dr. Amina Diallo, AAU Chief Correspondent</p> -->
+          <p class="article-text">
+            At the Association of African Universities’ 16th General Conference
+            in Rabat, Morocco, the African Union Commission, represented by
+            Chigozie Emmanuel Okonkwo, unveiled two landmark frameworks—the
+            Continental Education Strategy for Africa (CESA) 2026–2035 and the
+            African Continental TVET Strategy 2025–2034. The session highlighted
+            how these strategies aim to redefine Africa’s educational and skills
+            landscape, tackling systemic challenges and fostering human capital
+            development essential for the continent’s sustainable growth.
+          </p>
+          <p class="article-text">
+            Plenary Session III of AAU’s 16th Quadrennial General Conference in
+            Rabat, Morocco, spotlighted education as the cornerstone of Africa’s
+            sustainable future. With the African Union Commission’s Chigozie
+            Emmanuel Okonkwo delivering a compelling presentation, participants
+            were introduced to the ambitious Continental Education Strategy for
+            Africa (CESA) 2026–2035 and the African Continental Technical and
+            Vocational Education and Training (TVET) Strategy 2025–2034.
+            Together, these robust frameworks chart a transformative path to
+            empower Africa’s human capital for prosperity, equity, and
+            innovation.
+          </p>
+          <!-- <p class="article-text">Cras in justo eu risus tincidunt aliquam. Donec nec elit vel nunc consectetur tincidunt. Nullam nec nunc ut libero aliquam aliquam. Phasellus vel magna nec sem consequat cursus. Curabitur vel arcu vel urna vehicula pulvinar.</p> -->
+        </article>
+      </div>
+
+      <div
+        class="page-container page-2"
+        style="
+          background: linear-gradient(135deg, #e0e8f0, #f2f2f2);
+          padding: 40px;
+        "
+      >
+        <div
+          class="title-section"
+          style="text-align: center; margin-bottom: 30px"
+        >
+          <h1 id="cesa-section">Education for Sustainable Development in Africa</h1>
+          <h2>A Call to Action</h2>
+        </div>
+
+        <div class="article">
+          <img
+            src="/public_html/subs/Chigozie_Emmanuel_Okonkwo.jpg"
+            alt="Mr. Chigozie Emmanuel"
+          />
+          <h3>
+            CESA 2026–2035: A Vision for Inclusive, Future-Ready Education
+          </h3>
+          <!-- <div class="author">By L. Abidou & R. Traore</div> -->
+          <p>
+            Building on the gains and lessons of its predecessor (CESA
+            2016–2025), the new strategy emphasizes that education is not a
+            privilege for select few Africans but a fundamental human right for
+            all. It identifies key pillars such as skills acquisition,
+            socio-economic development, and labour market alignment as critical
+            levers for individual and collective prosperity.
+          </p>
+          <p>
+            This updated CESA framework prioritizes teachers’ central role,
+            effective school leadership, lifelong learning, digitalization,
+            artificial intelligence integration, and education system resilience
+            to address contemporary challenges and explore opportunities.
+            “Investing in education is not merely a moral imperative; it is a
+            smart economic and social strategy,” Okonkwo stressed, linking
+            education to lower mortality rates, improved health outcomes,
+            women’s empowerment, and increased earning potential.
+          </p>
+          <p>
+            The new CESA’s overarching goal is to build an integrated,
+            prosperous, and peaceful Africa driven by African citizens. The
+            strategy directly responds to the persistent burning issues in
+            African HE, such as gender disparities, low funding, low enrolment,
+            low levels of foundational skills, and low completion rates across
+            educational levels. To enable it to achieve its 20 objectives, the
+            strategy has been structured around six strategic areas.
+          </p>
+          <ul>
+            <li style="margin-bottom: 10px">
+              Resources and Enabling Environment, which emphasizes
+              evidence-based policies, robust governance, sustainable funding,
+              strong partnerships, up-to-date curricular, digitalization and
+              greening, and expanded infrastructure.
+            </li>
+            <li style="margin-bottom: 10px">
+              Teachers, Educators, and Caregivers, aiming to improve teacher
+              policies, enhance education and professional development, upgrade
+              the attractiveness of the teaching profession, and increase
+              investment in school leadership, particularly for female leaders.
+            </li>
+            <li style="margin-bottom: 10px">
+              Basic Education, which seeks to ensure cost effective approaches
+              to early childhood development and foundational learning,
+              investment in emotional skills, and promotion of 21st-century
+              labour market skills, including ICT, AI, and STEAM.
+            </li>
+            <li style="margin-bottom: 10px">
+              Higher Education and TVET, focusing on strengthening links between
+              TVET and the labour market, expanding access and quality of HE,
+              and incentivizing research.
+            </li>
+            <li style="margin-bottom: 10px">
+              Second Chance Programmes and Lifelong Learning aims to expand
+              opportunities for out-of-school children, adult-literacy
+              campaigns, and support for lifelong learning.
+            </li>
+            <li style="margin-bottom: 10px">
+              Gender Equity and Inclusion seeks to promote gender equality in
+              and through education, reduce the cost of schooling for equity,
+              and ensure inclusiveness of vulnerable groups.
+            </li>
+          </ul>
+          <p>
+            These six strategic areas—from basic to higher education to lifelong
+            learning—are designed to be interconnected and mutually reinforcing
+            to provide a holistic educational framework and create a resilient
+            and inclusive African education ecosystem, ensuring that all its
+            critical areas are addressed in a coordinated fashion.
+          </p>
+        </div>
+
+        <div class="article">
+          <img
+            src="/public_html/subs/panel_img.jpg"
+            alt="Panel Image"
+          />
+          <h3 id="tvets-section">
+            African Continental TVET Strategy: Skills for Prosperity and
+            Inclusion
+          </h3>
+          <!-- <div class="author">By S. Diallo</div> -->
+          <p>
+            In a paradigm shift, the new TVET Strategy expands beyond youth
+            employability to include all Africans—women, migrants, rural
+            populations, informal workers, displaced people, and people with
+            disabilities—and empower them to level up. Titled “Sustainable
+            Development, Social Justice and Employability for All,” the strategy
+            aligns with AU’s Agenda 2063 and UN’s Sustainable Development Goals,
+            seeking to cultivate a globally competitive and innovative African
+            workforce.
+          </p>
+          <p>
+            Recognizing the transformative impact of emerging dynamics, such as
+            technology advancements, climate shifts, and demographic changes,
+            the strategy proactively addresses critical TVET sector challenges,
+            including underfunding, gender gaps, skills mismatches, low
+            enrolment, weak institutional systems, poor perception of TVET
+            programmes, and lack of a robust quality assurance mechanism. It
+            also considers the importance of people’s mental health and
+            well-being in the workplace.
+          </p>
+          <p>
+            Its four transformation pillars—policy governance and finance,
+            quality and inclusion, partnerships, and resource sharing—work in
+            tandem with three guiding principles to reposition TVET as a
+            powerful engine for Africa’s development. These guiding principles
+            work synergistically to create a comprehensive framework, harnessing
+            the full potential of technical and vocational education and
+            training across the continent as a powerful engine for development.
+          </p>
+        </div>
+
+        <!-- <div class="footer-tag">
+          GenCon 2025 | Hosted by UM6P & UM5 | Powered by AAU
+        </div> -->
+      </div>
+      <!-- Page 2 -->
+      <div
+        class="page-container page-2"
+        style="
+          background: linear-gradient(135deg, #ffffff);
+          padding: 40px;
+        "
+      >
+        <!-- <div
+          class="title-section"
+          style="text-align: center; margin-bottom: 30px"
+        >
+          <h1>Education for Sustainable Development in Africa</h1>
+          <h2>A Call to Action</h2>
+        </div> -->
+
+        <div class="article">
+          <img
+            src="/public_html/subs/Prof_Olusola_Oyewole.JPG"
+            alt="Prof Oyewole Image"
+          />
+          <h3 id="calls-to-action-section">
+            Calls to Action: From Vision to Local Impact 
+          </h3>
+          <!-- <div class="author">By L. Abidou & R. Traore</div> -->
+          <p>
+            The session’s panellists, including AAU’s Secretary General, Prof. Olusola Oyewole, called on African higher education institutions (HEIs) and stakeholders to adopt and adapt these policies within their unique contexts. They urged participants to access the frameworks via SDG forums and AAU’s website, ratify the Addis Convention, strengthen institutional data reporting, and forge partnerships for coordinated action.
+          </p>
+          <p>
+            Closing the session, Prof. Oyewole commended the African Union Commission for its leadership in shaping a comprehensive educational roadmap for the continent. He also expressed his profound pride in partnering the AU Commission on CESA’s development and implementation to drive comprehensive education in Africa. Celebrating their active participation and significant contributions to the session in particular and Africa’s higher education landscape in general, Prof. Oyewole adorned the panellists with AAU-branded regalia. 
+          </p>
+          <p>
+            The unveiling of CESA 2026–2035 and the African Continental TVET Strategy 2025–2034 marks a defining moment in Africa’s education journey. As Prof. Oyewole noted, their success depends on collective ownership and implementation by African institutions and governments. With bold strategies and unified action, Africa can transform its education systems into engines of innovation, inclusion, and sustainable development—bringing to life the vision of “The Africa We Want.” 
+          </p>
+
+        <div class="footer-tag">
+          GenCon 2025 | Hosted by UM6P & UM5 | Powered by AAU
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
