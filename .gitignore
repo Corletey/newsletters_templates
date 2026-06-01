@@ -1,0 +1,13 @@
+# Office documents
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+*.pdf
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
