@@ -1,160 +1,96 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AAU Climate Collaborative — Newsletter Templates</title>
 <style>
-  * { box-sizing: border-box; }
-  body { margin:0; background:#e7f1df; font-family: Arial, Helvetica, sans-serif; color:#1d3a24; }
-  a { color:inherit; }
-  .wrap { max-width: 1180px; margin:0 auto; padding: 30px 24px 70px; }
-  .top { display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; background:#fff; border-radius:12px; padding:18px 26px; box-shadow:0 8px 26px rgba(40,90,45,.10); }
-  .top img.aau { height:48px; width:auto; display:block; }
-  .top img.acc { height:54px; width:auto; display:block; }
-  .kente { height:22px; width:100%; object-fit:cover; display:block; border-radius:6px; margin:22px 0 30px; }
-  .hero h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(28px, 4vw, 44px); line-height:1.12; margin:0 0 14px; color:#16301d; text-wrap:pretty; }
-  .hero p { font-size:17px; line-height:1.6; max-width:680px; margin:0 0 6px; color:#33402f; }
-  .meta { display:flex; gap:10px; flex-wrap:wrap; margin:22px 0 8px; }
-  .pill { background:#2c6b39; color:#fff; font-size:12px; font-weight:bold; letter-spacing:.5px; padding:8px 14px; border-radius:20px; }
-  .pill.gold { background:#e0a92e; color:#23341f; }
-  .pill.blue { background:#3f86bd; }
-  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:26px; margin-top:38px; }
-  @media (max-width: 920px){ .grid { grid-template-columns:1fr; max-width:520px; margin-left:auto; margin-right:auto; } }
-  .card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 10px 30px rgba(40,90,45,.12); display:flex; flex-direction:column; }
-  .preview { position:relative; height:340px; overflow:hidden; background:#f3f8ee; border-bottom:1px solid #e3ecdb; }
-  .preview iframe { border:0; transform-origin: top left; }
-  .preview .grab { position:absolute; inset:0; z-index:2; }
-  .num { position:absolute; top:14px; left:14px; z-index:3; background:#23341f; color:#fff; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:bold; }
-  .cbody { padding:20px 22px 24px; display:flex; flex-direction:column; gap:8px; flex:1; }
-  .cbody .kicker { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#3f8f4e; font-weight:bold; }
-  .cbody h2 { font-family: Georgia, serif; font-size:21px; margin:2px 0 4px; color:#16301d; }
-  .cbody p { font-size:14px; line-height:1.55; color:#46523f; margin:0 0 8px; }
-  .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px; }
-  .tag { font-size:11px; color:#5f7a59; background:#eef6e8; border:1px solid #dde9d4; padding:4px 9px; border-radius:5px; }
-  .btn { margin-top:auto; display:inline-block; text-align:center; background:#2c6b39; color:#fff; text-decoration:none; font-size:14px; font-weight:bold; padding:13px 18px; border-radius:8px; transition:background .15s; }
-  .btn:hover { background:#1d4a27; }
-  .note { margin-top:40px; background:#fff; border-left:5px solid #e0a92e; border-radius:8px; padding:20px 24px; font-size:14px; line-height:1.6; color:#33402f; box-shadow:0 6px 20px rgba(40,90,45,.08); }
-  .note strong { color:#16301d; }
-  .foot { text-align:center; margin-top:40px; font-size:12px; color:#6f8268; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f4f7f1; font-family: Arial, Helvetica, sans-serif; color: #1d3a24; }
+  .header { background: #fff; border-bottom: 3px solid #2c6b39; padding: 18px 32px; display: flex; align-items: center; gap: 20px; }
+  .header img { height: 44px; width: auto; display: block; }
+  .header img.acc { height: 48px; }
+  .header .divider { width: 1px; height: 44px; background: #d4e8cc; }
+  .wrap { max-width: 800px; margin: 48px auto; padding: 0 24px 60px; }
+  h1 { font-family: Georgia, serif; font-size: 26px; color: #16301d; margin-bottom: 6px; }
+  .subtitle { font-size: 14px; color: #5a7a52; margin-bottom: 32px; }
+  .list { list-style: none; }
+  .list li { background: #fff; border: 1px solid #dce8d4; border-radius: 8px; margin-bottom: 10px; display: flex; align-items: center; gap: 16px; padding: 16px 20px; }
+  .list li:hover { border-color: #2c6b39; }
+  .num { font-family: Georgia, serif; font-size: 22px; font-weight: bold; color: #c8dfc0; min-width: 30px; }
+  .info { flex: 1; }
+  .info strong { font-size: 15px; color: #1d3a24; display: block; margin-bottom: 2px; }
+  .info span { font-size: 13px; color: #6f8268; }
+  .list a.btn { font-size: 13px; font-weight: bold; color: #2c6b39; text-decoration: none; white-space: nowrap; padding: 8px 16px; border: 1.5px solid #2c6b39; border-radius: 6px; }
+  .list a.btn:hover { background: #2c6b39; color: #fff; }
+  .foot { text-align: center; font-size: 12px; color: #8fa888; margin-top: 40px; }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
-      <img class="aau" src="https://aau.org/subs/newsletters/mastercard/aau-logo.png" alt="Association of African Universities">
-      <img class="acc" src="https://aau.org/subs/newsletters/mastercard/africa-climate-logo-01.png" alt="Africa Climate Collaborative">
-    </div>
-    <img class="kente" src="https://aau.org/subs/newsletters/mastercard/kente-strip.png" alt="">
 
-    <div class="hero">
-      <div class="meta">
-        <span class="pill gold">AAU × Mastercard Foundation</span>
-        <span class="pill">Climate Resilience &amp; Sustainability Collaborative</span>
+<div class="header">
+  <img src="https://aau.org/subs/newsletters/mastercard/aau-logo.png" alt="Association of African Universities">
+  <div class="divider"></div>
+  <img class="acc" src="https://aau.org/subs/newsletters/mastercard/africa-climate-logo-01.png" alt="Africa Climate Collaborative">
+</div>
+
+<div class="wrap">
+  <h1>Climate Collaborative — Newsletter Templates</h1>
+  <p class="subtitle">Six mail-ready HTML templates. All styles are inline — paste directly into your mailing platform.</p>
+
+  <ul class="list">
+    <li>
+      <span class="num">01</span>
+      <div class="info">
+        <strong>Convening Newsletter</strong>
+        <span>Magazine-style editorial with full-width hero image and partner spotlights</span>
       </div>
-      <h1>Newsletter templates for the Climate Collaborative</h1>
-      <p>Six mail-ready designs in the Collaborative&rsquo;s green palette &mdash; built entirely with inline styles and no scripts, so your mailing service won&rsquo;t strip them. Pick a structure, drop in your photos, and send.</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="preview">
-          <span class="num">1</span>
-          <iframe src="aau_collab_v1.html" width="763" height="900" style="transform:scale(0.43);" scrolling="no"></iframe>
-          <a class="grab" href="aau_collab_v1.html" aria-label="Open template 1"></a>
-        </div>
-        <div class="cbody">
-          <span class="kicker">Template 1</span>
-          <h2>Convening Newsletter</h2>
-          <p>Two-logo masthead with kente accent strips, a full-width hero image and a long-form editorial article. Serif headlines for an authoritative, magazine feel.</p>
-          <div class="tags"><span class="tag">Serif</span><span class="tag">Magazine</span><span class="tag">Long-form</span></div>
-          <a class="btn" href="aau_collab_v1.html">Open template &rarr;</a>
-        </div>
+      <a class="btn" href="aau_collab_v1.html">Open &rarr;</a>
+    </li>
+    <li>
+      <span class="num">02</span>
+      <div class="info">
+        <strong>Collaboration Brief</strong>
+        <span>Navy masthead, green hero band and bento-grid content layout</span>
       </div>
-
-      <div class="card">
-        <div class="preview">
-          <span class="num">2</span>
-          <iframe src="aau_collab_v2.html" width="763" height="900" style="transform:scale(0.43);" scrolling="no"></iframe>
-          <a class="grab" href="aau_collab_v2.html" aria-label="Open template 2"></a>
-        </div>
-        <div class="cbody">
-          <span class="kicker">Template 2</span>
-          <h2>Collaboration Brief</h2>
-          <p>Navy masthead with AAU logo, a green hero band and a bento-grid content section. Bold headings for a modern, structured brief.</p>
-          <div class="tags"><span class="tag">Sans-serif</span><span class="tag">Bento grid</span><span class="tag">Brief</span></div>
-          <a class="btn" href="aau_collab_v2.html">Open template &rarr;</a>
-        </div>
+      <a class="btn" href="aau_collab_v2.html">Open &rarr;</a>
+    </li>
+    <li>
+      <span class="num">03</span>
+      <div class="info">
+        <strong>Collaboration Journal</strong>
+        <span>Newspaper-style masthead with two-column lead story</span>
       </div>
-
-      <div class="card">
-        <div class="preview">
-          <span class="num">3</span>
-          <iframe src="aau_collab_v3.html" width="763" height="900" style="transform:scale(0.43);" scrolling="no"></iframe>
-          <a class="grab" href="aau_collab_v3.html" aria-label="Open template 3"></a>
-        </div>
-        <div class="cbody">
-          <span class="kicker">Template 3</span>
-          <h2>Collaboration Journal</h2>
-          <p>Classic journal masthead with both logos centred, gold and green rule lines and a newspaper-column lead story. Formal and editorial.</p>
-          <div class="tags"><span class="tag">Newspaper</span><span class="tag">Classic</span><span class="tag">Journal</span></div>
-          <a class="btn" href="aau_collab_v3.html">Open template &rarr;</a>
-        </div>
+      <a class="btn" href="aau_collab_v3.html">Open &rarr;</a>
+    </li>
+    <li>
+      <span class="num">04</span>
+      <div class="info">
+        <strong>Editorial Bulletin</strong>
+        <span>Utility bar header, photo-forward layout at 640px standard width</span>
       </div>
-
-      <div class="card">
-        <div class="preview">
-          <span class="num">4</span>
-          <iframe src="aau_collab_v4.html" width="640" height="760" style="transform:scale(0.50);" scrolling="no"></iframe>
-          <a class="grab" href="aau_collab_v4.html" aria-label="Open template 4"></a>
-        </div>
-        <div class="cbody">
-          <span class="kicker">Template 4</span>
-          <h2>Editorial Bulletin</h2>
-          <p>Utility bar header, a full-width editorial hero photo and a clean article body. Polished and production-ready at 640px standard width.</p>
-          <div class="tags"><span class="tag">Editorial</span><span class="tag">Utility bar</span><span class="tag">Photo-forward</span></div>
-          <a class="btn" href="aau_collab_v4.html">Open template &rarr;</a>
-        </div>
+      <a class="btn" href="aau_collab_v4.html">Open &rarr;</a>
+    </li>
+    <li>
+      <span class="num">05</span>
+      <div class="info">
+        <strong>Bold Banner Bulletin</strong>
+        <span>Patterned banner hero with work-stream cards</span>
       </div>
-
-      <div class="card">
-        <div class="preview">
-          <span class="num">5</span>
-          <iframe src="aau_collab_v5.html" width="640" height="760" style="transform:scale(0.50);" scrolling="no"></iframe>
-          <a class="grab" href="aau_collab_v5.html" aria-label="Open template 5"></a>
-        </div>
-        <div class="cbody">
-          <span class="kicker">Template 5</span>
-          <h2>Bold Banner Bulletin</h2>
-          <p>Patterned banner hero in Collaborative green, bold headline overlay and four work-stream cards. Energetic and eye-catching.</p>
-          <div class="tags"><span class="tag">Bold</span><span class="tag">Banner</span><span class="tag">Work-streams</span></div>
-          <a class="btn" href="aau_collab_v5.html">Open template &rarr;</a>
-        </div>
+      <a class="btn" href="aau_collab_v5.html">Open &rarr;</a>
+    </li>
+    <li>
+      <span class="num">06</span>
+      <div class="info">
+        <strong>Clean Digest</strong>
+        <span>Numbered five-item digest with contents list — compact and quick to read</span>
       </div>
+      <a class="btn" href="aau_collab_v6.html">Open &rarr;</a>
+    </li>
+  </ul>
 
-      <div class="card">
-        <div class="preview">
-          <span class="num">6</span>
-          <iframe src="aau_collab_v6.html" width="600" height="700" style="transform:scale(0.533);" scrolling="no"></iframe>
-          <a class="grab" href="aau_collab_v6.html" aria-label="Open template 6"></a>
-        </div>
-        <div class="cbody">
-          <span class="kicker">Template 6</span>
-          <h2>Clean Digest</h2>
-          <p>Compact numbered digest with a contents list and five-item summary &mdash; perfect for a quick monthly or weekly read on any device.</p>
-          <div class="tags"><span class="tag">Numbered</span><span class="tag">Digest</span><span class="tag">Compact</span></div>
-          <a class="btn" href="aau_collab_v6.html">Open template &rarr;</a>
-        </div>
-      </div>
+  <p class="foot">Association of African Universities &nbsp;·&nbsp; Climate Resilience &amp; Sustainability Collaborative</p>
+</div>
 
-    </div>
-
-    <div class="note">
-      <strong>How to use these.</strong> Each newsletter is a standalone HTML file using only inline styles &mdash; copy the file&rsquo;s source into your mailing platform&rsquo;s &ldquo;paste HTML&rdquo; field. Image placeholders are marked <em>[ PHOTO ]</em>; swap them for <code>&lt;img&gt;</code> tags pointing to your hosted images (mail clients need absolute URLs). The partner logos, the Mastercard Foundation line and all copy are editable directly in the file. Colours, kente strip and pattern are drawn from your reference artwork.
-    </div>
-
-    <div class="foot">Association of African Universities · Climate Resilience &amp; Sustainability Collaborative</div>
-  </div>
 </body>
 </html>
