@@ -6,39 +6,42 @@
 <title>AAU Newsletter Templates — Design Hub</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: #f4f7f1; font-family: Arial, Helvetica, sans-serif; color: #1d3a24; }
-
-.topbar { background: #1d3a24; padding: 14px 32px; display: flex; align-items: center; gap: 16px; }
-.topbar img { height: 38px; width: auto; display: block; }
-.topbar .title { font-size: 14px; color: #a8d8b2; font-weight: 600; margin-left: 4px; }
-
-.hero { background: linear-gradient(135deg, #2c6b39 0%, #1d3a24 100%); padding: 48px 32px 40px; text-align: center; }
-.hero h1 { font-family: Georgia, serif; font-size: 32px; color: #fff; font-weight: bold; margin-bottom: 10px; line-height: 1.2; }
-.hero p { font-size: 15px; color: #a8d8b2; max-width: 560px; margin: 0 auto; line-height: 1.6; }
-
-.wrap { max-width: 960px; margin: 0 auto; padding: 44px 24px 64px; }
-
-.section-label { font-size: 11px; font-weight: 700; color: #8aaa8a; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #c8ddb8; }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; margin-bottom: 44px; }
-
-.card { background: #fff; border: 1px solid #d4e8cc; border-radius: 8px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
-.card:hover { border-color: #2c6b39; box-shadow: 0 4px 16px rgba(28,60,32,0.12); transform: translateY(-2px); }
-
-.card-icon { font-size: 28px; margin-bottom: 2px; }
-.card-title { font-family: Georgia, serif; font-size: 17px; color: #1d3a24; font-weight: bold; }
-.card-desc { font-size: 13px; color: #5a7a52; line-height: 1.5; flex: 1; }
-.card-meta { font-size: 11px; color: #8aaa8a; display: flex; align-items: center; gap: 6px; margin-top: 4px; }
-.card-dot { width: 6px; height: 6px; border-radius: 50%; background: #c8ddb8; display: inline-block; }
-.card-dot.green { background: #2c6b39; }
-.card-dot.gold { background: #e0a92e; }
-.card-arrow { margin-left: auto; font-size: 16px; color: #c8ddb8; }
-.card:hover .card-arrow { color: #2c6b39; }
-
-.card.featured { border-color: #e0a92e; background: #fffbef; }
-.card.featured:hover { border-color: #c8941e; }
-
-.footer-bar { text-align: center; padding: 22px; font-size: 12px; color: #8aaa8a; border-top: 1px solid #d4e8cc; background: #fff; }
+:root { --ink:#172238; --muted:#637084; --navy:#172b4d; --green:#16745b; --mint:#e6f2ed; --gold:#d6a83c; --line:#dce5e3; --paper:#fff; }
+body { background:#eef3f1; color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+.topbar { background:var(--navy); padding:14px clamp(20px,5vw,64px); display:flex; align-items:center; gap:14px; }
+.topbar img { height:36px; width:auto; display:block; }
+.topbar .title { border-left:1px solid rgba(255,255,255,.25); color:#d9e8e3; font-size:13px; font-weight:700; padding-left:14px; }
+.hero { background:linear-gradient(125deg,#16745b 0%,#172b4d 72%); padding:clamp(44px,7vw,78px) clamp(20px,5vw,64px) 42px; color:#fff; }
+.hero-inner { max-width:1100px; margin:0 auto; }
+.eyebrow { color:#f1cf75; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:16px; }
+.hero h1 { font-family:Georgia,serif; font-size:clamp(34px,5vw,58px); line-height:1.05; max-width:680px; margin-bottom:16px; }
+.hero p { color:#d8e8e3; font-size:16px; line-height:1.65; max-width:620px; }
+.quick-nav { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+.quick-nav a { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); border-radius:4px; color:#fff; font-size:12px; font-weight:700; padding:9px 13px; text-decoration:none; }
+.quick-nav a:hover { background:#fff; color:var(--navy); }
+.wrap { max-width:1100px; margin:0 auto; padding:34px clamp(20px,5vw,64px) 64px; }
+.summary { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:42px; }
+.summary-item { background:var(--paper); border:1px solid var(--line); border-radius:5px; padding:16px 18px; }
+.summary-number { color:var(--green); display:block; font-family:Georgia,serif; font-size:25px; font-weight:700; }
+.summary-label { color:var(--muted); font-size:12px; }
+.section { scroll-margin-top:20px; margin-bottom:44px; }
+.section-label { align-items:center; color:var(--navy); display:flex; font-size:11px; font-weight:700; gap:12px; letter-spacing:2px; margin-bottom:16px; text-transform:uppercase; }
+.section-label::after { background:var(--gold); content:""; height:2px; max-width:120px; width:100%; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.card { background:var(--paper); border:1px solid var(--line); border-radius:5px; color:inherit; display:flex; flex-direction:column; min-height:190px; padding:20px; text-decoration:none; transition:border-color .15s,box-shadow .15s,transform .15s; }
+.card:hover { border-color:var(--green); box-shadow:0 8px 20px rgba(23,43,77,.12); transform:translateY(-3px); }
+.card-icon { color:var(--green); font-size:25px; margin-bottom:12px; }
+.card-title { color:var(--navy); font-family:Georgia,serif; font-size:18px; font-weight:700; line-height:1.2; }
+.card-desc { color:var(--muted); flex:1; font-size:13px; line-height:1.55; margin-top:9px; }
+.card-meta { align-items:center; color:#84918e; display:flex; font-size:11px; gap:7px; margin-top:18px; }
+.card-dot { background:#b7c8c2; border-radius:50%; display:inline-block; height:7px; width:7px; }
+.card-dot.green { background:var(--green); }
+.card-dot.gold { background:var(--gold); }
+.card-arrow { color:var(--green); font-size:17px; margin-left:auto; }
+.card.featured { background:#fffaf0; border-color:var(--gold); }
+.footer-bar { background:var(--paper); border-top:1px solid var(--line); color:#7b8986; font-size:12px; padding:24px; text-align:center; }
+@media (max-width:760px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:520px) { .topbar { align-items:flex-start; flex-direction:column; } .topbar .title { border-left:0; border-top:1px solid rgba(255,255,255,.25); padding-left:0; padding-top:10px; } .summary { grid-template-columns:1fr; } .grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -49,13 +52,29 @@ body { background: #f4f7f1; font-family: Arial, Helvetica, sans-serif; color: #1
 </div>
 
 <div class="hero">
-  <h1>Newsletter Template Library</h1>
-  <p>Email newsletter and communication templates for AAU projects and collaborative initiatives.</p>
+  <div class="hero-inner">
+    <div class="eyebrow">AAU Communications &amp; Design Hub</div>
+    <h1>Newsletter Template Library</h1>
+    <p>Email newsletter and communication templates for AAU projects, internal communications, and collaborative initiatives.</p>
+    <nav class="quick-nav" aria-label="Quick navigation">
+      <a href="#active">Active Projects</a>
+      <a href="#monthly">Monthly Newsletters</a>
+      <a href="#projects">Project Communications</a>
+      <a href="INTERNAL/">Internal Communications</a>
+    </nav>
+  </div>
 </div>
 
 <div class="wrap">
 
-  <div class="section-label">Africa Climate Collaborative</div>
+  <div class="summary" aria-label="Library summary">
+    <div class="summary-item"><span class="summary-number">7</span><span class="summary-label">collection areas</span></div>
+    <div class="summary-item"><span class="summary-number">30+</span><span class="summary-label">newsletter designs</span></div>
+    <div class="summary-item"><span class="summary-number">2026</span><span class="summary-label">latest active editions</span></div>
+  </div>
+
+  <section class="section" id="active">
+  <div class="section-label">Active Projects</div>
   <div class="grid">
     <a class="card featured" href="MasterCard/newsletter/">
       <div class="card-icon">📰</div>
@@ -70,8 +89,10 @@ body { background: #f4f7f1; font-family: Arial, Helvetica, sans-serif; color: #1
       <div class="card-meta"><span class="card-dot green"></span>7 templates<span class="card-arrow">→</span></div>
     </a>
   </div>
+  </section>
 
-  <div class="section-label">AfriQAN — Quality Assurance Network</div>
+  <section class="section">
+  <div class="section-label">AfriQAN &mdash; Quality Assurance Network</div>
   <div class="grid">
     <a class="card featured" href="AfriQAN/">
       <div class="card-icon">🎓</div>
@@ -80,7 +101,9 @@ body { background: #f4f7f1; font-family: Arial, Helvetica, sans-serif; color: #1
       <div class="card-meta"><span class="card-dot gold"></span>6 designs &nbsp;·&nbsp; Active project<span class="card-arrow">→</span></div>
     </a>
   </div>
+  </section>
 
+  <section class="section" id="monthly">
   <div class="section-label">Monthly &amp; General Newsletters</div>
   <div class="grid">
     <a class="card" href="MONTHLY/">
@@ -96,7 +119,9 @@ body { background: #f4f7f1; font-family: Arial, Helvetica, sans-serif; color: #1
       <div class="card-meta"><span class="card-dot"></span>General use<span class="card-arrow">→</span></div>
     </a>
   </div>
+  </section>
 
+  <section class="section" id="projects">
   <div class="section-label">Project &amp; Event Communications</div>
   <div class="grid">
     <a class="card" href="AfRID/">
@@ -124,6 +149,7 @@ body { background: #f4f7f1; font-family: Arial, Helvetica, sans-serif; color: #1
       <div class="card-meta"><span class="card-dot"></span>Internal use<span class="card-arrow">→</span></div>
     </a>
   </div>
+  </section>
 
 </div>
 
