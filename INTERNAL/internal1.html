@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #312c564d;
@@ -18,38 +19,38 @@
             padding: 20px;
             line-height: 1.6;
         }
-        
+
         .main-table {
             max-width: 900px;
             margin: 0 auto;
             background: #ffffff;
             border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
             border-collapse: collapse;
             overflow: hidden;
         }
-        
+
         .header-row td {
             background: linear-gradient(135deg, #312c56 0%, #4a4575 100%);
             padding: 40px 30px;
             text-align: center;
             color: #ffffff;
         }
-        
+
         .header-row h1 {
             color: #f4da35;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         .header-row p {
             font-size: 1.1rem;
             opacity: 0.9;
             margin-bottom: 15px;
         }
-        
+
         .date-badge {
             background: #f4da35;
             color: #312c56;
@@ -59,7 +60,7 @@
             display: inline-block;
             font-size: 0.95rem;
         }
-        
+
         .section-header {
             background: #312c56;
             color: #ffffff;
@@ -67,7 +68,7 @@
             font-size: 1.4rem;
             font-weight: 600;
         }
-        
+
         .section-icon {
             width: 30px;
             height: 30px;
@@ -82,50 +83,50 @@
             margin-right: 15px;
             vertical-align: middle;
         }
-        
+
         .section-content {
             padding: 25px;
             border-bottom: 1px solid #e5e7eb;
         }
-        
+
         .section-content:hover {
             background: #f8fafc;
         }
-        
+
         .content-text {
             width: 60%;
             vertical-align: top;
             padding-right: 25px;
         }
-        
+
         .content-image {
             width: 40%;
             vertical-align: top;
         }
-        
+
         .content-text h3 {
             color: #312c56;
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .content-text p {
             color: #4b5563;
             margin-bottom: 15px;
             font-size: 1rem;
         }
-        
+
         .content-text ul {
             color: #4b5563;
             padding-left: 20px;
             margin-bottom: 15px;
         }
-        
+
         .content-text li {
             margin-bottom: 8px;
         }
-        
+
         .section-image {
             width: 100%;
             height: 200px;
@@ -133,7 +134,7 @@
             border-radius: 12px;
             border: 2px solid #e5e7eb;
         }
-        
+
         .highlight-box {
             background: #fef3c7;
             border-left: 4px solid #312c56;
@@ -141,93 +142,95 @@
             border-radius: 8px;
             margin: 15px 0;
         }
-        
+
         .highlight-box h4 {
             color: #312c56;
             font-weight: 600;
             margin-bottom: 8px;
         }
-        
+
         .highlight-box p {
             color: #92400e;
             font-size: 0.95rem;
         }
-        
+
         .footer-row td {
             background: #312c56;
             color: #ffffff;
             padding: 30px;
             text-align: center;
         }
-        
+
         .footer-row h3 {
             color: #f4da35;
             margin-bottom: 15px;
             font-size: 1.3rem;
         }
-        
+
         .footer-row p {
             opacity: 0.8;
             margin-bottom: 10px;
         }
-        
+
         .footer-divider {
             height: 2px;
             background: linear-gradient(90deg, transparent 0%, #f4da35 50%, transparent 100%);
             margin: 20px 0;
         }
-        
+
         .feedback-section {
             background: rgba(145, 162, 225, 0.1);
             border-radius: 12px;
             padding: 25px;
             margin-top: 15px;
         }
-        
+
         .feedback-section h4 {
             color: #312c56;
             margin-bottom: 10px;
         }
-        
+
         .feedback-section p {
             color: #4b5563;
             font-size: 0.95rem;
         }
-        
+
         @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
-            
+
             .header-row td {
                 padding: 30px 20px;
             }
-            
+
             .header-row h1 {
                 font-size: 2rem;
             }
-            
+
             .section-header {
                 padding: 15px 20px;
                 font-size: 1.2rem;
             }
-            
-            .content-text, .content-image {
+
+            .content-text,
+            .content-image {
                 width: 100%;
                 display: block;
                 padding: 0;
             }
-            
+
             .content-image {
                 padding-top: 20px;
             }
-            
+
             .section-image {
                 height: 150px;
             }
         }
     </style>
 </head>
+
 <body>
     <table class="main-table" width="100%">
         <!-- Header -->
@@ -238,395 +241,1387 @@
                 <span class="date-badge">August 2025 Edition</span>
             </td>
         </tr>
-        
+
         <!-- Company News Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">1</span>Company News & Updates
+                <span class="section-icon">1</span>Latest Organizational Developments
             </td>
         </tr>
         <tr>
-            <td colspan="2" class="section-content">
+            <td colspan="2" class="section-content" style="text-align: justify;">
                 <table width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Latest Organizational Developments</h3>
-                            <p>Stay informed about important announcements, organizational milestones, and strategic changes that impact our work environment.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>This Month's Highlights</h4>
-                                <p>Major announcements, policy changes, and organizational achievements will be featured here with detailed explanations and impact assessments.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Recent organizational achievements and milestones</li>
-                                <li>Strategic updates and future planning initiatives</li>
-                                <li>Important procedural changes and implementations</li>
-                            </ul>
-                        </td>
+                        <img src="https://aau.org/subs/newsletters/intercomm/courtesy_visit.jpeg" alt="Courtesy Meeting"
+                            class="section-image">
+
+                        <h3 style="margin-top: 0; padding-top: 0;">
+                            >AAU Strengthens Ties with Ghana's Foreign Affairs Ministry in Courtesy Visit</h3>
+                        <p>On Monday, 10 August 2026, AAU Secretary-General, Prof. Olusola Bandele Oyewole, led a senior
+                            management delegation on a courtesy visit to Hon. Samuel Okudzeto Ablakwa, Ghana's Minister
+                            of Foreign Affairs, at his office in Accra.</p>
+                        <p>The visit served as an opportunity to reaffirm the Association's deep appreciation to the
+                            Government and people of Ghana for their unwavering hospitality since AAU's establishment in
+                            1967 and its hosting in Accra since 1970 - a partnership that has now spanned more than five
+                            decades.</p>
+                        <p>Prof. Oyewole commended Ghana's bold decision to grant visa-free entry for African passport
+                            holders, describing the initiative as a significant step toward African integration,
+                            mobility, and Pan-African unity. He further reaffirmed the Association's readiness to
+                            continue providing academic, research, policy, and institutional support to Ghana, and to
+                            contribute to the country's leadership efforts across the continent.</p>
+                        <p>Discussions also covered matters of mutual interest, including AAU's diplomatic status in
+                            Ghana, its strategic partnership with the Government on higher education matters, and other
+                            priorities advancing higher education across Africa.</p>
+                        <p>The AAU remains steadfast in its commitment to supporting Ghana and strengthening its
+                            contribution to the continent's transformation through higher education, research,
+                            innovation, knowledge exchange, and Pan-African collaboration.</p>
+
                         <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Business Meeting" class="section-image">
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
-        <!-- Employee Spotlights Section -->
+        <!-- -------------------------------------------------------- -->
         <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; line-height: 1.6;">
+
+                            <!-- LARGER IMAGE WITH BETTER SPACING -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/abass-sylla-jpg.jpeg"
+                                alt="Dr. Abass Sylla" align="right" width="320" hspace="0" vspace="0"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0;">Dr. Abass Youba Sylla Appointed RELANCE Project Coordinator</h3>
+
+                            <p>The Association of African Universities (AAU) has appointed <b>Dr. Abass Youba Sylla</b>
+                                as Project Coordinator for the <b>Sahel Regional Engagement for Learning and
+                                    Collaboration in Education (RELANCE)</b> project, a major regional initiative aimed
+                                at strengthening education systems and expanding learning opportunities for vulnerable
+                                communities across the Sahel.</p>
+
+                            <div class="highlight-box" style="clear: both; margin-top: 20px;">
+                                <h4>In his new role,</h4>
+                                <p>Dr. Sylla will provide strategic leadership for the implementation of the project
+                                    from the RELANCE Secretariat in Chad, working closely with governments, development
+                                    partners, higher education institutions, and regional stakeholders to ensure the
+                                    successful delivery of project activities across participating countries.</p>
+                            </div>
+
+                            <p>With extensive experience in managing multi-country development programmes, Dr. Sylla
+                                brings valuable expertise in programme coordination, partnership management, and
+                                institutional development. His appointment reinforces AAU's commitment to delivering
+                                high-impact initiatives that promote inclusive, resilient, and innovative education
+                                across Africa. His work sits within the Directorate of Special Projects, headed by Dr.
+                                Sylvia Mkandawire.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- ------------------------------------------------------------- -->
+
+        <!-- Employee Spotlights Section -->
+        <!-- <tr>
             <td colspan="2" class="section-header">
                 <span class="section-icon">2</span>Employee Spotlights
             </td>
-        </tr>
+        </tr> -->
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Celebrating Our Team Members</h3>
-                            <p>Get to know your colleagues better through featured profiles highlighting their professional achievements, interesting projects, and personal interests.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Featured Employee</h4>
-                                <p>Each month we showcase team members who have made significant contributions or achieved notable milestones in their roles.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Professional achievements and career highlights</li>
-                                <li>Current projects and responsibilities</li>
-                                <li>Personal interests and hobbies</li>
-                                <li>Tips and insights from experienced team members</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Professional Portrait" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">One Voice, Amplified Impact: Communications and
+                                Knowledge Management Unit Strengthens Integration</h3>
+
+                            <!-- IMAGE 1: Full-width group photo -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/Comms_Workshop_group.jpg.jpeg"
+                                alt="Communications and Knowledge Management Integration Workshop - Group Photo"
+                                width="100%"
+                                style="width: 100%; height: 70%; object-fit: cover; display: block; margin: 20px 0; border-radius: 10px;">
+
+                            <p>On 11 August 2026, the Communications and Knowledge Management Unit of the Association of
+                                African Universities (AAU) convened an integration workshop under the theme, <b>"One
+                                    Voice, Amplified Impact: Integrating Communications, Knowledge Management, and AAU
+                                    TV for Strategic Cohesion."</b> The session marked a deliberate step toward
+                                deepening collaboration across the Unit's three core functions - Strategic
+                                Communications, Knowledge Management, and AAU TV - while preserving the distinct
+                                expertise and mandate of each.</p>
+
+                            <p>The workshop opened with a strategic reflection on the imperatives of integration,
+                                followed by an honest examination of operational challenges that have historically
+                                impeded collaboration. Participants assessed how communication planning can be more
+                                systematically embedded across the AAU's portfolio of projects, programmes, and events,
+                                and identified concrete opportunities for deeper cooperation in joint planning, event
+                                coordination, content development, and publications.</p>
+
+                            <!-- IMAGE 2: Full-width breakout session -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/comms_workshop_2.jpeg"
+                                alt="Workshop breakout session" width="100%"
+                                style="width: 100%; height: 90%; object-fit: cover; display: block; margin: 20px 0; border-radius: 10px;">
+
+                            <p>In breakout sessions, the team explored actionable pathways to strengthen integration,
+                                including enhanced engagement with other AAU departments and regional offices,
+                                continuous professional development, and the development of transparent, standardised
+                                operating procedures. Group deliberations culminated in plenary presentations, during
+                                which participants distilled emerging priorities and articulated a clear set of "big
+                                wins" for integration.</p>
+
+                            <p>The workshop concluded with a firm commitment to translating dialogue into deliverables,
+                                with emphasis on clearer workflows, stronger coordination mechanisms, and a more
+                                structured approach to cross-functional collaboration. The session reinforced that while
+                                the Unit's functions are distinct, their points of intersection represent a strategic
+                                asset. By leveraging these intersections, the Unit is better positioned to work with
+                                coherence, agility, and purpose - ultimately amplifying the impact of the AAU's
+                                communications and knowledge management efforts across the continent.</p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+        <!-- -------------------------------------------------- -->
+
         <!-- Departmental Updates Section -->
-        <tr>
+        <!-- <tr>
             <td colspan="2" class="section-header">
                 <span class="section-icon">3</span>Departmental Updates
             </td>
-        </tr>
+        </tr> -->
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Cross-Departmental Progress Reports</h3>
-                            <p>Discover what different teams across the organization are working on, their recent successes, and ongoing challenges.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Department Focus</h4>
-                                <p>Monthly rotation featuring different departments, their current projects, achievements, and collaborative opportunities.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Current projects and initiatives by department</li>
-                                <li>Recent successes and accomplishments</li>
-                                <li>Challenges being addressed and solutions implemented</li>
-                                <li>Opportunities for cross-departmental collaboration</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Team Collaboration" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/dr-songu-head-of-it.jfif"
+                                alt="Dr. Songu, Head of IT at AAU" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Driving Digital Connectivity: AAU Launches
+                                eduroam</h3>
+
+                            <p>The Association of African Universities has taken a step in strengthening its digital
+                                infrastructure with the introduction of <b>eduroam</b> (education roaming), a secure
+                                global Wi-Fi service for the international research and education community.</p>
+
+                            <p>The rollout reflects AAU's commitment to improving digital connectivity, enhancing
+                                cybersecurity, and providing staff with seamless access to online resources both at the
+                                Secretariat and across thousands of participating universities and research institutions
+                                worldwide.</p>
+
+                            <p>Using their institutional credentials, staff can securely connect to the eduroam network
+                                without the need for guest accounts or shared passwords. The service employs advanced
+                                encryption and authentication protocols to protect user information while providing
+                                reliable internet access at partner institutions during conferences, research
+                                collaborations, and official travel.</p>
+
+                            <p>The service is currently being piloted with a cross section of Secretariat staff and will
+                                be expanded to all staff in the coming months.</p>
+
+                            <p>Speaking on this initiative, <b>Dr. Songu</b>, the new Head of IT said that <i>"With
+                                    eduroam now operational at the Secretariat, staff, researchers, students, and
+                                    visitors from participating institutions worldwide can securely access wireless
+                                    internet using their home institutional credentials. This eliminates the need for
+                                    temporary guest accounts while ensuring robust authentication, enhanced
+                                    cybersecurity, and an improved user experience.</i></p>
+
+                            <p><i>Looking ahead, AAU will continue investing in advanced digital infrastructure,
+                                    cybersecurity, cloud-based services, digital learning platforms, research data
+                                    management, and trusted identity solutions that strengthen institutional resilience
+                                    and improve service delivery to our member universities."</i></p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+        <!-- ----------------------------------------- -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/prof-denis-graduation.jpeg"
+                                alt="Professor Denis Worlanyo Aheto at University of Cape Coast" align="right"
+                                width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">AAU Joins University of Cape Coast to Celebrate
+                                Investiture of New Vice Chancellor, Professor Denis Worlanyo Aheto</h3>
+
+                            <p>The AAU was represented by <b>Mrs. Yvette Quashie</b>, Human Resource and Admin Manager
+                                and <b>Dr. Sylvia Mkandawire</b>, Director of Special Projects, at the investiture
+                                ceremony of <b>Professor Denis Worlanyo Aheto</b> as Vice Chancellor of the University
+                                of Cape Coast (UCC), Ghana. They joined university leaders, government officials and
+                                other distinguished guests in celebrating his appointment.</p>
+
+                            <p>Professor Aheto has been a valued partner of the AAU through his leadership of the Africa
+                                Centre of Excellence in Coastal Resilience (ACECoR), under the ACE Impact Project. In
+                                this role, he made notable contributions to research, capacity development and higher
+                                education advancement across the continent.</p>
+
+                            <p>The AAU extends its warm congratulations to Professor Aheto and looks forward to
+                                strengthening its longstanding partnership with the University of Cape Coast in
+                                advancing quality higher education, research and innovation in Africa.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- ------------------------------------------------ -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/corevip-2027-launch.jfif"
+                                alt="COREVIP 2027 and AAU@60 Launch Event" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">AAU Officially Launches COREVIP 2027 and AAU@60
+                            </h3>
+
+                            <p>The Association of African Universities officially launched the <b>24th Conference of
+                                    Rectors, Vice Chancellors and Presidents of African Universities (COREVIP 2027)</b>
+                                alongside its Diamond Jubilee celebrations (<b>AAU@60</b>) during a virtual event held
+                                on 28 July 2026.</p>
+
+                            <p>The launch brought together university leaders, policymakers, development partners and
+                                higher education stakeholders from across Africa and beyond, marking the start of
+                                preparations for the Association's flagship conference and the celebration of 60 years
+                                of advancing higher education across the continent.</p>
+
+                            <p>Held under the theme, <b>"Universities for Africa's Future: Repositioning African
+                                    Universities for Resilience, Relevance and Global Impact,"</b> COREVIP 2027 will
+                                provide a platform for dialogue on strengthening higher education through innovation,
+                                research, resilient institutions, ethical leadership and global partnerships.</p>
+
+                            <p>The event also unveiled the COREVIP 2027 and AAU@60 visual identities, conference
+                                promotional materials and the roadmap to Nairobi, Kenya, where <b>KCA University</b>
+                                will host the conference from 20 to 23 July 2027.</p>
+
+                            <p>Registration for COREVIP 2027 is now officially open after the successful launch, and
+                                staff, member institutions, partners and stakeholders are encouraged to secure their
+                                participation or share this widely within their respective networks as preparations
+                                gather momentum. For more details on the event and registration <a
+                                    href="https://events.aau.org/corevip/">Click Here</a>.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- ---------------------------------------------- -->
         <!-- Upcoming Events Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">4</span>Upcoming Events
+                <span class="section-icon">2</span>Events Recap
             </td>
         </tr>
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Mark Your Calendars</h3>
-                            <p>Stay updated on company-wide meetings, professional development opportunities, team building activities, and important conferences.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Priority Events</h4>
-                                <p>Key upcoming events that require advance planning, registration, or preparation from staff members.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Company-wide meetings and all-hands sessions</li>
-                                <li>Training workshops and skill development programs</li>
-                                <li>Social events and team building activities</li>
-                                <li>Industry conferences and networking opportunities</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Conference Event" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/3rd-edition-of-the-positioning-your-university-for-global-visibility-workshop.jpeg"
+                                alt="3rd Edition of the Positioning Your University for Global Visibility Workshop"
+                                align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Positioning Universities for Greater Global
+                                Visibility</h3>
+
+                            <p>The Association of African Universities (AAU), in collaboration with <b>KCA
+                                    University</b>, successfully hosted the <b>3rd Edition of the Positioning Your
+                                    University for Global Visibility Workshop</b> from 14 to 17 July 2026 in Nairobi,
+                                Kenya.</p>
+
+                            <p>The workshop brought together university leaders, policymakers, researchers and higher
+                                education professionals from across Africa to explore practical strategies for enhancing
+                                institutional visibility, strengthening research impact, building strategic partnerships
+                                and improving global competitiveness.</p>
+
+                            <p>The programme reaffirmed AAU's commitment to supporting African universities in
+                                strengthening their international presence and expanding opportunities for
+                                collaboration, innovation and sustainable institutional growth.</p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
-        <!-- Policy Updates Section -->
+        <!-- ---------------- -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/executive-leadership-workshop.jfif"
+                                alt="Executive Leadership Workshop on Digital Transformation" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Advancing Digital Transformation in African
+                                Universities</h3>
+
+                            <p>The Association of African Universities (AAU) successfully hosted the <b>Executive
+                                    Leadership Workshop on Digital Transformation in Practice: From Strategy to
+                                    Execution</b> from 20 to 24 July 2026 at the AAU Secretariat in Accra, Ghana.</p>
+
+                            <p>The workshop brought together senior academic and administrative leaders from across
+                                Africa to strengthen their capacity to lead digital transformation within their
+                                institutions. Through practical sessions on <b>cybersecurity, artificial intelligence,
+                                    digital leadership</b> and <b>institutional readiness</b>, participants explored
+                                strategies for driving innovation and building resilient, future ready universities.</p>
+
+                            <p>The programme also fostered peer learning and collaboration, equipping participants with
+                                practical frameworks to develop and implement digital transformation initiatives that
+                                enhance teaching, learning, research and institutional administration.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Upcoming Events Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">5</span>Policy Updates
+                <span class="section-icon">3</span>Upcoming Events
             </td>
         </tr>
+        <!-- EVENT 1: African Students' Leadership Summit -->
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Important Policy Changes</h3>
-                            <p>Stay informed about updates to company policies, procedures, and benefits that affect your work experience and employment.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Recent Changes</h4>
-                                <p>Clear explanations of policy modifications, effective dates, and practical implications for daily operations.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Updates to employee handbook and procedures</li>
-                                <li>Changes to benefits packages and enrollment</li>
-                                <li>New safety protocols and compliance requirements</li>
-                                <li>Technology and security policy modifications</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Policy Documents" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/african-students-leadership-summit.jpeg"
+                                alt="African Students' Leadership Summit 2026" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Inaugural African Students' Leadership Summit
+                                2026</h3>
+
+                            <p>The Association of African Universities (AAU), in collaboration with its North Africa
+                                Regional Office (NARO) and hosted by <b>Al Azhar University</b>, will hold the inaugural
+                                African Students' Leadership Summit from <b>17 to 19 August 2026</b> in Cairo, Egypt.
+                            </p>
+
+                            <p>Held under the theme, <b>"Shaping the Next Generation of African Transformation:
+                                    Leadership, Innovation, and Agenda 2063 in Action,"</b> the summit will bring
+                                together undergraduate and postgraduate students, doctoral researchers and young
+                                innovators from across Africa to strengthen leadership capacity, foster innovation and
+                                promote youth engagement in advancing the continent's development agenda.</p>
+
+                            <p>AAU encourages member institutions to nominate and support eligible students to
+                                participate in this landmark event.</p>
+
+                            <p><b>Participation Fees</b><br>
+                                • USD 300 – AAU Member Institutions<br>
+                                • USD 350 – Non-AAU Member Institutions</p>
+
+                            <p><b>Enquiries:</b> +233 552639759 | +233 243752815 • jddotsey@aau.org | jkornor@aau.org
+                            </p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+
+        <!-- EVENT 2: Safety and Security Workshop -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/safety-and-security-workshop.png"
+                                alt="Workshop on Safety and Security in African Universities" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Strengthening Safety and Security in African
+                                Universities</h3>
+
+                            <p>The Association of African Universities (AAU), in collaboration with the <b>University of
+                                    Dar es Salaam</b>, will host the Workshop on Safety and Security in African
+                                Universities from <b>25 to 27 August 2026</b> at the Golden Tulip Hotel, Zanzibar,
+                                Tanzania.</p>
+
+                            <p>The workshop is designed to strengthen institutional capacity in campus safety, emergency
+                                preparedness, proactive security management and the use of technology enabled security
+                                systems. It will provide a platform for university leaders and security professionals to
+                                exchange experiences, share best practices and explore practical approaches to creating
+                                safer and more resilient university campuses.</p>
+
+                            <p>The workshop is intended for Vice Chancellors, Presidents, Rectors, Registrars,
+                                Directors, Campus Safety and Security Officers, ICT Officers and other professionals
+                                responsible for institutional security and risk management.</p>
+
+                            <p><b>Participation Fees</b><br>
+                                • USD 700 – AAU Member Institutions<br>
+                                • USD 800 – Non-AAU Member Institutions</p>
+
+                            <p><b>Enquiries:</b> elaari@aau.org | membership@aau.org | WhatsApp: +233 244 498 868</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- EVENT 3: AAU TV Media Masterclass -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/media-master-class-2026.png"
+                                alt="AAU TV Media Masterclass 2026" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">AAU TV Media Masterclass 2026</h3>
+
+                            <p>AAU TV will host the AAU TV Media Masterclass 2026 from <b>7 to 11 September 2026</b> at
+                                the AAU Secretariat, Accra, Ghana. Held under the theme, <b>"Building Powerful
+                                    University Brands Through Strategic Content and Academic Storytelling,"</b> the five
+                                day programme is designed to equip higher education communication professionals with
+                                practical skills to strengthen institutional visibility and reputation.</p>
+
+                            <p>Participants will explore strategic communication, institutional branding, content
+                                strategy, academic storytelling, research communication and multimedia production, while
+                                learning how to effectively communicate their institutions' impact to local and global
+                                audiences.</p>
+
+                            <p><b>Participation Fees</b><br>
+                                • USD 450 – Early Bird (extended until 31 July 2026)<br>
+                                • USD 500 – AAU Member Institutions<br>
+                                • USD 600 – Non-Member Institutions</p>
+
+                            <p><b>Date:</b> 7–11 September 2026<br>
+                                <b>Venue:</b> AAU Secretariat, Accra, Ghana
+                            </p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- EVENT 4: Smart Financial Management Workshop -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/financial-management-workshop.png"
+                                alt="Smart Financial Management Workshop" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Smart Financial Management Workshop</h3>
+
+                            <p>The Association of African Universities (AAU) invites university finance and
+                                administrative professionals to participate in the Smart Financial Management Workshop,
+                                scheduled for <b>15 to 18 September 2026</b> in Windhoek, Namibia.</p>
+
+                            <p>Held under the theme, <b>"Alignment Between Finance, IT and Institutional Planning for
+                                    Bursars and Finance Officers,"</b> the workshop will examine practical strategies
+                                for strengthening the integration of financial management, information technology and
+                                institutional planning. Participants will explore approaches to improving operational
+                                efficiency, enhancing accountability and ensuring that financial and digital systems
+                                effectively support institutional priorities.</p>
+
+                            <p>The workshop is designed for Registrars, Bursars, Finance Officers, Directors of Audit,
+                                Directors of Procurement, ICT Officers and other professionals involved in financial
+                                management within higher education institutions.</p>
+
+                            <p><b>Participation Fees</b><br>
+                                • USD 700 – AAU Member Institutions<br>
+                                • USD 800 – Non-Member Institutions</p>
+
+                            <p><b>Date:</b> 15–18 September 2026<br>
+                                <b>Venue:</b> Windhoek, Namibia<br>
+                                <b>Payment:</b> <a
+                                    href="https://pay.aau.org/smart-financial-management-namibia-2026">https://pay.aau.org/smart-financial-management-namibia-2026</a><br>
+                                <b>Enquiries:</b> jokoe@aau.org | jonasokoe@gmail.com
+                            </p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- ------------------------------ -->
+
+
         <!-- Employee Recognition Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">6</span>Employee Recognition
+                <span class="section-icon">4</span>EMPLOYEE SPOTLIGHT
             </td>
         </tr>
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Celebrating Excellence</h3>
-                            <p>Recognizing outstanding contributions, achievements, and dedication of our team members across all departments and roles.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Recognition Programs</h4>
-                                <p>Various awards and recognition programs designed to acknowledge exceptional performance and contributions.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Employee of the month awards and nominations</li>
-                                <li>Project completion celebrations and team achievements</li>
-                                <li>Length of service recognition and milestones</li>
-                                <li>Peer-nominated appreciation and kudos</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Awards Ceremony" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/mr-emmanuel-bamfo-ansong.jpeg"
+                                alt="Mr. Emmanuel Bamfo Ansong, Procurement Specialist" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Meet Mr. Emmanuel Bamfo Ansong</h3>
+
+                            <p><b>Mr. Ansong</b> served as the Procurement Specialist for the World Bank-funded <b>ACE
+                                    Impact Project</b> at the AAU Secretariat and has played a key role in strengthening
+                                procurement systems across the Secretariat since joining in <b>June 2020</b>.</p>
+
+                            <p>With over <b>29 years</b> of experience in development projects, he has built strong
+                                expertise in procurement and contract management through his work with organizations
+                                such as the <b>World Bank, African Development Bank, European Union,</b> and
+                                <b>UNOPS</b>. At AAU, he continues to support procurement implementation across the ACE
+                                Impact Centres while also facilitating training sessions and webinars for Procurement
+                                Focal Persons.</p>
+
+                            <p>His dedication, professionalism, and technical expertise contributed significantly to the
+                                successful implementation of the ACE Impact Project and the broader work of the
+                                Association.</p>
+
+                            <p>Outside work, Mr. Ansong enjoys watching football, playing number and word games, and
+                                spending time in nature. A proud supporter of "any team playing against Manchester
+                                City," he never misses a good football debate. His favorite meal is a local Ghanaian
+                                corn meal popularly known as <b>TZ</b>, and his favorite quote is from <b>John
+                                    6:68–69</b>: <i>"Lord, to whom shall we go? You have the words of eternal life. We
+                                    have come to believe and to know that you are the Holy One of God."</i></p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+
         <!-- Industry Insights Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">7</span>Industry Insights
+                <span class="section-icon">5</span>DEPARTMENTAL & PROJECTS UPDATES
             </td>
         </tr>
+        <!-- ARTICLE 1: SIRA Programme -->
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Higher Education Landscape</h3>
-                            <p>Keep abreast of trends, developments, and analysis relevant to African higher education and our organizational mission.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Trending Topics</h4>
-                                <p>Current issues and opportunities in African higher education that impact our strategic direction and operations.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Latest research and educational technology trends</li>
-                                <li>Funding opportunities and partnership developments</li>
-                                <li>Regulatory changes in higher education sector</li>
-                                <li>Innovation and best practices from member institutions</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="University Campus" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/sira-world-bank.png"
+                                alt="World Bank SIRA Programme" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">AAU to Support Regional Facilitation of the World
+                                Bank's SIRA Programme</h3>
+
+                            <p>The Association of African Universities (AAU), through its Directorate of Special
+                                Projects, is expected to play a key role in the regional facilitation of the <b>Skills
+                                    for Innovation, Resilience, and Aspirations (SIRA) Programme</b>, a <b>US$642
+                                    million</b> World Bank initiative aimed at strengthening education-to-employment
+                                pathways for young people across West and Central Africa.</p>
+
+                            <p>Currently under discussion between the AAU and the World Bank, the programme is expected
+                                to benefit approximately <b>5.4 million young people</b>, with a particular focus on
+                                young women and out-of-school youth in <b>Cabo Verde, Cote d'Ivoire,</b> and
+                                <b>Guinea</b>. SIRA will support the development of market-relevant skills and improve
+                                access to employment opportunities in priority sectors, including healthcare,
+                                agriculture, tourism, manufacturing, and energy.</p>
+
+                            <p>Building on its extensive experience in coordinating regional higher education
+                                initiatives, the AAU is expected to support programme implementation through regional
+                                coordination, stakeholder engagement, monitoring and evaluation, and knowledge sharing.
+                                The initiative also complements the ACE Innovate Project, further reinforcing the
+                                Association's commitment to strengthening skills development, innovation, and inclusive
+                                economic growth across Africa.</p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+
+        <!-- ARTICLE 2: HAQAA3 -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/haqaa3.webp"
+                                alt="HAQAA3 External Agency Review Programme" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">HAQAA3 Agency Reviews Strengthen Quality
+                                Assurance Across Africa</h3>
+
+                            <p>The Harmonisation of African Higher Education Quality Assurance and Accreditation
+                                (<b>HAQAA3</b>) Initiative continues to advance quality assurance across the continent
+                                through its External Agency Review Programme. Working in partnership with higher
+                                education regulatory bodies, the initiative has successfully completed reviews in
+                                several African countries, including <b>Lesotho, Namibia, Egypt, Guinea, Senegal,
+                                    Morocco,</b> and <b>Angola</b>.</p>
+
+                            <p>The reviews have provided participating agencies with valuable opportunities for peer
+                                learning, institutional reflection, and continuous improvement while promoting the
+                                African Standards and Guidelines for Quality Assurance (ASG-QA). Emerging good practices
+                                include strengthening internal quality assurance systems, expanding stakeholder
+                                engagement, integrating digital accreditation processes, and enhancing transparency in
+                                quality assurance across higher education institutions.</p>
+
+                            <p>As the initiative continues to support quality enhancement across Africa, the final round
+                                of applications for the HAQAA3 External Agency Review Programme is now open, providing
+                                additional higher education regulatory bodies with the opportunity to benchmark their
+                                systems and strengthen institutional quality assurance practices.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 3: CO-CAT Project -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/co-cat.png"
+                                alt="CO-CAT Project Climate Capacity Assessment" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">CO-CAT Project Advances to a New Phase of
+                                Institutional Capacity Strengthening</h3>
+
+                            <p>The Association of African Universities (AAU), in collaboration with the Association of
+                                Commonwealth Universities (ACU) and the Liverpool School of Tropical Medicine (LSTM),
+                                has reached a significant milestone in implementing the <b>Climate-focused
+                                    Organisational Capacity Assessment Tool (CO-CAT)</b> project.</p>
+
+                            <p>Following the successful completion of organisational self-assessments by <b>16
+                                    universities and research institutions</b>, the project has progressed to a new
+                                phase focused on strengthening institutional capacity for climate adaptation research.
+                                The assessments examined key areas including leadership, strategic planning, resource
+                                mobilisation, organisational learning and stakeholder engagement, providing
+                                participating institutions with evidence to identify strengths and areas for
+                                improvement.</p>
+
+                            <p>The next phase will promote peer learning, institutional mentorship and collaborative
+                                action, enabling participating institutions to strengthen their organisational systems,
+                                share best practices and enhance their capacity to deliver impactful climate adaptation
+                                research across Africa.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 4: CHINNOVA -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/chinova-1.jpeg"
+                                alt="CHINNOVA Climate and Health Research" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">CHINNOVA Advances Climate and Health Research
+                            </h3>
+
+                            <p>The Association of African Universities (AAU), through the <b>Climate Change and Health
+                                    Innovation Hub for West and Central Africa (CHINNOVA)</b>, participated in the
+                                International Workshop on the Presentation of Results from the DOPERAUS Project and
+                                Other IDRC funded Projects, held in Conakry, Guinea, from <b>9 to 11 July 2026</b>.</p>
+
+                            <p>Representing AAU, <b>Mrs. Ruth Issambo Dickson</b>, CHINNOVA Project Officer, presented
+                                the Hub's evidence driven approach to climate and health research, highlighting its
+                                regional research agenda and stakeholder led priority setting process. She also shared
+                                the strong regional response to the initiative, which received <b>306 proposals from 14
+                                    countries</b> to support research on disease surveillance, climate health data
+                                integration, and epidemic preparedness across West and Central Africa.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 5: AAU and ICANN -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/icann.jpeg"
+                                alt="AAU and ICANN Universal Acceptance Curriculum" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">AAU and ICANN Advance Universal Acceptance
+                                Curriculum in African Universities</h3>
+
+                            <p>The Association of African Universities (AAU), in collaboration with the <b>Internet
+                                    Corporation for Assigned Names and Numbers (ICANN)</b>, continues to make
+                                significant strides in promoting the <b>Universal Acceptance (UA) Curriculum
+                                    Initiative</b> across African higher education institutions. The initiative aims to
+                                equip future ICT professionals with the knowledge and practical skills needed to build a
+                                more inclusive and multilingual digital ecosystem.</p>
+
+                            <p>A major milestone was recently achieved when the <b>Women's University in Africa
+                                    (WUA)</b>, Zimbabwe, became one of the first universities on the continent to
+                                formally adopt the UA Curriculum by signing a Memorandum of Understanding (MoU) with
+                                ICANN. This was followed by a two-day capacity-building workshop, supported by the AAU,
+                                which equipped faculty members with the skills and resources needed to integrate
+                                Universal Acceptance concepts into their teaching.</p>
+
+                            <p>The initiative reinforces the AAU's commitment to strengthening digital capacity,
+                                promoting internet inclusivity, and preparing graduates with the skills needed to
+                                support Africa's digital transformation. The success of the Women's University in Africa
+                                also provides a model for other AAU member institutions interested in adopting the UA
+                                Curriculum.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 6: AEIP -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/aeip.jfif"
+                                alt="AEIP Digital Skills Curriculum Session" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">AEIP: Embedding Digital Skills into Curricula -
+                                Institutional Case Studies</h3>
+
+                            <p>This session examines how universities are embedding digital skills across programmes
+                                through curriculum redesign, assessment innovation, and staff-student partnerships.
+                                Using institutional case studies, participants will explore models for mapping digital
+                                competencies to learning outcomes, integrating authentic digital tasks and
+                                micro-credentials, and building sustainable support structures (policy, staff
+                                development, and learning technology services).</p>
+
+                            <p><b>Date:</b> Tuesday, 18th August 2026<br>
+                                <b>Time:</b> 14:00–15:30 GMT<br>
+                                <b>Registration Link:</b> <a
+                                    href="https://shorturl.at/ugojv">https://shorturl.at/ugojv</a>
+                            </p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 7: AAU TV -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/aau-tv-call.png"
+                                alt="AAU TV Call for Content" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Call for Content for AAU TV</h3>
+
+                            <p>AAU TV invites all departments, projects and initiatives across the Association to share
+                                news, events, documentaries, success stories, interviews and other multimedia content
+                                for broadcast across its digital platforms, including the AAU TV YouTube channel.</p>
+
+                            <p>This provides an opportunity to showcase the Association's programmes, achievements and
+                                impact while increasing the visibility of AAU's work across Africa and beyond. Staff are
+                                encouraged to submit content on project milestones, workshops, conferences, research
+                                activities, partnerships, institutional achievements and other noteworthy developments.
+                            </p>
+
+                            <p>Let's work together to tell the AAU story and amplify the impact of our collective
+                                efforts.</p>
+
+                            <p><b>Enquiries:</b> aehottor@aau.org</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 8: Staff Capacity Building -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/mrs-larissa-3.jpeg"
+                                alt="Mrs. Larissa Odzebe Gidisu" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Staff Capacity Building: Innovation,
+                                Transformation and Resilience for Sustainable Development</h3>
+
+                            <p><b>Mrs. Larissa Odzebe Gidisu</b> participated in the Innovation, Transformation and
+                                Resilience for Sustainable Development training programme, sponsored by the <b>Swedish
+                                    International Development Cooperation Agency (Sida)</b> and the <b>African Union
+                                    Development Agency (AUDA-NEPAD)</b> in collaboration with the <b>Lund University
+                                    School of Economics and Management</b>.</p>
+
+                            <p>Mrs. Gidisu was selected to participate in the programme through a competitive
+                                application process following an open call for applications issued by the Lund
+                                University School of Economics and Management in collaboration with Sida and AUDA-NEPAD.
+                            </p>
+
+                            <p>The training enhanced participants' understanding of innovation systems and their role in
+                                advancing sustainable development, economic transformation and evidence-based
+                                policymaking. It also highlighted the importance of collaboration among universities,
+                                industry, government and society in driving innovation and building resilient economies.
+                            </p>
+
+                            <p>The knowledge and insights gained through the programme will contribute to AAU's ongoing
+                                efforts to promote innovation, strengthen higher education and support sustainable
+                                development across Africa.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
         <!-- Team Achievements Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">8</span>Team Member Achievements
+                <span class="section-icon">6</span>TRAVEL UPDATE
             </td>
         </tr>
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Career Milestones & Changes</h3>
-                            <p>Celebrating promotions, welcoming new team members, and acknowledging the contributions of departing colleagues.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Recent Updates</h4>
-                                <p>Important personnel changes and career advancement announcements within our organization.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Recent promotions and role transitions</li>
-                                <li>New hire introductions and welcome messages</li>
-                                <li>Farewell messages and transition updates</li>
-                                <li>Professional development achievements and certifications</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Team Celebration" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/professor-olusola-bandele-oyewole.jpg"
+                                alt="Professor Olusola Bandele Oyewole, Secretary General of AAU" align="right"
+                                width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Secretary General to Lead AAU at Key
+                                International Engagements</h3>
+
+                            <p>The Secretary General of the Association of African Universities (AAU), <b>Professor
+                                    Olusola Bandele Oyewole</b>, will represent the Association at several high level
+                                regional and international engagements in the coming months, reinforcing AAU's
+                                commitment to strengthening partnerships and advancing African higher education on the
+                                global stage.</p>
+
+                            <p><b>Upcoming engagements include:</b></p>
+
+                            <p>• <b>37th General Assembly Conference of the Committee of Vice Chancellors of Nigerian
+                                    Universities (CVCNU)</b> – Ilorin, Nigeria | 17th – 23rd August 2026<br>
+                                • <b>International Association of Universities (IAU) Conference and DAAD Meeting</b> –
+                                Glasgow, Scotland | 7th – 12th September 2026<br>
+                                • <b>Science Diplomacy Dialogue and ASTIL Working Meeting</b> – Stellenbosch, South
+                                Africa | 17th – 18th September 2026</p>
+
+                            <p>These engagements will provide opportunities to contribute to discussions on quality
+                                assurance, science diplomacy, institutional collaboration and the future of higher
+                                education, while strengthening AAU's voice and strategic partnerships within the global
+                                higher education community.</p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+
         <!-- Health & Wellness Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">9</span>Health & Wellness
+                <span class="section-icon">7</span>STAFF ACHIEVEMENTS
             </td>
         </tr>
+        <!-- ARTICLE 1: Mr. Frank Asefuah -->
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Employee Well-being Initiatives</h3>
-                            <p>Resources, tips, and programs designed to support physical and mental health, work-life balance, and overall well-being.</p>
-                            
-                            <div class="highlight-box">
-                                <h4>Wellness Programs</h4>
-                                <p>Available resources and upcoming initiatives to help maintain a healthy and productive work environment.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Mental health resources and support services</li>
-                                <li>Fitness programs and physical activity initiatives</li>
-                                <li>Work-life balance tips and time management strategies</li>
-                                <li>Nutrition advice and healthy workplace practices</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Wellness Activities" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/mr-frank.jfif"
+                                alt="Mr. Frank Asefuah, ICANN87 Fellow" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Congratulations to Mr. Frank Asefuah</h3>
+
+                            <p>The Association of African Universities (AAU) congratulates <b>Mr. Frank Asefuah</b> on
+                                his selection, through a highly competitive global process, as an <b>ICANN87 Fellow</b>.
+                                As part of the fellowship, he will participate in the Internet Corporation for Assigned
+                                Names and Numbers (ICANN) 87 Annual General Meeting, to be held from <b>17 to 22 October
+                                    2026</b> in Bali, Indonesia.</p>
+
+                            <p>The ICANN Fellowship Program recognises individuals who have demonstrated leadership, a
+                                commitment to the multistakeholder model of Internet governance, and the potential to
+                                contribute meaningfully to global Internet policy discussions. As an ICANN Fellow, Mr.
+                                Asefuah will represent the African Academia Stakeholder Group, bringing the perspectives
+                                of African higher education institutions to discussions on internet governance, digital
+                                policy and the future of the Internet.</p>
+
+                            <p>His participation provides an important opportunity to amplify the voice of African
+                                academia, strengthen collaboration with global stakeholders and promote the role of
+                                higher education in shaping an inclusive and secure digital future.</p>
+
+                            <p>The Association is proud of this remarkable achievement and wishes Mr. Asefuah every
+                                success as he represents African higher education on the global stage.</p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+
+        <!-- ARTICLE 2: Ms. Joan Akua Iyoha -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/grc-fellowship-1.jpg"
+                                alt="Ms. Joan Akua Iyoha, GRC Fellow" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Ms. Joan Admitted into the Global Research
+                                Consortium Fellowship</h3>
+
+                            <p>The Association of African Universities (AAU) congratulates <b>Ms. Joan Akua Iyoha</b> on
+                                her admission into the <b>Global Research Consortium (GRC) Fellowship</b>, a highly
+                                competitive 60-day international programme focused on research, public policy, and
+                                leadership development. The inaugural online cohort is scheduled to commence on <b>9
+                                    August 2026</b>, bringing together students, researchers, and young professionals
+                                from across the globe.</p>
+
+                            <p>The fellowship attracted more than <b>600 applications</b>, with only 50-60 fellows
+                                selected through a rigorous multi-stage process, representing an acceptance rate of less
+                                than 10 percent. Throughout the programme, participants will receive advanced research
+                                training, mentorship for independent research, opportunities for publication, expert-led
+                                lectures, and long-term membership in the Global Research Consortium network.</p>
+
+                            <p>The Association congratulates Ms. Joan on this remarkable achievement and wishes her
+                                every success as she undertakes the fellowship and continues to strengthen her research
+                                and leadership capacity.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 3: Ms. Abena Corletey -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/abena-egigfa-photo.jpg"
+                                alt="Ms. Abena Corletey, GhanaSIG Fellow" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Ms. Abena Corletey Selected for the 2026 Ghana
+                                School on Internet Governance Fellowship</h3>
+
+                            <p>The Association of African Universities (AAU) congratulates <b>Abena Dede Corletey</b> on
+                                her selection as a 2026 Fellow of the <b>Ghana School on Internet Governance
+                                    (GhanaSIG)</b>, an annual fellowship organised by the E-Governance and Internet
+                                Governance Foundation for Africa (EGIGFA). She was selected as one of <b>79 fellows</b>
+                                from nearly <b>400 applicants</b> nationwide, reflecting her commitment to advancing
+                                knowledge and practice in internet governance.</p>
+
+                            <p>As part of the fellowship, Ms. Abena successfully completed the online training
+                                component, which included specialised courses on ICANN Learn and the RIPE NCC Internet
+                                Governance Academy, achieving an impressive <b>92%</b> in the final EGIGFA assessment.
+                                She also participated in weekly reflections, group presentations, and collaborative
+                                learning activities designed to strengthen participants' understanding of internet
+                                governance, cybersecurity, digital rights, and internet infrastructure.</p>
+
+                            <p>She is currently preparing for the fellowship's onsite training programme, scheduled to
+                                take place in Accra from <b>7-11 September 2026</b>. The Association wishes her every
+                                success as she continues to represent AAU through this important professional
+                                development opportunity.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 4: Mr. Jonas Adjei Okoe -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/mr-oku.jpg" alt="Mr. Jonas Adjei Okoe"
+                                align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Congratulations to Mr. Jonas Adjei Okoe</h3>
+
+                            <p>The AAU extends its heartfelt congratulations to <b>Mr. Jonas Adjei Okoe</b> on
+                                successfully completing the <b>Executive Master of Arts in Conflict, Peace and
+                                    Security</b> at the <b>Kofi Annan International Peacekeeping Training Centre
+                                    (KAIPTC)</b>.</p>
+
+                            <p>This significant academic achievement reflects his dedication to continuous learning,
+                                professional excellence and leadership development. The knowledge and expertise gained
+                                through the programme will further strengthen his contributions to the Association and
+                                its mission of advancing higher education across Africa.</p>
+
+                            <p>We celebrate this remarkable milestone and wish Mr. Okoe continued success in his
+                                professional journey.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 5: Ms. Alexandra Johnson -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/ms-alex.jpeg"
+                                alt="Ms. Alexandra Johnson" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Congratulations to Ms. Alexandra Johnson</h3>
+
+                            <p>The AAU congratulates <b>Ms. Alexandra Johnson</b> on successfully earning an
+                                <b>Executive Master of Arts in Conflict, Peace and Security</b> from the <b>Kofi Annan
+                                    International Peacekeeping Training Centre (KAIPTC)</b>.</p>
+
+                            <p>At AAU, continuous learning and professional development are central to building a
+                                skilled and dynamic workforce. The Association is proud of Alexandra's commitment to
+                                advancing her knowledge and expertise, reflecting the values of excellence and lifelong
+                                learning that underpin AAU's mission.</p>
+
+                            <p>We celebrate this remarkable achievement and commend Alexandra for taking this important
+                                step in her professional development. We wish her continued success in all her future
+                                endeavours.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 6: Ms. Imelda Amoudji -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/imelda.jpeg" alt="Ms. Imelda Amoudji"
+                                align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Congratulations to Ms. Imelda Amoudji</h3>
+
+                            <p>The Association of African Universities (AAU) congratulates <b>Ms. Imelda Amoudji</b> on
+                                successfully earning a <b>Master of Business Administration (MBA)</b> from the
+                                <b>University of Ghana</b>.</p>
+
+                            <p>This remarkable achievement reflects her dedication, perseverance and commitment to
+                                continuous learning and professional excellence. We celebrate this important milestone
+                                and are confident that the knowledge and skills she has acquired will further enhance
+                                her contributions to the Association.</p>
+
+                            <p>Congratulations, Imelda, and best wishes for continued success in your professional
+                                journey.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- ARTICLE 7: Ms. Lydia Nyame -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <img src="https://aau.org/subs/newsletters/intercomm/graduation-photo-lydia.jpeg"
+                                alt="Ms. Lydia Nyame" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Congratulations to Ms. Lydia Nyame</h3>
+
+                            <p>The Association of African Universities (AAU) congratulates <b>Ms. Lydia Nyame</b> on
+                                successfully earning a <b>Master of Arts (MA) in Strategic Communication</b> from the
+                                <b>University of Ghana</b>.</p>
+
+                            <p>As part of the first graduating cohort of the University's Master's programme in
+                                Strategic Communication, Lydia gained advanced knowledge and practical skills in key
+                                areas of strategic communication, including communication research, stakeholder
+                                engagement and organisational communication. The programme has further strengthened her
+                                capacity to support strategic communication and institutional engagement within the
+                                higher education sector.</p>
+
+                            <p>The AAU celebrates this significant academic achievement and wishes Lydia continued
+                                success in her professional and academic journey.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
         <!-- Feedback Section -->
         <tr>
             <td colspan="2" class="section-header">
-                <span class="section-icon">10</span>Feedback & Suggestions
+                <span class="section-icon">8</span>AAU POLICY SECTION
             </td>
         </tr>
         <tr>
             <td colspan="2" class="section-content">
-                <table width="100%">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
                     <tr>
-                        <td class="content-text">
-                            <h3>Your Voice Matters</h3>
-                            <p>We value your input and ideas for improving our workplace, processes, and organizational culture.</p>
-                            
-                            <div class="feedback-section">
-                                <h4>How to Share Your Ideas</h4>
-                                <p>Multiple channels available for submitting feedback, suggestions, and concerns. All contributions are reviewed and considered for implementation.</p>
-                            </div>
-                            
-                            <ul>
-                                <li>Anonymous suggestion box and online forms</li>
-                                <li>Regular feedback sessions with management</li>
-                                <li>Process improvement recommendations</li>
-                                <li>Workplace culture enhancement ideas</li>
-                            </ul>
-                        </td>
-                        <td class="content-image">
-                            <img src="https://aau.org/subs/newsletters/edition_2/AAU-Board-1024x683.jpg" alt="Feedback Communication" class="section-image">
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/policy.jpg"
+                                alt="Staff Development Policy" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+                            <h3 style="margin-top: 0; padding-top: 0;">Staff Development Policy</h3>
+
+                            <p>As the apex continental higher education institution, AAU continues to prioritize staff
+                                growth and capacity building through its <b>Staff Development Policy</b>, which provides
+                                a structured framework for continuous learning and professional development across the
+                                Secretariat.</p>
+
+                            <p>Staff are encouraged to take advantage of training opportunities by submitting requests
+                                through the appropriate supervisory channels. Requests must align with individual roles,
+                                departmental priorities, and organizational goals, and clearly demonstrate expected
+                                benefits. To ensure operational continuity, only a limited number of staff from the same
+                                unit may be approved within a given period.</p>
+
+                            <p>In line with <b>Section 2.4</b> of the policy, staff who receive development support are
+                                expected to apply the knowledge gained, support knowledge sharing, and, where
+                                applicable, fulfill agreed service conditions. Approval remains subject to relevance,
+                                operational needs, and available resources.</p>
+
+                            <p>Staff are advised to consult the full Staff Development document for detailed guidelines
+                                on eligibility and requirements.</p>
+
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-        
+        <tr>
+            <!-- --------------------------- -->
+        <tr>
+            <td colspan="2" class="section-header">
+                <span class="section-icon">9</span>Stay Hydrated at Work
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/stay-hydrated.jpg"
+                                alt="Stay Hydrated at Work" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+
+                            <p>Staying properly hydrated is essential for maintaining focus, energy, and overall
+                                well-being throughout the workday. Dehydration can lead to fatigue, headaches, and
+                                reduced concentration, which can affect productivity and performance. Staff are
+                                encouraged to drink water regularly during the day, even before feeling thirsty, as
+                                thirst is often a late sign of dehydration.</p>
+
+                            <p>Simple habits such as keeping a water bottle at your desk, taking short water breaks, and
+                                choosing water over sugary or caffeinated drinks can help maintain adequate hydration.
+                                Increasing water intake is especially important during busy work periods and in warm
+                                environments. Prioritizing hydration is a simple but effective way to support both
+                                physical health and mental alertness at work.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- ----------------------------------- -->
+        <tr>
+
+            <td colspan="2" class="section-header">
+                <span class="section-icon">10</span>Smart Practices and Troubleshooting
+            </td>
+        </tr>
+        <!-- ARTICLE: Smart Practices and Troubleshooting -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: justify; padding: 20px; vertical-align: top;">
+
+                            <!-- IMAGE: Floated right, aligned with heading -->
+                            <img src="https://aau.org/subs/newsletters/intercomm/itsupport.jpg"
+                                alt="ICT Support and Smart Practices" align="right" width="320"
+                                style="width: 320px; height: auto; border-radius: 10px; float: right; margin: 0 0 20px 25px; display: block;">
+
+
+                            <p>Basic ICT skills are essential for improving productivity, communication and ensuring
+                                efficient use of digital tools at AAU. Staff are encouraged to adopt simple habits such
+                                as organizing files properly, using clear file names, and saving work regularly to avoid
+                                data loss and improve workflow.</p>
+
+                            <p>Effective computer use, including basic navigation and keyboard shortcuts, can improve
+                                speed and accuracy. <b>Watch:</b> <a
+                                    href="https://youtu.be/vKauB_ui598">https://youtu.be/vKauB_ui598</a></p>
+
+                            <p>Maintaining well-organized folders and safely handling USB devices helps prevent common
+                                issues. <b>Watch:</b> <a
+                                    href="https://youtu.be/k-EID5_2D9U">https://youtu.be/k-EID5_2D9U</a></p>
+
+                            <p>For minor issues, try restarting programs, checking the Recycle Bin, or reconnecting
+                                devices. If problems persist, contact the IT support team. Applying these practices
+                                helps maintain system performance and minimize disruptions.</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- CALL TO ACTION: Have updates to share? -->
+        <tr>
+            <td colspan="2" class="section-content">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="content-text" style="text-align: center; padding: 30px 20px; vertical-align: top;">
+
+                            <h4 style="margin-top: 0; color: #1a3a6e;">Have updates to share for our next edition?</h4>
+
+                            <p style="margin: 10px 0;">Contact <b>Latifa Adam</b> or email <b>Ms. Ellen Fosu</b></p>
+
+                            <p style="margin: 5px 0;"><a href="mailto:commserve@aau.org"
+                                    style="color: #1a3a6e; text-decoration: none; font-weight: bold;">commserve@aau.org</a>
+                            </p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
         <!-- Footer -->
         <tr class="footer-row">
             <td colspan="2">
                 <h3>Stay Connected</h3>
                 <p>This newsletter is published monthly for internal staff communication.</p>
                 <p>Questions or suggestions? Contact HR or the Communications Team.</p>
-                
+
                 <!-- Social Media Icons -->
                 <table style="margin: 20px auto; border-collapse: separate; border-spacing: 0;">
                     <tr>
-                      <td style="padding: 0 8px 0 0;">
-                        <a href="https://www.facebook.com/AAU67/" style="text-decoration: none;">
-                          <img src="https://cdn-icons-png.flaticon.com/32/733/733547.png" alt="Facebook" width="32"
-                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
-                        </a>
-                      </td>
-                      <td style="padding: 0 8px;">
-                        <a href="https://www.twitter.com/aau_67" style="text-decoration: none;">
-                          <img src="https://cdn-icons-png.flaticon.com/32/733/733579.png" alt="Twitter" width="32"
-                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
-                        </a>
-                      </td>
-                      <td style="padding: 0 8px;">
-                        <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg"
-                          style="text-decoration: none;">
-                          <img src="https://cdn-icons-png.flaticon.com/32/1384/1384060.png" alt="YouTube" width="32"
-                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
-                        </a>
-                      </td>
-                      <td style="padding: 0 8px;">
-                        <a href="https://www.flickr.com/photos/aau-africa/albums/" style="text-decoration: none;">
-                          <img src="https://cdn-icons-png.flaticon.com/32/733/733614.png" alt="Flickr" width="32"
-                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
-                        </a>
-                      </td>
-                      <td style="padding: 0 0 0 8px;">
-                        <a href="https://www.linkedin.com/company/association-of-african-universities"
-                          style="text-decoration: none;">
-                          <img src="https://cdn-icons-png.flaticon.com/32/733/733561.png" alt="LinkedIn" width="32"
-                            height="32" style="display: block; border-radius: 6px; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
-                        </a>
-                      </td>
+                        <td style="padding: 0 8px 0 0;">
+                            <a href="https://www.facebook.com/AAU67/" style="text-decoration: none;">
+                                <img src="https://cdn-icons-png.flaticon.com/32/733/733547.png" alt="Facebook"
+                                    width="32" height="32"
+                                    style="display: block; border-radius: 6px; transition: opacity 0.3s ease;"
+                                    onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                            </a>
+                        </td>
+                        <td style="padding: 0 8px;">
+                            <a href="https://www.twitter.com/aau_67" style="text-decoration: none;">
+                                <img src="https://cdn-icons-png.flaticon.com/32/733/733579.png" alt="Twitter" width="32"
+                                    height="32"
+                                    style="display: block; border-radius: 6px; transition: opacity 0.3s ease;"
+                                    onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                            </a>
+                        </td>
+                        <td style="padding: 0 8px;">
+                            <a href="https://www.youtube.com/channel/UCvLPRhhEHLSFE8Gc15mGLZg"
+                                style="text-decoration: none;">
+                                <img src="https://cdn-icons-png.flaticon.com/32/1384/1384060.png" alt="YouTube"
+                                    width="32" height="32"
+                                    style="display: block; border-radius: 6px; transition: opacity 0.3s ease;"
+                                    onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                            </a>
+                        </td>
+                        <td style="padding: 0 8px;">
+                            <a href="https://www.flickr.com/photos/aau-africa/albums/" style="text-decoration: none;">
+                                <img src="https://cdn-icons-png.flaticon.com/32/733/733614.png" alt="Flickr" width="32"
+                                    height="32"
+                                    style="display: block; border-radius: 6px; transition: opacity 0.3s ease;"
+                                    onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                            </a>
+                        </td>
+                        <td style="padding: 0 0 0 8px;">
+                            <a href="https://www.linkedin.com/company/association-of-african-universities"
+                                style="text-decoration: none;">
+                                <img src="https://cdn-icons-png.flaticon.com/32/733/733561.png" alt="LinkedIn"
+                                    width="32" height="32"
+                                    style="display: block; border-radius: 6px; transition: opacity 0.3s ease;"
+                                    onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                            </a>
+                        </td>
                     </tr>
                 </table>
-                
+
                 <div class="footer-divider"></div>
-                <p style="font-size: 0.9rem; opacity: 0.7;">Association of African Universities - Internal Communications</p>
+                <p style="font-size: 0.9rem; opacity: 0.7;">Association of African Universities - Internal
+                    Communications</p>
             </td>
         </tr>
     </table>
 </body>
+
 </html>
